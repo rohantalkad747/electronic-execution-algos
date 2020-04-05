@@ -6,8 +6,13 @@
 #define UNTITLED1_TIMEINFORCE_H
 
 
-class TimeInForce {
-
+enum class TimeInForce : char
+{
+    DAY = '0',
+    GTC = '1',
+    OPG = '2',
+    IOC = '3',
+    FOK = '5'
 };
 
 

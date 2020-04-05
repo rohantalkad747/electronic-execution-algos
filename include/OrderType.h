@@ -8,10 +8,9 @@
 
 enum class OrderType : char
 {
-    MARKET ='1',
-    LIMIT =	'2'
+    MARKET = '1',
+    LIMIT = '2'
 };
-
 
 
 #endif //UNTITLED1_ORDERTYPE_H

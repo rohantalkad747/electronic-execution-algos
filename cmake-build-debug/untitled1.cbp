@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -101,7 +107,13 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/main.cpp">

@@ -23,39 +23,40 @@ public:
         DEBUG, INFO, WARN, ERROR
     };
 
-    explicit Logger(std::string clz) : clazz(std::move(clz)) {}
+    explicit Logger(std::string clz) : clazz(std::move(clz))
+    {}
 
-    void info(const std::string & msg)
+    void info(const std::string &msg)
     { log(Level::INFO, msg); }
 
 
-    void info(const std::string & msg, const std::string &x)
+    void info(const std::string &msg, const std::string &x)
     { log(Level::INFO, msg, x); }
 
 
-    void info(const std::string & msg, int v)
+    void info(const std::string &msg, int v)
     { log(Level::INFO, msg, to_string(v)); }
 
 
-    void info(const std::string & msg, double v)
+    void info(const std::string &msg, double v)
     { log(Level::INFO, msg, to_string(v)); }
 
-    void info(const std::string & msg, const std::vector<std::string> v)
+    void info(const std::string &msg, const std::vector<std::string> v)
     { log(Level::INFO, msg, to_string(v)); }
 
 
-    void debug(const std::string & msg)
+    void debug(const std::string &msg)
     { log(Level::DEBUG, msg); }
 
 
-    void warn(const std::string & msg)
+    void warn(const std::string &msg)
     { log(Level::DEBUG, msg); }
 
 
-    void error(const std::string & msg)
+    void error(const std::string &msg)
     { log(Level::ERROR, msg); }
 
-    void error(const std::string & msg, const std::string & s)
+    void error(const std::string &msg, const std::string &s)
     { log(Level::ERROR, msg, s); }
 
 private:

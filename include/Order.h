@@ -14,7 +14,9 @@
 
 class Order
 {
-    explicit Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price, TimeInForce timeInForce) :
+public:
+    explicit Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
+                   TimeInForce timeInForce) :
             side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price), timeInForce(timeInForce)
     {
         minQuantity = quantity;
@@ -22,17 +24,17 @@ class Order
         orderStatus = OrderStatus::NEW;
     };
 
-    Order(const Order & o) :
-            side( o.side ),
-            symbol( o.symbol ),
-            quantity( o.quantity ),
-            orderType( o.orderType ),
-            price( o.price ),
-            timeInForce ( o.timeInForce )
+    Order(const Order &o) :
+            side(o.side),
+            symbol(o.symbol),
+            quantity(o.quantity),
+            orderType(o.orderType),
+            price(o.price),
+            timeInForce(o.timeInForce)
     {
-        minQuantity			=		o.quantity;
-        cumulativeQuantity			=		o.cumulativeQuantity;
-        orderStatus		=		OrderStatus::NEW;
+        minQuantity = o.quantity;
+        cumulativeQuantity = o.cumulativeQuantity;
+        orderStatus = OrderStatus::NEW;
     }
 
     int leaves()

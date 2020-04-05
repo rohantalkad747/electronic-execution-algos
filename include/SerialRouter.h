@@ -11,9 +11,11 @@
 
 #endif //UNTITLED1_SERIALROUTER_H
 
-class SerialRouter {
+class SerialRouter
+{
 public:
-    SerialRouter(const VenueManager &vm) : VenueManager(vm), Log("SerialRouter") {
+    SerialRouter(const VenueManager &vm) : VenueManager(vm), Log("SerialRouter")
+    {
     }
 
     void route(const Order &order);

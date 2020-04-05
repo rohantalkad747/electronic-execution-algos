@@ -12,7 +12,7 @@ void VenueManager::add_venue(const Venue &venue)
 
 void VenueManager::remove_venue(Venue &venue)
 {
-    const std::string& name = venue.getName();
+    const std::string &name = venue.getName();
     Log.info("removing venue:", name);
     if (Venues.empty())
     {
@@ -23,15 +23,14 @@ void VenueManager::remove_venue(Venue &venue)
 
 void VenueManager::iterateAndRemove(const std::string &name)
 {
-    for (auto it = Venues.begin(); it != Venues.end(); )
+    for (auto it = Venues.begin(); it != Venues.end();)
     {
         Venue v = *it;
-        if ( name == v.getName())
+        if (name == v.getName())
         {
             Venues.erase(it);
             Log.info("Removed venue: ", name);
-        }
-        else
+        } else
         {
             it++;
         }
@@ -40,7 +39,7 @@ void VenueManager::iterateAndRemove(const std::string &name)
 
 std::vector<Venue> VenueManager::venues(const std::string &symbol)
 {
-    std::vector<Venue> venues = SymbolVenues[ symbol ];
+    std::vector<Venue> venues = SymbolVenues[symbol];
     if (venues.empty())
     {
         return venues;
@@ -48,13 +47,13 @@ std::vector<Venue> VenueManager::venues(const std::string &symbol)
     double totalRank = 0.0;
     for (auto v : venues)
     {
-        VenueRank vr = v.getRanking( symbol );
+        VenueRank vr = v.getRanking(symbol);
         totalRank += vr.getRank();
     }
     std::vector<Venue> rankings;
     for (auto v : venues)
     {
-        VenueRank vr = v.getRanking( symbol );
+        VenueRank vr = v.getRanking(symbol);
         double executionProbability = vr.getRank() / totalRank;
         v.setExecutionProbability(executionProbability);
         rankings.push_back(v);
@@ -66,15 +65,28 @@ std::vector<Venue> VenueManager::venues(const std::string &symbol)
 /*
 *	Send Order to a Venue (Market)
 */
-void VenueManager::send_order(const Venue & venue, const Order & order)
+void VenueManager::sendOrder(const Venue &venue, const Order &order)
 {
     Log.info("order sent to venue:", venue.getName());
 }
 
-/*
-*	Process Ack/Fill from Venue (Market)
-*/
-void VenueManager::process_exec(const Execution & exec)
+void VenueManager::process_exec(const Execution &exec)
 {
-    Log.info("recevied exec:", exec.exec_id());
+    Log.info("Received exec:", exec.exec_id());
+}
+
+void VenueManager::init()
+{
+    for (const auto &v : Venues)
+    {
+        Log.info("v:", v.getName());
+        std::vector<std::string> symbols = v.getSymbols();
+        for (const auto &symbol : symbols)
+        {
+            std::vector<Venue> venues = SymbolVenues[symbol];
+            venues.push_back(v);
+            Log.info("Adding to symbol:", symbol);
+            SymbolVenues[symbol] = venues;
+        }
+    }
 }

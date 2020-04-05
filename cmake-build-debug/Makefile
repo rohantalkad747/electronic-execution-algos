@@ -122,59 +122,59 @@ untitled1/fast:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/build
 .PHONY : untitled1/fast
 
-main.obj: main.cpp.obj
+src/Main.obj: src/Main.cpp.obj
 
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-src/Order.obj: src/Order.cpp.obj
-
-.PHONY : src/Order.obj
+.PHONY : src/Main.obj
 
 # target to build an object file
-src/Order.cpp.obj:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Order.cpp.obj
-.PHONY : src/Order.cpp.obj
+src/Main.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Main.cpp.obj
+.PHONY : src/Main.cpp.obj
 
-src/Order.i: src/Order.cpp.i
+src/Main.i: src/Main.cpp.i
 
-.PHONY : src/Order.i
+.PHONY : src/Main.i
 
 # target to preprocess a source file
-src/Order.cpp.i:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Order.cpp.i
-.PHONY : src/Order.cpp.i
+src/Main.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Main.cpp.i
+.PHONY : src/Main.cpp.i
 
-src/Order.s: src/Order.cpp.s
+src/Main.s: src/Main.cpp.s
 
-.PHONY : src/Order.s
+.PHONY : src/Main.s
 
 # target to generate assembly for a file
-src/Order.cpp.s:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Order.cpp.s
-.PHONY : src/Order.cpp.s
+src/Main.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Main.cpp.s
+.PHONY : src/Main.cpp.s
+
+src/SerialRouter.obj: src/SerialRouter.cpp.obj
+
+.PHONY : src/SerialRouter.obj
+
+# target to build an object file
+src/SerialRouter.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SerialRouter.cpp.obj
+.PHONY : src/SerialRouter.cpp.obj
+
+src/SerialRouter.i: src/SerialRouter.cpp.i
+
+.PHONY : src/SerialRouter.i
+
+# target to preprocess a source file
+src/SerialRouter.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SerialRouter.cpp.i
+.PHONY : src/SerialRouter.cpp.i
+
+src/SerialRouter.s: src/SerialRouter.cpp.s
+
+.PHONY : src/SerialRouter.s
+
+# target to generate assembly for a file
+src/SerialRouter.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SerialRouter.cpp.s
+.PHONY : src/SerialRouter.cpp.s
 
 src/VenueManager.obj: src/VenueManager.cpp.obj
 
@@ -212,12 +212,12 @@ help:
 	@echo ... untitled1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
-	@echo ... src/Order.obj
-	@echo ... src/Order.i
-	@echo ... src/Order.s
+	@echo ... src/Main.obj
+	@echo ... src/Main.i
+	@echo ... src/Main.s
+	@echo ... src/SerialRouter.obj
+	@echo ... src/SerialRouter.i
+	@echo ... src/SerialRouter.s
 	@echo ... src/VenueManager.obj
 	@echo ... src/VenueManager.i
 	@echo ... src/VenueManager.s

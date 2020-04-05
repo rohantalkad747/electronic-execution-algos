@@ -116,10 +116,10 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/main.cpp">
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/Main.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/Order.cpp">
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/SerialRouter.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp">

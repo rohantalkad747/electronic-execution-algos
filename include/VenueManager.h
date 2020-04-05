@@ -24,7 +24,7 @@ public:
 
     std::vector<Venue> venues(const std::string &symbol);
 
-    void send_order(const Venue &venue, const Order &order);
+    void sendOrder(const Venue &venue, const Order &order);
 
     void process_exec(const Execution &exec);
 
@@ -34,6 +34,7 @@ private:
     Logger Log;
 
     void init();
+
     void iterateAndRemove(const std::string &name);
 };
 

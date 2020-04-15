@@ -57,8 +57,8 @@ void SerialRouter::route(const Order &order)
             Order child(order);
             child.setQuantity(childQuantity);
 
-            long time = std::chrono::system_clock::now().time_since_epoch().count() + adjustments[i];
-            while (std::chrono::system_clock::now().time_since_epoch().count() <= time);
+            long time = ( std::chrono::system_clock::now().time_since_epoch().count() * 1000) + adjustments[i];
+            while (( std::chrono::system_clock::now().time_since_epoch().count() * 1000 ) <= time);
             VenueManager.sendOrder(venue, child);
         }
     }

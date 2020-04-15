@@ -104,7 +104,7 @@ public:
 
     const std::string &getClOrdId() const
     {
-        return clOrdID;
+        return ClOrdID;
     }
 
     const std::string &getMsgType() const
@@ -154,7 +154,7 @@ private:
     OrderStatus orderStatus;
     // Other FIX fields
     std::string account;
-    std::string clOrdID;
+    std::string ClOrdID;
     std::string msgType;
     std::string text;
     std::string transactTime;

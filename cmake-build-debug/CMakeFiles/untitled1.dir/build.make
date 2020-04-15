@@ -95,11 +95,39 @@ CMakeFiles/untitled1.dir/src/Main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/Main.cpp.s"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\Main.cpp -o CMakeFiles\untitled1.dir\src\Main.cpp.s
 
+CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj: ../src/BlockingQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\BlockingQueue.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\BlockingQueue.cpp
+
+CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\BlockingQueue.cpp > CMakeFiles\untitled1.dir\src\BlockingQueue.cpp.i
+
+CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\BlockingQueue.cpp -o CMakeFiles\untitled1.dir\src\BlockingQueue.cpp.s
+
+CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj: ../src/AvgLatency.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\AvgLatency.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\AvgLatency.cpp
+
+CMakeFiles/untitled1.dir/src/AvgLatency.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/AvgLatency.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\AvgLatency.cpp > CMakeFiles\untitled1.dir\src\AvgLatency.cpp.i
+
+CMakeFiles/untitled1.dir/src/AvgLatency.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/AvgLatency.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\AvgLatency.cpp -o CMakeFiles\untitled1.dir\src\AvgLatency.cpp.s
+
 # Object files for target untitled1
 untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/SerialRouter.cpp.obj" \
-"CMakeFiles/untitled1.dir/src/Main.cpp.obj"
+"CMakeFiles/untitled1.dir/src/Main.cpp.obj" \
+"CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj" \
+"CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj"
 
 # External object files for target untitled1
 untitled1_EXTERNAL_OBJECTS =
@@ -107,11 +135,13 @@ untitled1_EXTERNAL_OBJECTS =
 untitled1.exe: CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/SerialRouter.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/Main.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/build.make
 untitled1.exe: CMakeFiles/untitled1.dir/linklibs.rsp
 untitled1.exe: CMakeFiles/untitled1.dir/objects1.rsp
 untitled1.exe: CMakeFiles/untitled1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable untitled1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable untitled1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\untitled1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

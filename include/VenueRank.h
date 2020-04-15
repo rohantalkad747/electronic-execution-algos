@@ -69,7 +69,7 @@ public:
 
 private:
 
-    unsigned char locks = 0;
+    unsigned volatile char locks = 0;
     double venueTradingCost;
     double routerHistoricTradingVolume;
     double marketHistoricTradingVolume;

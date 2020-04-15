@@ -15,7 +15,7 @@ class Venue
 {
 public:
     explicit Venue(std::string name, bool available, std::vector<std::string> symbols)
-            : name(name), available(available), symbols(symbols), probability(0.0)
+            : name(name), available(available), symbols(symbols), probability(0.0), avgLatency(0)
     {}
 
     bool isAvailable() const
@@ -56,6 +56,16 @@ public:
         return probability;
     }
 
+    long getAvgLatency () const
+    {
+        return avgLatency;
+    }
+
+    void setAvgLatency (long avg)
+    {
+        avgLatency = avg;
+    }
+
     const std::map<std::string, VenueRank> &getRankMapping() const
     {
         return rankMapping;
@@ -67,6 +77,7 @@ private:
     std::vector<std::string> symbols;
     double probability;
     std::map<std::string, VenueRank> rankMapping;
+    long avgLatency;
 
     friend std::ostream &operator<< (std::ostream &os, const Venue &venue)
     {

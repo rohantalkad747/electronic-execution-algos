@@ -122,6 +122,60 @@ untitled1/fast:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/build
 .PHONY : untitled1/fast
 
+src/AvgLatency.obj: src/AvgLatency.cpp.obj
+
+.PHONY : src/AvgLatency.obj
+
+# target to build an object file
+src/AvgLatency.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj
+.PHONY : src/AvgLatency.cpp.obj
+
+src/AvgLatency.i: src/AvgLatency.cpp.i
+
+.PHONY : src/AvgLatency.i
+
+# target to preprocess a source file
+src/AvgLatency.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/AvgLatency.cpp.i
+.PHONY : src/AvgLatency.cpp.i
+
+src/AvgLatency.s: src/AvgLatency.cpp.s
+
+.PHONY : src/AvgLatency.s
+
+# target to generate assembly for a file
+src/AvgLatency.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/AvgLatency.cpp.s
+.PHONY : src/AvgLatency.cpp.s
+
+src/BlockingQueue.obj: src/BlockingQueue.cpp.obj
+
+.PHONY : src/BlockingQueue.obj
+
+# target to build an object file
+src/BlockingQueue.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj
+.PHONY : src/BlockingQueue.cpp.obj
+
+src/BlockingQueue.i: src/BlockingQueue.cpp.i
+
+.PHONY : src/BlockingQueue.i
+
+# target to preprocess a source file
+src/BlockingQueue.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.i
+.PHONY : src/BlockingQueue.cpp.i
+
+src/BlockingQueue.s: src/BlockingQueue.cpp.s
+
+.PHONY : src/BlockingQueue.s
+
+# target to generate assembly for a file
+src/BlockingQueue.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.s
+.PHONY : src/BlockingQueue.cpp.s
+
 src/Main.obj: src/Main.cpp.obj
 
 .PHONY : src/Main.obj
@@ -212,6 +266,12 @@ help:
 	@echo ... untitled1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/AvgLatency.obj
+	@echo ... src/AvgLatency.i
+	@echo ... src/AvgLatency.s
+	@echo ... src/BlockingQueue.obj
+	@echo ... src/BlockingQueue.i
+	@echo ... src/BlockingQueue.s
 	@echo ... src/Main.obj
 	@echo ... src/Main.i
 	@echo ... src/Main.s

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj"
+  "CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj"
   "CMakeFiles/untitled1.dir/src/Main.cpp.obj"
   "CMakeFiles/untitled1.dir/src/SerialRouter.cpp.obj"
   "CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj"

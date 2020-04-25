@@ -56,12 +56,12 @@ public:
         return probability;
     }
 
-    long getAvgLatency () const
+    long getAvgLatency() const
     {
         return avgLatency;
     }
 
-    void setAvgLatency (long avg)
+    void setAvgLatency(long avg)
     {
         avgLatency = avg;
     }
@@ -79,7 +79,7 @@ private:
     std::map<std::string, VenueRank> rankMapping;
     long avgLatency;
 
-    friend std::ostream &operator<< (std::ostream &os, const Venue &venue)
+    friend std::ostream &operator<<(std::ostream &os, const Venue &venue)
     {
         os << " Venue [" << venue.name << ", " << venue.available << ", ";
         for (const auto &symbol : venue.symbols)

@@ -18,10 +18,6 @@ public:
     {
     }
 
-    void onReject(const std::string ClOrdID);
-
-    void onExecution(const std::string ClOrdID , int quantity);
-
     void route(const Order &order);
 
 private:

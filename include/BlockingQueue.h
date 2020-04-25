@@ -39,13 +39,14 @@ public:
      * Throws an exception if there is no item in the given queue;
      * otherwise, returns a top of the queue.
      */
-     T tryPop();
+    T tryPop();
 
-     /**
-      * Blocks the calling thread until there is an item
-      * in the given queue.
-      */
-     T pop();
+    /**
+     * Blocks the calling thread until there is an item
+     * in the given queue.
+     */
+    T pop();
+
 private:
     std::vector<T> queue;
     std::mutex mtx;

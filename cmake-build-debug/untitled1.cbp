@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AvgLatency.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -107,13 +113,25 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/POVConfig.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/RingBuffer.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TWAPConfig.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VWAPConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h">

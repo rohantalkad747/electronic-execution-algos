@@ -14,5 +14,5 @@ long AvgLatency::getLatencyAdjustment()
     {
         this->histLatency[index];
     }
-    return 0.3*this->histLatency[index] + 0.7*this->todayLatency[index] ;
+    return 0.3 * this->histLatency[index] + 0.7 * this->todayLatency[index];
 }

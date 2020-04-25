@@ -5,6 +5,7 @@
 #include "../include/Order.h"
 #include "../include/VenueManager.h"
 #include "../include/SprayRouter.h"
+#include "../include/AvgLatency.h"
 
 VenueManager create_venue_manager();
 
@@ -20,16 +21,17 @@ int main()
     for (int i = 50; i < 100; i++)
     {
         bool odd = (i & 1) == 1;
-        Order prnt(odd ? OrderSide::BUY : OrderSide::SELL, odd ? "IBM" : "GOOG", i, OrderType::MARKET, odd ? 110 : 1500, TimeInForce::DAY);
+        Order prnt(odd ? OrderSide::BUY : OrderSide::SELL, odd ? "IBM" : "GOOG", i, OrderType::MARKET, odd ? 110 : 1500,
+                   TimeInForce::DAY);
         orders.push_back(prnt);
     }
 
     int ncount = 0;
-    for (auto & order : orders)
+    for (auto &order : orders)
     {
         Log.info("=======================================");
         Log.info("order-count:", ++ncount);
-        sr.route( order );
+        sr.route(order);
         Log.info("=======================================");
         std::this_thread::sleep_for(std::chrono::milliseconds(100));  // Mock execution
         order.setQuantity(order.getQuantity() - order.getQuantity());
@@ -47,27 +49,31 @@ VenueManager create_venue_manager()
 
     std::vector<Venue> venues;
 
-    Venue v1( "DPa", true, {"IBM", "GOOG"} );
+    Venue v1("DPa", true, {"IBM", "GOOG"});
     v1.setRanking("IBM", vr1);
     v1.setRanking("GOOG", vr2);
-    venues.push_back( v1 );
+    v1.setAvgLatency(25);
+    venues.push_back(v1);
 
-    Venue v2( "DPb", true, {"IBM", "GOOG"} );
+    Venue v2("DPb", true, {"IBM", "GOOG"});
     v2.setRanking("IBM", vr3);
     v2.setRanking("GOOG", vr4);
-    venues.push_back( v2 );
+    v1.setAvgLatency(35);
+    venues.push_back(v2);
 
-    Venue v3( "DPc", true, {"IBM", "GOOG"} );
+    Venue v3("DPc", true, {"IBM", "GOOG"});
     v3.setRanking("IBM", vr3);
     v3.setRanking("GOOG", vr3);
-    venues.push_back( v3 );
+    v1.setAvgLatency(5);
+    venues.push_back(v3);
 
-    Venue v4( "DPd", true, {"IBM", "GOOG", "MSFT"} );
+    Venue v4("DPd", true, {"IBM", "GOOG", "MSFT"});
     v4.setRanking("IBM", vr3);
     v4.setRanking("GOOG", vr2);
     v4.setRanking("MSFT", vr1);
-    venues.push_back( v4 );
+    v1.setAvgLatency(3);
+    venues.push_back(v4);
 
-    VenueManager vm( venues );
+    VenueManager vm(venues);
     return vm;
 }

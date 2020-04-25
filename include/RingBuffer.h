@@ -13,8 +13,9 @@ template<class T, long Q_SIZE>
 class RingBuffer
 {
 public:
-    void push(T* item);
-    T* pop();
+    void push(T *item);
+
+    T *pop();
 
 private:
     static const unsigned long Q_MASK = Q_SIZE - 1;

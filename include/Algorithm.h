@@ -10,13 +10,35 @@
 class Algorithm
 {
 public:
+
+    Algorithm(const AlgoConfig &algoConfig) : algoConfig(algoConfig), cancel(false)
+    {}
+
     void executeAlgo();
-    bool cancelAlgo();
+
+    bool cancelAlgo()
+    {
+        this->cancel = true;
+    }
+
+    const AlgoConfig &getAlgoConfig() const
+    {
+        return algoConfig;
+    }
+
     void setAlgoConfig(AlgoConfig& config)
     {
         this->algoConfig = config;
     }
-private:
+
+
+    bool algoActive()
+    {
+        return !(this->cancel);
+    }
+
+protected:
     AlgoConfig algoConfig;
+    bool cancel;
 };
 #endif //UNTITLED1_ALGORITHM_H

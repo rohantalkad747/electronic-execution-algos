@@ -4,6 +4,8 @@
 
 #include <chrono>
 #include "../include/SprayRouter.h"
+#include "../include/TimeUtils.h"
+
 
 std::vector<long> getLatencyAdjustments(const std::vector<Venue> &venues);
 
@@ -47,8 +49,8 @@ void SprayRouter::route(const Order &order)
                       << std::endl;
             Order child(order);
             child.setQuantity(childQuantity);
-            unsigned __int64 time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() + adjustments[i];
-            while (std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() <= time);
+            unsigned __int64 time = TimeUtils::getCurTimeEpochMs() + adjustments[i];
+            TimeUtils::wait(time);
             VenueManager.sendOrder(venue, child);
         }
     }

@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/src/Main.cpp.obj"
   "CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj"
   "CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj"
+  "CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj"
   "CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj"
   "libuntitled1.dll.a"
   "untitled1.exe"

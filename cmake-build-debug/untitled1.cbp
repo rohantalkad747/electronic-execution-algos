@@ -128,6 +128,12 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -156,6 +162,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/SprayRouter.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp">

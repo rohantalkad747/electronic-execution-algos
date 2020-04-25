@@ -257,6 +257,33 @@ src/SprayRouter.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SprayRouter.cpp.s
 .PHONY : src/SprayRouter.cpp.s
 
+src/TimedAlgorithm.obj: src/TimedAlgorithm.cpp.obj
+
+.PHONY : src/TimedAlgorithm.obj
+
+# target to build an object file
+src/TimedAlgorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj
+.PHONY : src/TimedAlgorithm.cpp.obj
+
+src/TimedAlgorithm.i: src/TimedAlgorithm.cpp.i
+
+.PHONY : src/TimedAlgorithm.i
+
+# target to preprocess a source file
+src/TimedAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.i
+.PHONY : src/TimedAlgorithm.cpp.i
+
+src/TimedAlgorithm.s: src/TimedAlgorithm.cpp.s
+
+.PHONY : src/TimedAlgorithm.s
+
+# target to generate assembly for a file
+src/TimedAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.s
+.PHONY : src/TimedAlgorithm.cpp.s
+
 src/VenueManager.obj: src/VenueManager.cpp.obj
 
 .PHONY : src/VenueManager.obj
@@ -308,6 +335,9 @@ help:
 	@echo ... src/SprayRouter.obj
 	@echo ... src/SprayRouter.i
 	@echo ... src/SprayRouter.s
+	@echo ... src/TimedAlgorithm.obj
+	@echo ... src/TimedAlgorithm.i
+	@echo ... src/TimedAlgorithm.s
 	@echo ... src/VenueManager.obj
 	@echo ... src/VenueManager.i
 	@echo ... src/VenueManager.s

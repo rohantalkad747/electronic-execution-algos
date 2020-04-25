@@ -10,6 +10,10 @@
 
 class TWAPAlgorithm : public TimedAlgorithm
 {
+private:
+    int getLeavesQuantity();
+    double getPrice();
+    int leavesPerOrder;
 };
 
 

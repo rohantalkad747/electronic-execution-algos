@@ -34,11 +34,7 @@ public:
         this->algoConfig = config;
     }
 
-
-    bool algoActive()
-    {
-        return !(this->cancel);
-    }
+    bool algoActive();
 
 protected:
     virtual double getPrice() = 0;
@@ -46,11 +42,6 @@ protected:
     void sendToRouter();
     AlgoConfig algoConfig;
     bool cancel;
-
-private:
-public:
-    Algorithm(const AlgoConfig &algoConfig, bool cancel, const SprayRouter &sprayRouter);
-
 private:
     SprayRouter sprayRouter;
 };

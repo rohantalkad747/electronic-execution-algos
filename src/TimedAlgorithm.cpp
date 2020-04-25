@@ -8,7 +8,7 @@
 
 void TimedAlgorithm::executeAlgo() {
     auto ftr = std::async( std::launch::async, [this](){
-        TimingContext timingContext = this->timingContext;
+        TimingContext timingContext = static_cast<TimingContext&>(this->algoConfig);
         int delay = timingContext.getInitialDelay();
         TimeUtils::wait(delay);
         int interval = timingContext.getInterval();

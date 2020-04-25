@@ -8,14 +8,11 @@
 
 #include "Algorithm.h"
 #include "TimingContext.h"
-#include "SprayRouter.h"
 
 class TimedAlgorithm : public Algorithm
 {
 public:
     void executeAlgo();
-protected:
-    TimingContext timingContext;
 };
 
 

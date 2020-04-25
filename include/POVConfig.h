@@ -22,20 +22,20 @@ public:
         POVConfig::histParticipation = histParticipation;
     }
 
-    float getParticipation() const
+    double getParticipation() const
     {
         return participation;
     }
 
-    void setParticipation(float participation)
+    void setParticipation(double participation)
     {
         POVConfig::participation = participation;
     }
 
 private:
-    float participation;
+    double participation;
 public:
-    POVConfig(const std::vector<int> &histParticipation, float participation) : histParticipation(histParticipation),
+    POVConfig(const std::vector<int> &histParticipation, double participation) : histParticipation(histParticipation),
                                                                                 participation(participation)
     {}
 };

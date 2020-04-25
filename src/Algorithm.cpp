@@ -14,4 +14,9 @@ void Algorithm::sendToRouter()
     this->sprayRouter.route(child);
 }
 
+bool Algorithm::algoActive()
+{
+    return !this->cancel && !this->algoConfig.getOrder().isTerminal();
+}
+
 

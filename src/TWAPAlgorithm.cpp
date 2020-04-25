@@ -20,7 +20,7 @@ double TWAPAlgorithm::getPrice() {
 }
 
 int TWAPAlgorithm::getLeavesQuantity() {
-    if (leavesPerOrder != NULL)
+    if (leavesPerOrder == 0)
     {
         leavesPerOrder = (int) (algoConfig.getOrder().getQuantity() / (static_cast<TWAPConfig&>(this->algoConfig)).getInterval());
     }

@@ -4,7 +4,7 @@
 #include <thread>
 #include "../include/Order.h"
 #include "../include/VenueManager.h"
-#include "../include/SerialRouter.h"
+#include "../include/SprayRouter.h"
 
 VenueManager create_venue_manager();
 
@@ -14,7 +14,7 @@ int main()
 
     VenueManager vm = create_venue_manager();
 
-    SerialRouter sr(vm);
+    SprayRouter sr(vm);
 
     std::vector<Order> orders;
     for (int i = 50; i < 100; i++)

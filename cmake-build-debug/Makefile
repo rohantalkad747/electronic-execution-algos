@@ -122,6 +122,33 @@ untitled1/fast:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/build
 .PHONY : untitled1/fast
 
+src/Algorithm.obj: src/Algorithm.cpp.obj
+
+.PHONY : src/Algorithm.obj
+
+# target to build an object file
+src/Algorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj
+.PHONY : src/Algorithm.cpp.obj
+
+src/Algorithm.i: src/Algorithm.cpp.i
+
+.PHONY : src/Algorithm.i
+
+# target to preprocess a source file
+src/Algorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Algorithm.cpp.i
+.PHONY : src/Algorithm.cpp.i
+
+src/Algorithm.s: src/Algorithm.cpp.s
+
+.PHONY : src/Algorithm.s
+
+# target to generate assembly for a file
+src/Algorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Algorithm.cpp.s
+.PHONY : src/Algorithm.cpp.s
+
 src/AvgLatency.obj: src/AvgLatency.cpp.obj
 
 .PHONY : src/AvgLatency.obj
@@ -257,6 +284,33 @@ src/SprayRouter.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SprayRouter.cpp.s
 .PHONY : src/SprayRouter.cpp.s
 
+src/TWAPAlgorithm.obj: src/TWAPAlgorithm.cpp.obj
+
+.PHONY : src/TWAPAlgorithm.obj
+
+# target to build an object file
+src/TWAPAlgorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj
+.PHONY : src/TWAPAlgorithm.cpp.obj
+
+src/TWAPAlgorithm.i: src/TWAPAlgorithm.cpp.i
+
+.PHONY : src/TWAPAlgorithm.i
+
+# target to preprocess a source file
+src/TWAPAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.i
+.PHONY : src/TWAPAlgorithm.cpp.i
+
+src/TWAPAlgorithm.s: src/TWAPAlgorithm.cpp.s
+
+.PHONY : src/TWAPAlgorithm.s
+
+# target to generate assembly for a file
+src/TWAPAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.s
+.PHONY : src/TWAPAlgorithm.cpp.s
+
 src/TimedAlgorithm.obj: src/TimedAlgorithm.cpp.obj
 
 .PHONY : src/TimedAlgorithm.obj
@@ -320,6 +374,9 @@ help:
 	@echo ... untitled1
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... src/Algorithm.obj
+	@echo ... src/Algorithm.i
+	@echo ... src/Algorithm.s
 	@echo ... src/AvgLatency.obj
 	@echo ... src/AvgLatency.i
 	@echo ... src/AvgLatency.s
@@ -335,6 +392,9 @@ help:
 	@echo ... src/SprayRouter.obj
 	@echo ... src/SprayRouter.i
 	@echo ... src/SprayRouter.s
+	@echo ... src/TWAPAlgorithm.obj
+	@echo ... src/TWAPAlgorithm.i
+	@echo ... src/TWAPAlgorithm.s
 	@echo ... src/TimedAlgorithm.obj
 	@echo ... src/TimedAlgorithm.i
 	@echo ... src/TimedAlgorithm.s

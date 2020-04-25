@@ -37,11 +37,6 @@ public:
         orderStatus = OrderStatus::NEW;
     }
 
-    bool compareAndSwap(int expected, int actual)
-    {
-        return expected != actual;
-    }
-
     int leaves() const
     {
         return quantity - cumulativeQuantity;
@@ -148,6 +143,13 @@ private:
     int quantity;
     OrderType orderType;
     double price;
+public:
+    void setPrice(double price)
+    {
+        Order::price = price;
+    }
+
+private:
     TimeInForce timeInForce;
     int minQuantity;
     int cumulativeQuantity;

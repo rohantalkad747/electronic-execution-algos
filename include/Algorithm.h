@@ -6,15 +6,18 @@
 #define UNTITLED1_ALGORITHM_H
 
 #include "AlgoConfig.h"
+#include "SprayRouter.h"
 
 class Algorithm
 {
 public:
 
-    Algorithm(const AlgoConfig &algoConfig) : algoConfig(algoConfig), cancel(false)
+    Algorithm(const AlgoConfig &algoConfig, const SprayRouter &sprayRouter) : algoConfig(
+            algoConfig), cancel(false), sprayRouter(sprayRouter)
     {}
 
-    void executeAlgo();
+
+    virtual void executeAlgo() = 0;
 
     bool cancelAlgo()
     {
@@ -38,7 +41,17 @@ public:
     }
 
 protected:
+    virtual double getPrice() = 0;
+    virtual int getLeavesQuantity() = 0;
+    void sendToRouter();
     AlgoConfig algoConfig;
     bool cancel;
+
+private:
+public:
+    Algorithm(const AlgoConfig &algoConfig, bool cancel, const SprayRouter &sprayRouter);
+
+private:
+    SprayRouter sprayRouter;
 };
 #endif //UNTITLED1_ALGORITHM_H

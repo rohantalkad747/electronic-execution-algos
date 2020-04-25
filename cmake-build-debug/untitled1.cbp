@@ -122,6 +122,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TWAPAlgorithm.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TWAPConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -149,6 +152,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/Algorithm.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/AvgLatency.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -162,6 +168,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/SprayRouter.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TWAPAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp">

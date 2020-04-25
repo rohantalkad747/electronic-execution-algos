@@ -13,6 +13,10 @@ class TimedAlgorithm : public Algorithm
 {
 public:
     void executeAlgo();
+
+private:
+    int getLeavesQuantity();
+    int leavesQuantity;
 };
 
 

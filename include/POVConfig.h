@@ -36,7 +36,8 @@ private:
     double participation;
 public:
     POVConfig(const std::vector<int> &histParticipation, double participation) : histParticipation(histParticipation),
-                                                                                participation(participation)
+                                                                                 participation(participation)
     {}
 };
+
 #endif //UNTITLED1_POVCONFIG_H

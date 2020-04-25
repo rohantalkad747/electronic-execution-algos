@@ -338,6 +338,33 @@ src/TimedAlgorithm.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.s
 .PHONY : src/TimedAlgorithm.cpp.s
 
+src/VWAPAlgorithm.obj: src/VWAPAlgorithm.cpp.obj
+
+.PHONY : src/VWAPAlgorithm.obj
+
+# target to build an object file
+src/VWAPAlgorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj
+.PHONY : src/VWAPAlgorithm.cpp.obj
+
+src/VWAPAlgorithm.i: src/VWAPAlgorithm.cpp.i
+
+.PHONY : src/VWAPAlgorithm.i
+
+# target to preprocess a source file
+src/VWAPAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.i
+.PHONY : src/VWAPAlgorithm.cpp.i
+
+src/VWAPAlgorithm.s: src/VWAPAlgorithm.cpp.s
+
+.PHONY : src/VWAPAlgorithm.s
+
+# target to generate assembly for a file
+src/VWAPAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.s
+.PHONY : src/VWAPAlgorithm.cpp.s
+
 src/VenueManager.obj: src/VenueManager.cpp.obj
 
 .PHONY : src/VenueManager.obj
@@ -398,6 +425,9 @@ help:
 	@echo ... src/TimedAlgorithm.obj
 	@echo ... src/TimedAlgorithm.i
 	@echo ... src/TimedAlgorithm.s
+	@echo ... src/VWAPAlgorithm.obj
+	@echo ... src/VWAPAlgorithm.i
+	@echo ... src/VWAPAlgorithm.s
 	@echo ... src/VenueManager.obj
 	@echo ... src/VenueManager.i
 	@echo ... src/VenueManager.s

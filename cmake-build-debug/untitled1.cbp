@@ -104,6 +104,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Order.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -140,6 +143,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VWAPAlgorithm.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VWAPConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -174,6 +180,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VWAPAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp">

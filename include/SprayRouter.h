@@ -5,23 +5,21 @@
 #include "VenueManager.h"
 #include "Order.h"
 #include "Logger.h"
+#include "OrderRouter.h"
 
 #ifndef UNTITLED1_SERIALROUTER_H
 #define UNTITLED1_SERIALROUTER_H
 
 #endif //UNTITLED1_SERIALROUTER_H
 
-class SprayRouter
+class SprayRouter : public OrderRouter
 {
 public:
-    SprayRouter(const VenueManager &vm) : VenueManager(vm), Log("SprayRouter")
-    {
-    }
+    SprayRouter(const VenueManager &vm, const Logger &log);
 
     void route(const Order &order);
-
 private:
-    VenueManager VenueManager;
+    VenueManager venueManager;
     Logger Log;
 };
 

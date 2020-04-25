@@ -8,13 +8,11 @@
 #include <vector>
 #include "TimingContext.h"
 
-class VWAPConfig: public TimingContext
+class VWAPConfig : public TimingContext
 {
-private:
-    std::vector<double> histPrice;
 public:
     VWAPConfig(OrderSide orderSide, const Order &order, long initialDelay, long startTime, long endTime, long interval,
-               const std::vector<double> &histPrice, const std::vector<double> &histVolume) : TimingContext(orderSide,
+               const std::vector<double> &histPrice, const std::vector<int> &histVolume) : TimingContext(orderSide,
                                                                                                             order,
                                                                                                             initialDelay,
                                                                                                             startTime,
@@ -24,18 +22,36 @@ public:
                                                                                               histVolume(histVolume)
     {}
 
+    VWAPConfig(OrderSide orderSide, const Order &order, long initialDelay, long startTime, long endTime, long interval,
+               const std::vector<double> &histPrice) : TimingContext(orderSide, order, initialDelay, startTime, endTime,
+                                                                     interval), histPrice(histPrice)
+    {}
+
 private:
-    std::vector<double> histVolume;
+    std::vector<int> histVolume;
+    std::vector<double> histPrice;
 public:
-    const std::vector<double> &getHistVolume() const
+    const std::vector<double> &getHistPrice() const
+    {
+        return histPrice;
+    }
+
+    void setHistPrice(const std::vector<double> &histPrice)
+    {
+        VWAPConfig::histPrice = histPrice;
+    }
+
+public:
+    const std::vector<int> &getHistVolume() const
     {
         return histVolume;
     }
 
-    void setHistVolume(const std::vector<double> &histVolume)
+    void setHistVolume(const std::vector<int> &histVolume)
     {
         VWAPConfig::histVolume = histVolume;
     }
 
 };
+
 #endif //UNTITLED1_VWAPCONFIG_H

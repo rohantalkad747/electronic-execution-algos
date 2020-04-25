@@ -63,4 +63,5 @@ private:
     long endTime;
     long interval;
 };
+
 #endif //UNTITLED1_TIMINGCONTEXT_H

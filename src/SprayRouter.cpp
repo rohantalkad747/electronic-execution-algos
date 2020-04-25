@@ -32,7 +32,7 @@ void SprayRouter::route(const Order &order)
     }
     std::vector<long> adjustments = getLatencyAdjustments(venues);
     int curRouted = 0;
-    for ( ; ; )
+    for (;;)
     {
         for (int i = 0; i < venues.size(); i++)
         {
@@ -55,6 +55,7 @@ void SprayRouter::route(const Order &order)
         }
     }
 }
+
 
 std::vector<long> getLatencyAdjustments(const std::vector<Venue> &venues)
 {

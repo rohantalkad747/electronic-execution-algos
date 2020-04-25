@@ -64,6 +64,10 @@
     </recent_temporary>
   </component>
   <component name="WindowStateProjectService">
+    <state x="586" y="198" key="#Inspections" timestamp="1587846206234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1587846206234" />
     <state x="552" y="178" key="#New_File_Extensions" timestamp="1587790860854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -76,14 +80,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="711" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586399932421" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1587841369271">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1587850512297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587841369271" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587840735845">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587850512297" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587847248596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587840735845" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587847248596" />
     <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1587790838064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -116,13 +120,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="122" width="587" height="795" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587841337099" />
-    <state x="701" y="169" width="448" height="422" key="refactoring.ChangeSignatureDialog" timestamp="1586925437046">
+    <state x="701" y="169" width="448" height="422" key="refactoring.ChangeSignatureDialog" timestamp="1587848777814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="701" y="169" width="448" height="422" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586925437046" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1587841182284">
+    <state x="701" y="169" width="448" height="422" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587848777814" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1587848804645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587841182284" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587848804645" />
   </component>
 </project>

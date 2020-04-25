@@ -29,7 +29,7 @@ public:
         return algoConfig;
     }
 
-    void setAlgoConfig(AlgoConfig& config)
+    void setAlgoConfig(AlgoConfig &config)
     {
         this->algoConfig = config;
     }
@@ -38,11 +38,15 @@ public:
 
 protected:
     virtual double getPrice() = 0;
+
     virtual int getLeavesQuantity() = 0;
+
     void sendToRouter();
+
     AlgoConfig algoConfig;
     bool cancel;
 private:
     SprayRouter sprayRouter;
 };
+
 #endif //UNTITLED1_ALGORITHM_H

@@ -12,6 +12,7 @@ class RoutingConfig
 private:
     RoutingType routingType;
     std::string venueName;
+
     RoutingConfig(RoutingType routingType) : routingType(routingType)
     {}
 

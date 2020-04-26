@@ -22,6 +22,9 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
  C:/Users/Rohan/CLionProjects/untitled1/src/Algorithm.cpp
+CMakeFiles/untitled1.dir/src/AntiGaming.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/AntiGaming.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/AntiGaming.cpp
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/AvgLatency.h
  C:/Users/Rohan/CLionProjects/untitled1/src/AvgLatency.cpp
@@ -31,6 +34,30 @@ CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj
 CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/CountDownLatch.h
  C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateAlgorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/RingBuffer.h
  C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp
@@ -81,6 +108,7 @@ CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/AntiGaming.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
@@ -150,6 +178,8 @@ CMakeFiles/untitled1.dir/test/test.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateAlgorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h

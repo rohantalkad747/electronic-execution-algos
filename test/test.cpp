@@ -12,19 +12,24 @@
 #include "../include/AvgLatency.h"
 #include "../include/Algorithm.h"
 #include "../include/TWAPAlgorithm.h"
+#include "../include/ParticipateAlgorithm.h"
 #include "../include/TWAPConfig.h"
 #include "../include/TimeUtils.h"
 #include "../include/VWAPConfig.h"
 #include "../include/VWAPAlgorithm.h"
+#include "../include/ParticipateConfig.h"
 
 
 VenueManager createVenueManager();
-void testSprayRouter();
+void testSprayRouter(const VenueManager &vm);
 void testTWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double> histPrice);
 void testVWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double> histPrice, std::vector<int> histVol);
+void testPOV(const VenueManager &manager, SprayRouter& sr, std::vector<int> histVol);
 
 template<class T>
 std::vector<T> seedVector(int a, int b, int amt);
+
+void testAlgos(const VenueManager &vm);
 
 template<class T>
 std::vector<T> seedVector(int a, int b, int amt)
@@ -32,23 +37,30 @@ std::vector<T> seedVector(int a, int b, int amt)
     std::random_device rd;
     std::mt19937 eng(rd());
     std::uniform_int_distribution<> distr(a, b);
-    std::vector<T> histPrice = *(new std::vector<T>());
-    histPrice.reserve(amt);
+    std::vector<T> target = *(new std::vector<T>());
+    target.reserve(amt);
     for (int i = 0; i < amt; i++)
     {
-        histPrice.push_back(distr(eng));
+        target.push_back(distr(eng));
     }
-    return histPrice;
+    return target;
 }
 
 int main()
 {
     VenueManager vm = createVenueManager();
+    testAlgos(vm);
+//    testSprayRouter(vm);
+}
+
+void testAlgos(const VenueManager &vm)
+{
     SprayRouter sr(vm);
     std::vector<double> histPrice = seedVector<double>(88, 93, 86400);
-    testTWAP(vm, sr, histPrice);
     std::vector<int> histVol = seedVector<int>(20, 40, 86400);
+//    testTWAP(vm, sr, histPrice);
 //    testVWAP(vm, sr, histPrice, histVol);
+//    testPOV(vm, sr, histVol);
 }
 
 void testVWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double> histPrice, std::vector<int> histVol)
@@ -141,4 +153,15 @@ VenueManager createVenueManager()
     venues.push_back(v4);
 
     return *(new VenueManager(venues));
+}
+
+void testPOV(const VenueManager &manager, SprayRouter &sr, std::vector<int> histVol)
+{
+    Order order(OrderSide::BUY, "GOOG", 790000, OrderType::LIMIT, 1282, TimeInForce::DAY);
+    long curTime = TimeUtils::getCurTimeEpoch();
+    RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
+    ParticipateConfig* povCOnfig = new ParticipateConfig(order, 0, curTime, curTime + 30, 5, routingConfig, histVol, 0.20);
+    AlgoConfig* algoConfig = ((AlgoConfig*) povCOnfig);
+    ParticipateAlgorithm* algo = new ParticipateAlgorithm(algoConfig, sr, manager);
+    algo->executeAlgo();
 }

@@ -12,6 +12,7 @@ class TimeUtils
 {
 public:
     static long getCurTimeEpoch();
+
     static long getSecondsSinceMidnight();
 };
 

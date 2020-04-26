@@ -11,7 +11,8 @@ class TimingContext : public AlgoConfig
 {
 public:
     TimingContext(const Order &order, long initialDelay, long startTime, long endTime,
-                  long interval, RoutingConfig routingType) : AlgoConfig(order, routingType), initialDelay(initialDelay), startTime(startTime),
+                  long interval, RoutingConfig routingType) : AlgoConfig(order, routingType),
+                                                              initialDelay(initialDelay), startTime(startTime),
                                                               endTime(endTime), interval(interval)
     {
     }

@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj"
+  "CMakeFiles/untitled1.dir/src/AntiGaming.cpp.obj"
   "CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj"
   "CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj"
   "CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj"
+  "CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj"
   "CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj"
   "CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj"
   "CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj"

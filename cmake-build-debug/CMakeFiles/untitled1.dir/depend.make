@@ -22,6 +22,9 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/VenueManager.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../src/Algorithm.cpp
 
+CMakeFiles/untitled1.dir/src/AntiGaming.cpp.obj: ../include/AntiGaming.h
+CMakeFiles/untitled1.dir/src/AntiGaming.cpp.obj: ../src/AntiGaming.cpp
+
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj: ../include/AvgLatency.h
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj: ../src/AvgLatency.cpp
 
@@ -30,6 +33,30 @@ CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj: ../src/BlockingQueue.cpp
 
 CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj: ../include/CountDownLatch.h
 CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj: ../src/CountDownLatch.cpp
+
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/AlgoConfig.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Algorithm.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Execution.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Logger.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Order.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/OrderRouter.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/ParticipateAlgorithm.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/ParticipateConfig.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/RoutingConfig.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/RoutingType.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/SprayRouter.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/TimeUtils.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/TimedAlgorithm.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/TimingContext.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Venue.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/VenueManager.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/VenueRank.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../src/ParticipateAlgorithm.cpp
 
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: ../include/RingBuffer.h
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: ../src/RingBuffer.cpp
@@ -80,6 +107,7 @@ CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj: ../src/TimeUtils.cpp
 
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/Algorithm.h
+CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/AntiGaming.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/ExecutionType.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/Logger.h
@@ -149,6 +177,8 @@ CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/OrderStatus.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/OrderType.h
+CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/ParticipateAlgorithm.h
+CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/ParticipateConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/RoutingConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/RoutingType.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/SprayRouter.h

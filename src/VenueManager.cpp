@@ -11,9 +11,10 @@ void VenueManager::add_venue(const Venue &venue)
     Venues.push_back(venue);
 }
 
-void VenueManager::sendOrder(std::string &venueName, Order &order) {
+void VenueManager::sendOrder(std::string &venueName, Order &order)
+{
     int i = -1;
-    Venue* v;
+    Venue *v;
     std::vector<Venue> venues = this->venues(order.getSymbol());
     while (++i < venues.size())
     {
@@ -21,8 +22,8 @@ void VenueManager::sendOrder(std::string &venueName, Order &order) {
         {
             if (v->isAvailable())
             {
-                VenueManager::sendOrder(*v, order);
-                return;
+                v->acceptOrder(order);
+                Log.info("Order sent to venue:", v->getName());
             }
             throw *(new std::exception);
         }
@@ -78,15 +79,6 @@ std::vector<Venue> VenueManager::venues(const std::string &symbol)
         rankings.push_back(v);
     }
     return rankings;
-}
-
-/*
-*	Send Order to a Venue (Market)
-*/
-void VenueManager::sendOrder(Venue &venue, Order &order)
-{
-    venue.acceptOrder(order);
-    Log.info("Order sent to venue:", venue.getName());
 }
 
 void VenueManager::process_exec(const Execution &exec)

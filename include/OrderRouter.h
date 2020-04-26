@@ -13,4 +13,5 @@ class OrderRouter
 public:
     virtual void route(const Order &order) = 0;
 };
+
 #endif //UNTITLED1_ORDERROUTER_H

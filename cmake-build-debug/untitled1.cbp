@@ -86,6 +86,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AntiGaming.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AvgLatency.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -119,7 +122,10 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/POVConfig.h">
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateAlgorithm.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/RingBuffer.h">
@@ -170,6 +176,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/Algorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/AntiGaming.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/AvgLatency.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -177,6 +186,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp">

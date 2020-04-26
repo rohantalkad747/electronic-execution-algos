@@ -10,15 +10,18 @@
 #include <condition_variable>
 #include <mutex>
 
-class CountDownLatch {
+class CountDownLatch
+{
 public:
-    explicit CountDownLatch(const unsigned int count): m_count(count) { }
+    explicit CountDownLatch(const unsigned int count) : m_count(count)
+    {}
+
     virtual ~CountDownLatch() = default;
 
     void await(void);
 
-    template <class Rep, class Period>
-    bool await(const std::chrono::duration<Rep, Period>& timeout);
+    template<class Rep, class Period>
+    bool await(const std::chrono::duration<Rep, Period> &timeout);
 
     void countDown(void);
 

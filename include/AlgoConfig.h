@@ -13,7 +13,9 @@
 class AlgoConfig
 {
 public:
-    virtual ~AlgoConfig() { }
+    virtual ~AlgoConfig()
+    {}
+
     const Order &getOrder() const
     {
         return order;
@@ -28,6 +30,7 @@ public:
     AlgoConfig(const Order &order, RoutingConfig routingConfig)
             : order(order), routingConfig(routingConfig)
     {}
+
 protected:
     Order order;
     RoutingConfig routingConfig;

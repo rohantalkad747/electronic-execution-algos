@@ -16,7 +16,9 @@ public:
     SprayRouter(const VenueManager &venueManager) : VenueManager(venueManager), Log(*(new Logger("SprayRouter")))
     {
     }
+
     void route(const Order &order);
+
 private:
     VenueManager VenueManager;
 private:

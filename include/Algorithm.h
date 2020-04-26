@@ -13,7 +13,8 @@ class Algorithm
 public:
 
     Algorithm(AlgoConfig *algoConfig, const SprayRouter &sprayRouter, const VenueManager &venueManager)
-            : algoConfig(algoConfig), sprayRouter(sprayRouter), venueManager(venueManager), log(*(new Logger("Algorithm")))
+            : algoConfig(algoConfig), sprayRouter(sprayRouter), venueManager(venueManager),
+              log(*(new Logger("Algorithm"))), cancel(false)
     {}
 
     virtual void executeAlgo() = 0;
@@ -27,11 +28,13 @@ public:
 
 protected:
     virtual double getPrice() = 0;
+
     virtual int getLeavesQuantity() = 0;
+
     void sendToRouter();
 
-    int sharesTraded;
-    AlgoConfig* algoConfig;
+    int sharesTraded = 0;
+    AlgoConfig *algoConfig;
 
 protected:
     bool cancel;
@@ -40,7 +43,10 @@ protected:
 private:
     SprayRouter sprayRouter;
     VenueManager venueManager;
+
     Order getChildOrder();
+
+    bool pxIncompatibleWithLimit(double px, Order order);
 };
 
 #endif //UNTITLED1_ALGORITHM_H

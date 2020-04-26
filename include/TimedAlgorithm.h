@@ -13,10 +13,12 @@ class TimedAlgorithm : public Algorithm
 {
 public:
     using Algorithm::Algorithm;
+
     void executeAlgo();
 
 protected:
     int getLeavesQuantity();
+
     int leavesQuantity = -1;
 
 protected:

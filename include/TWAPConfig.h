@@ -25,8 +25,10 @@ public:
 
 public:
     TWAPConfig(const Order &order, long initialDelay, long startTime, long endTime, long interval,
-               const std::vector<double> &histPrice, RoutingConfig routingType) : TimingContext(order, initialDelay, startTime, endTime,
-                                                                                                interval, routingType), histPrice(histPrice)
+               const std::vector<double> &histPrice, RoutingConfig routingType) : TimingContext(order, initialDelay,
+                                                                                                startTime, endTime,
+                                                                                                interval, routingType),
+                                                                                  histPrice(histPrice)
     {
         std::cout << histPrice.size() << std::endl;
     }

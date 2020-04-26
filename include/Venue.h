@@ -21,7 +21,8 @@ class Venue
 {
 public:
     explicit Venue(std::string name, bool available, std::vector<std::string> symbols)
-            : name(name), available(available), symbols(symbols), probability(0.0), avgLatency(0), log(*(new Logger("Venue")))
+            : name(name), available(available), symbols(symbols), probability(0.0), avgLatency(0),
+              log(*(new Logger("Venue")))
     {}
 
     bool isAvailable() const
@@ -29,11 +30,12 @@ public:
         return available;
     }
 
-    const void acceptOrder(Order& order)
+    const void acceptOrder(Order &order)
     {
-        std::this_thread::sleep_for(std::chrono::milliseconds (getAvgLatency()));
-        std::string received = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count());
-        log.info("Received order at venue at " + received);
+        std::this_thread::sleep_for(std::chrono::milliseconds(getAvgLatency()));
+        std::string received = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(
+                std::chrono::system_clock::now().time_since_epoch()).count());
+        log.info("Received order at " + name + " at " + received);
     }
 
     std::vector<std::string> getSymbols() const

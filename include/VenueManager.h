@@ -24,7 +24,6 @@ public:
 
     std::vector<Venue> venues(const std::string &symbol);
 
-    void sendOrder(Venue &venue,Order &order);
 
     void sendOrder(std::string &venueName, Order &order);
 

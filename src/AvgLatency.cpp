@@ -10,7 +10,8 @@ long AvgLatency::getLatencyAdjustment()
     time_t theTime = time(NULL);
     struct tm *aTime = localtime(&theTime);
     int index = aTime->tm_hour;
-    if (index < this->todayLatency.size())
+    int sz = this->todayLatency.size();
+    if (index < sz)
     {
         this->histLatency[index];
     }

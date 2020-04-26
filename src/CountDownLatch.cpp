@@ -7,8 +7,10 @@
 void CountDownLatch::await(void)
 {
     std::unique_lock<std::mutex> lock(m_mutex);
-    if (m_count > 0) {
-        m_cv.wait(lock, [this](){ return m_count == 0; });
+    if (m_count > 0)
+    {
+        m_cv.wait(lock, [this]()
+        { return m_count == 0; });
     }
 }
 
@@ -17,8 +19,10 @@ bool CountDownLatch::await(const std::chrono::duration<Rep, Period> &timeout)
 {
     std::unique_lock<std::mutex> lock(m_mutex);
     bool result = true;
-    if (m_count > 0) {
-        result = m_cv.wait_for(lock, timeout, [this](){ return m_count == 0; });
+    if (m_count > 0)
+    {
+        result = m_cv.wait_for(lock, timeout, [this]()
+        { return m_count == 0; });
     }
 
     return result;
@@ -27,7 +31,8 @@ bool CountDownLatch::await(const std::chrono::duration<Rep, Period> &timeout)
 void CountDownLatch::countDown(void)
 {
     std::unique_lock<std::mutex> lock(m_mutex);
-    if (m_count > 0) {
+    if (m_count > 0)
+    {
         m_count--;
         m_cv.notify_all();
     }

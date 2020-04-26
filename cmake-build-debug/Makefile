@@ -149,6 +149,33 @@ src/Algorithm.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Algorithm.cpp.s
 .PHONY : src/Algorithm.cpp.s
 
+src/AntiGaming.obj: src/AntiGaming.cpp.obj
+
+.PHONY : src/AntiGaming.obj
+
+# target to build an object file
+src/AntiGaming.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/AntiGaming.cpp.obj
+.PHONY : src/AntiGaming.cpp.obj
+
+src/AntiGaming.i: src/AntiGaming.cpp.i
+
+.PHONY : src/AntiGaming.i
+
+# target to preprocess a source file
+src/AntiGaming.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/AntiGaming.cpp.i
+.PHONY : src/AntiGaming.cpp.i
+
+src/AntiGaming.s: src/AntiGaming.cpp.s
+
+.PHONY : src/AntiGaming.s
+
+# target to generate assembly for a file
+src/AntiGaming.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/AntiGaming.cpp.s
+.PHONY : src/AntiGaming.cpp.s
+
 src/AvgLatency.obj: src/AvgLatency.cpp.obj
 
 .PHONY : src/AvgLatency.obj
@@ -229,6 +256,33 @@ src/CountDownLatch.s: src/CountDownLatch.cpp.s
 src/CountDownLatch.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.s
 .PHONY : src/CountDownLatch.cpp.s
+
+src/ParticipateAlgorithm.obj: src/ParticipateAlgorithm.cpp.obj
+
+.PHONY : src/ParticipateAlgorithm.obj
+
+# target to build an object file
+src/ParticipateAlgorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj
+.PHONY : src/ParticipateAlgorithm.cpp.obj
+
+src/ParticipateAlgorithm.i: src/ParticipateAlgorithm.cpp.i
+
+.PHONY : src/ParticipateAlgorithm.i
+
+# target to preprocess a source file
+src/ParticipateAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.i
+.PHONY : src/ParticipateAlgorithm.cpp.i
+
+src/ParticipateAlgorithm.s: src/ParticipateAlgorithm.cpp.s
+
+.PHONY : src/ParticipateAlgorithm.s
+
+# target to generate assembly for a file
+src/ParticipateAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.s
+.PHONY : src/ParticipateAlgorithm.cpp.s
 
 src/RingBuffer.obj: src/RingBuffer.cpp.obj
 
@@ -458,6 +512,9 @@ help:
 	@echo ... src/Algorithm.obj
 	@echo ... src/Algorithm.i
 	@echo ... src/Algorithm.s
+	@echo ... src/AntiGaming.obj
+	@echo ... src/AntiGaming.i
+	@echo ... src/AntiGaming.s
 	@echo ... src/AvgLatency.obj
 	@echo ... src/AvgLatency.i
 	@echo ... src/AvgLatency.s
@@ -467,6 +524,9 @@ help:
 	@echo ... src/CountDownLatch.obj
 	@echo ... src/CountDownLatch.i
 	@echo ... src/CountDownLatch.s
+	@echo ... src/ParticipateAlgorithm.obj
+	@echo ... src/ParticipateAlgorithm.i
+	@echo ... src/ParticipateAlgorithm.s
 	@echo ... src/RingBuffer.obj
 	@echo ... src/RingBuffer.i
 	@echo ... src/RingBuffer.s

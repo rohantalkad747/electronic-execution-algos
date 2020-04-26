@@ -62,7 +62,7 @@ public:
                            marketHistoricTradingVolume(0.0), immediateTradingVolume(0.0), priceImprovementIndicator(0.0)
     {}
 
-    explicit VenueRank(double vtc, double rhtv, double mhtv, double ita, double pii):
+    explicit VenueRank(double vtc, double rhtv, double mhtv, double ita, double pii) :
             venueTradingCost(vtc), routerHistoricTradingVolume(rhtv), marketHistoricTradingVolume(mhtv),
             immediateTradingVolume(ita), priceImprovementIndicator(pii)
     {}

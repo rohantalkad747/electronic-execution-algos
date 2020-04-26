@@ -8,16 +8,16 @@
 
 double VWAPAlgorithm::getPrice()
 {
-    VWAPConfig vwapConfig = static_cast<VWAPConfig &>(this->algoConfig);
-    std::vector<int> histVol = vwapConfig.getHistVolume();
-    std::vector<double> histPrice = vwapConfig.getHistPrice();
-    long intervalStart = TimeUtils::getCurTimeEpochMs();
-    long tillIntervalEnd = intervalStart + vwapConfig.getInterval();
+    VWAPConfig* vwapConfig = (VWAPConfig *)(this->algoConfig);
+    std::vector<int> histVol = vwapConfig->getHistVolume();
+    std::vector<double> histPrice = vwapConfig->getHistPrice();
+    long intervalStart = TimeUtils::getSecondsSinceMidnight();
+    long tillIntervalEnd = intervalStart + vwapConfig->getInterval();
     double num = 0, den = 0;
     for (int i = intervalStart; i < tillIntervalEnd; i++)
     {
         num += histVol[i] * histPrice[i];
         den += histPrice[i];
     }
-    return num / den;
+    return std::min(this->algoConfig->getOrder().getPrice(), num / den);
 }

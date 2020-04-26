@@ -14,9 +14,9 @@ public:
 
 private:
 public:
-    VWAPConfig(OrderSide orderSide, const Order &order, long initialDelay, long startTime, long endTime, long interval,
+    VWAPConfig(const Order &order, long initialDelay, long startTime, long endTime, long interval,
                RoutingConfig routingType, const std::vector<int> &histVolume, const std::vector<double> &histPrice)
-            : TimingContext(orderSide, order, initialDelay, startTime, endTime, interval, routingType),
+            : TimingContext(order, initialDelay, startTime, endTime, interval, routingType),
               histVolume(histVolume), histPrice(histPrice)
     {}
 

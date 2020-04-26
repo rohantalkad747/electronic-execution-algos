@@ -92,6 +92,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/BlockingQueue.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/CountDownLatch.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -173,7 +176,7 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/BlockingQueue.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/Main.cpp">
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp">
@@ -185,6 +188,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TWAPAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimeUtils.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -192,6 +198,12 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/test/test.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/test/test.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/CMakeLists.txt">

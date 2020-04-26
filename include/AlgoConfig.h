@@ -12,19 +12,8 @@
 
 class AlgoConfig
 {
-protected:
-    OrderSide orderSide;
 public:
-    OrderSide getOrderSide() const
-    {
-        return orderSide;
-    }
-
-    void setOrderSide(OrderSide orderSide)
-    {
-        AlgoConfig::orderSide = orderSide;
-    }
-
+    virtual ~AlgoConfig() { }
     const Order &getOrder() const
     {
         return order;
@@ -36,8 +25,8 @@ public:
     }
 
 public:
-    AlgoConfig(OrderSide orderSide, const Order &order, RoutingConfig routingConfig)
-            : orderSide(orderSide), order(order), routingConfig(routingConfig)
+    AlgoConfig(const Order &order, RoutingConfig routingConfig)
+            : order(order), routingConfig(routingConfig)
     {}
 protected:
     Order order;

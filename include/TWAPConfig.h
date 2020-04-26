@@ -24,10 +24,12 @@ public:
     }
 
 public:
-    TWAPConfig(OrderSide orderSide, const Order &order, long initialDelay, long startTime, long endTime, long interval,
-               const std::vector<double> &histPrice, RoutingConfig routingType) : TimingContext(orderSide, order, initialDelay, startTime, endTime,
+    TWAPConfig(const Order &order, long initialDelay, long startTime, long endTime, long interval,
+               const std::vector<double> &histPrice, RoutingConfig routingType) : TimingContext(order, initialDelay, startTime, endTime,
                                                                                                 interval, routingType), histPrice(histPrice)
-    {}
+    {
+        std::cout << histPrice.size() << std::endl;
+    }
 };
 
 #endif //UNTITLED1_TWAPCONFIG_H

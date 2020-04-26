@@ -24,9 +24,9 @@ public:
 
     std::vector<Venue> venues(const std::string &symbol);
 
-    void sendOrder(const Venue &venue, const Order &order);
+    void sendOrder(Venue &venue,Order &order);
 
-    void sendOrder(const std::string &venueName, const Order &order);
+    void sendOrder(std::string &venueName, Order &order);
 
     void process_exec(const Execution &exec);
 

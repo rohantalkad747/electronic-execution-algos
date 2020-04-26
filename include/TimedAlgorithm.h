@@ -12,11 +12,14 @@
 class TimedAlgorithm : public Algorithm
 {
 public:
+    using Algorithm::Algorithm;
     void executeAlgo();
 
-private:
+protected:
     int getLeavesQuantity();
-    int leavesQuantity;
+    int leavesQuantity = -1;
+
+protected:
 };
 
 

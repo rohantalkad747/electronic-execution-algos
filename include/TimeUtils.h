@@ -11,16 +11,8 @@
 class TimeUtils
 {
 public:
-    static long getCurTimeEpochMs()
-    {
-        return std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::system_clock::now().time_since_epoch()).count();
-    }
-
-    static void wait(long ms)
-    {
-        while (TimeUtils::getCurTimeEpochMs() <= ms);
-    }
+    static long getCurTimeEpoch();
+    static long getSecondsSinceMidnight();
 };
 
 

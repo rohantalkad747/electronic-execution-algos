@@ -9,8 +9,13 @@
 
 class VWAPAlgorithm : public TimedAlgorithm
 {
+public:
+    using TimedAlgorithm::TimedAlgorithm;
 private:
     double getPrice();
+
+public:
+    VWAPAlgorithm();
 };
 
 #endif //UNTITLED1_VWAPALGORITHM_H

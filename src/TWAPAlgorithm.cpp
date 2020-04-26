@@ -8,14 +8,16 @@
 
 double TWAPAlgorithm::getPrice()
 {
-    double twap = 0.0;
-    TWAPConfig twapConfig = static_cast<TWAPConfig &>(this->algoConfig);
-    long intervalStart = TimeUtils::getCurTimeEpochMs() / 1000;
-    long tillIntervalEnd = intervalStart + twapConfig.getInterval();
-    std::vector<double> histPrice = twapConfig.getHistPrice();
-    for (long i = intervalStart; i < tillIntervalEnd; i++)
+    double numerator = 0.0;
+    TWAPConfig* twapConfig = (TWAPConfig*)(this->algoConfig);
+    long intervalStart = TimeUtils::getSecondsSinceMidnight();
+    long tillIntervalEnd = intervalStart + twapConfig->getInterval();
+    std::vector<double> histPrice = twapConfig->getHistPrice();
+    for (int i = intervalStart; i < tillIntervalEnd; i++)
     {
-        twap += histPrice[i];
+        numerator += histPrice[i];
     }
-    return twap / histPrice.size();
+    return numerator / (tillIntervalEnd - intervalStart);
 }
+
+

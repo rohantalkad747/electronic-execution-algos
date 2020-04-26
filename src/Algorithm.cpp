@@ -3,32 +3,35 @@
 //
 
 #include "../include/Algorithm.h"
+#include "../include/TimeUtils.h"
+#include "../include/TimingContext.h"
 
 
 void Algorithm::sendToRouter()
 {
     Order child = getChildOrder();
-    RoutingConfig routingConfig = this->algoConfig.getRoutingConfig();
-    if (routingConfig.getRoutingType() == RoutingType::DIRECT)
+    RoutingConfig routingConfig = this->algoConfig->getRoutingConfig();
+    switch(routingConfig.getRoutingType())
     {
-       this->venueManager.sendOrder(routingConfig.getVenueName(), child);
+        case (RoutingType::DIRECT):
+            this->venueManager.sendOrder(routingConfig.getVenueName(), child);
+            break;
+        case (RoutingType::SPRAY):
+            this->sprayRouter.route(child);
+            break;
+        case (RoutingType::SERIAL): // TODO
+            break;
+        default:
+            throw *(new std::exception);
     }
-    else if (routingConfig.getRoutingType() == RoutingType::SPRAY)
-    {
-        this->sprayRouter.route(child);
-    }
-    else
-    {
-        // TODO for serial router and possibly other types
-        throw *(new std::exception);
-    }
+    this->sharesTraded += child.getQuantity();
 }
 
 Order Algorithm::getChildOrder()
 {
-    Order child(algoConfig.getOrder());
-    double px = getPrice();
-    int leaves = getLeavesQuantity();
+    Order child(algoConfig->getOrder());
+    double px = this->getPrice();
+    int leaves = this->getLeavesQuantity();
     child.setPrice(px);
     child.setQuantity(leaves);
     return child;
@@ -36,7 +39,11 @@ Order Algorithm::getChildOrder()
 
 bool Algorithm::algoActive()
 {
-    return !this->cancel && !this->algoConfig.getOrder().isTerminal();
+    return
+            TimeUtils::getCurTimeEpoch() <= ((TimingContext *)(this->algoConfig))->getEndTime() &&
+            !this->cancel &&
+            this->sharesTraded != this->algoConfig->getOrder().getQuantity();
 }
+
 
 

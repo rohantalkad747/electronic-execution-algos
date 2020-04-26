@@ -22,33 +22,33 @@ public:
     void incRouterHistoricTradingVolume(double routerHistoricTradingVolume)
     {
         while ((locks & RHTV_TS) == RHTV_TS);
-        locks |= RHTV_TS;
+        locks = locks | RHTV_TS;
         VenueRank::routerHistoricTradingVolume += routerHistoricTradingVolume;
-        locks &= ~RHTV_TS;
+        locks = locks & ~RHTV_TS;
     }
 
     void incMarketHistoricTradingVolume(double marketHistoricTradingVolume)
     {
         while ((locks & MHTV) == MHTV);
-        locks |= MHTV;
+        locks = locks | MHTV;
         VenueRank::marketHistoricTradingVolume += marketHistoricTradingVolume;
-        locks &= ~MHTV;
+        locks = locks & ~MHTV;
     }
 
     void incImmediateTradingVolume(double immediateTradingVolume)
     {
         while ((locks & ITV) == ITV);
-        locks |= ITV;
+        locks = locks | ITV;
         VenueRank::immediateTradingVolume += immediateTradingVolume;
-        locks &= ~ITV;
+        locks = locks & ~ITV;
     }
 
     void incPriceImprovementIndicator(double priceImprovementIndicator)
     {
         while ((locks & PII) == PII);
-        locks |= PII;
+        locks = locks | PII;
         VenueRank::priceImprovementIndicator += priceImprovementIndicator;
-        locks &= ~PII;
+        locks = locks & ~PII;
     }
 
     double getRank() const
@@ -62,14 +62,13 @@ public:
                            marketHistoricTradingVolume(0.0), immediateTradingVolume(0.0), priceImprovementIndicator(0.0)
     {}
 
-    explicit VenueRank(double vtc, double rhtv, double mhtv, double ita, double pii) :
+    explicit VenueRank(double vtc, double rhtv, double mhtv, double ita, double pii):
             venueTradingCost(vtc), routerHistoricTradingVolume(rhtv), marketHistoricTradingVolume(mhtv),
             immediateTradingVolume(ita), priceImprovementIndicator(pii)
     {}
 
 private:
-
-    unsigned volatile char locks = 0;
+    unsigned volatile long locks = 0;
     double venueTradingCost;
     double routerHistoricTradingVolume;
     double marketHistoricTradingVolume;

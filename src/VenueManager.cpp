@@ -2,12 +2,31 @@
 // Created by Rohan on 4/4/2020.
 //
 
+#include <thread>
 #include "../include/VenueManager.h"
 
 void VenueManager::add_venue(const Venue &venue)
 {
     Log.info("adding venue:", venue.getName());
     Venues.push_back(venue);
+}
+
+void VenueManager::sendOrder(std::string &venueName, Order &order) {
+    int i = -1;
+    Venue* v;
+    std::vector<Venue> venues = this->venues(order.getSymbol());
+    while (++i < venues.size())
+    {
+        if ((v = &(venues[i]))->getName() == venueName)
+        {
+            if (v->isAvailable())
+            {
+                VenueManager::sendOrder(*v, order);
+                return;
+            }
+            throw *(new std::exception);
+        }
+    }
 }
 
 void VenueManager::remove_venue(Venue &venue)
@@ -53,11 +72,10 @@ std::vector<Venue> VenueManager::venues(const std::string &symbol)
     std::vector<Venue> rankings;
     for (auto v : venues)
     {
-        VenueRank vr = v.getRanking(symbol);
-        double executionProbability = vr.getRank() / totalRank;
+        double rank = v.getRanking(symbol).getRank();
+        double executionProbability = rank / totalRank;
         v.setExecutionProbability(executionProbability);
         rankings.push_back(v);
-        Log.info("Added ranking for venue:", v.getName());
     }
     return rankings;
 }
@@ -65,9 +83,10 @@ std::vector<Venue> VenueManager::venues(const std::string &symbol)
 /*
 *	Send Order to a Venue (Market)
 */
-void VenueManager::sendOrder(const Venue &venue, const Order &order)
+void VenueManager::sendOrder(Venue &venue, Order &order)
 {
-    Log.info("order sent to venue:", venue.getName());
+    venue.acceptOrder(order);
+    Log.info("Order sent to venue:", venue.getName());
 }
 
 void VenueManager::process_exec(const Execution &exec)
@@ -87,24 +106,6 @@ void VenueManager::init()
             venues.push_back(v);
             Log.info("Adding to symbol:", symbol);
             SymbolVenues[symbol] = venues;
-        }
-    }
-}
-
-void VenueManager::sendOrder(const std::string &venueName, const Order &order) {
-    int i = -1;
-    Venue* v;
-    std::vector<Venue> venues = this->venues(order.getSymbol());
-    while (++i < venues.size())
-    {
-        if ((v = &(venues[i]))->getName() == venueName)
-        {
-            if (v->isAvailable())
-            {
-                VenueManager::sendOrder(*v, order);
-                return;
-            }
-            throw *(new std::exception);
         }
     }
 }

@@ -12,10 +12,8 @@ class Algorithm
 {
 public:
 
-
-    Algorithm(const AlgoConfig &algoConfig, bool cancel, const SprayRouter &sprayRouter,
-              const VenueManager &venueManager) : algoConfig(algoConfig), cancel(cancel), sprayRouter(sprayRouter),
-                                                  venueManager(venueManager)
+    Algorithm(AlgoConfig *algoConfig, const SprayRouter &sprayRouter, const VenueManager &venueManager)
+            : algoConfig(algoConfig), sprayRouter(sprayRouter), venueManager(venueManager), log(*(new Logger("Algorithm")))
     {}
 
     virtual void executeAlgo() = 0;
@@ -25,31 +23,23 @@ public:
         this->cancel = true;
     }
 
-    const AlgoConfig &getAlgoConfig() const
-    {
-        return algoConfig;
-    }
-
-    void setAlgoConfig(AlgoConfig &config)
-    {
-        this->algoConfig = config;
-    }
-
     bool algoActive();
 
 protected:
     virtual double getPrice() = 0;
-
     virtual int getLeavesQuantity() = 0;
-
     void sendToRouter();
 
-    AlgoConfig algoConfig;
+    int sharesTraded;
+    AlgoConfig* algoConfig;
+
+protected:
     bool cancel;
+
+    Logger log;
 private:
     SprayRouter sprayRouter;
     VenueManager venueManager;
-
     Order getChildOrder();
 };
 

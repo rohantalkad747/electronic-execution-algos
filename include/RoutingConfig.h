@@ -11,10 +11,25 @@ class RoutingConfig
 {
 private:
     RoutingType routingType;
-public:
+    std::string venueName;
+    RoutingConfig(RoutingType routingType) : routingType(routingType)
+    {}
+
     RoutingConfig(RoutingType routingType, const std::string &venueName) : routingType(routingType),
                                                                            venueName(venueName)
     {}
+
+public:
+    static RoutingConfig getSOR(RoutingType routingType)
+    {
+        return *(new RoutingConfig(routingType, ""));
+
+    }
+
+    static RoutingConfig getDirectRouter(const std::string &venueName)
+    {
+        return *(new RoutingConfig(RoutingType::DIRECT, venueName));
+    }
 
     RoutingType getRoutingType() const
     {
@@ -26,7 +41,7 @@ public:
         RoutingConfig::routingType = routingType;
     }
 
-    const std::string &getVenueName() const
+    std::string &getVenueName()
     {
         return venueName;
     }
@@ -35,9 +50,6 @@ public:
     {
         RoutingConfig::venueName = venueName;
     }
-
-private:
-    std::string venueName;
 };
 
 #endif //UNTITLED1_ROUTINGCONFIG_H

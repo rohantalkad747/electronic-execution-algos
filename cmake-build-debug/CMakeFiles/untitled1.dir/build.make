@@ -82,22 +82,9 @@ CMakeFiles/untitled1.dir/src/SprayRouter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/SprayRouter.cpp.s"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\SprayRouter.cpp -o CMakeFiles\untitled1.dir\src\SprayRouter.cpp.s
 
-CMakeFiles/untitled1.dir/src/Main.cpp.obj: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/src/Main.cpp.obj: ../src/Main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled1.dir/src/Main.cpp.obj"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\Main.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\Main.cpp
-
-CMakeFiles/untitled1.dir/src/Main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/Main.cpp.i"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\Main.cpp > CMakeFiles\untitled1.dir\src\Main.cpp.i
-
-CMakeFiles/untitled1.dir/src/Main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/Main.cpp.s"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\Main.cpp -o CMakeFiles\untitled1.dir\src\Main.cpp.s
-
 CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj: ../src/BlockingQueue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\BlockingQueue.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\BlockingQueue.cpp
 
 CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.i: cmake_force
@@ -110,7 +97,7 @@ CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.s: cmake_force
 
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj: ../src/AvgLatency.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\AvgLatency.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\AvgLatency.cpp
 
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.i: cmake_force
@@ -123,7 +110,7 @@ CMakeFiles/untitled1.dir/src/AvgLatency.cpp.s: cmake_force
 
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: ../src/RingBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\RingBuffer.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\RingBuffer.cpp
 
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.i: cmake_force
@@ -136,7 +123,7 @@ CMakeFiles/untitled1.dir/src/RingBuffer.cpp.s: cmake_force
 
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../src/TimedAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\TimedAlgorithm.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\TimedAlgorithm.cpp
 
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.i: cmake_force
@@ -149,7 +136,7 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.s: cmake_force
 
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../src/TWAPAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\TWAPAlgorithm.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\TWAPAlgorithm.cpp
 
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.i: cmake_force
@@ -162,7 +149,7 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.s: cmake_force
 
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../src/Algorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\Algorithm.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\Algorithm.cpp
 
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.i: cmake_force
@@ -175,7 +162,7 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.s: cmake_force
 
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../src/VWAPAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\VWAPAlgorithm.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\VWAPAlgorithm.cpp
 
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.i: cmake_force
@@ -186,25 +173,65 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.s"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\VWAPAlgorithm.cpp -o CMakeFiles\untitled1.dir\src\VWAPAlgorithm.cpp.s
 
+CMakeFiles/untitled1.dir/test/test.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/test/test.cpp.obj: ../test/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/untitled1.dir/test/test.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\test\test.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\test\test.cpp
+
+CMakeFiles/untitled1.dir/test/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/test/test.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\test\test.cpp > CMakeFiles\untitled1.dir\test\test.cpp.i
+
+CMakeFiles/untitled1.dir/test/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/test/test.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\test\test.cpp -o CMakeFiles\untitled1.dir\test\test.cpp.s
+
+CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj: ../src/TimeUtils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\TimeUtils.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\TimeUtils.cpp
+
+CMakeFiles/untitled1.dir/src/TimeUtils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/TimeUtils.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\TimeUtils.cpp > CMakeFiles\untitled1.dir\src\TimeUtils.cpp.i
+
+CMakeFiles/untitled1.dir/src/TimeUtils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/TimeUtils.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\TimeUtils.cpp -o CMakeFiles\untitled1.dir\src\TimeUtils.cpp.s
+
+CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj: ../src/CountDownLatch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\CountDownLatch.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\CountDownLatch.cpp
+
+CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\CountDownLatch.cpp > CMakeFiles\untitled1.dir\src\CountDownLatch.cpp.i
+
+CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\CountDownLatch.cpp -o CMakeFiles\untitled1.dir\src\CountDownLatch.cpp.s
+
 # Object files for target untitled1
 untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj" \
-"CMakeFiles/untitled1.dir/src/Main.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj" \
-"CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj"
+"CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj" \
+"CMakeFiles/untitled1.dir/test/test.cpp.obj" \
+"CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj" \
+"CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj"
 
 # External object files for target untitled1
 untitled1_EXTERNAL_OBJECTS =
 
 untitled1.exe: CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj
-untitled1.exe: CMakeFiles/untitled1.dir/src/Main.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj
@@ -212,11 +239,14 @@ untitled1.exe: CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/test/test.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/build.make
 untitled1.exe: CMakeFiles/untitled1.dir/linklibs.rsp
 untitled1.exe: CMakeFiles/untitled1.dir/objects1.rsp
 untitled1.exe: CMakeFiles/untitled1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable untitled1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable untitled1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\untitled1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

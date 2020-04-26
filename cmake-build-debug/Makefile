@@ -203,32 +203,32 @@ src/BlockingQueue.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.s
 .PHONY : src/BlockingQueue.cpp.s
 
-src/Main.obj: src/Main.cpp.obj
+src/CountDownLatch.obj: src/CountDownLatch.cpp.obj
 
-.PHONY : src/Main.obj
+.PHONY : src/CountDownLatch.obj
 
 # target to build an object file
-src/Main.cpp.obj:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Main.cpp.obj
-.PHONY : src/Main.cpp.obj
+src/CountDownLatch.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj
+.PHONY : src/CountDownLatch.cpp.obj
 
-src/Main.i: src/Main.cpp.i
+src/CountDownLatch.i: src/CountDownLatch.cpp.i
 
-.PHONY : src/Main.i
+.PHONY : src/CountDownLatch.i
 
 # target to preprocess a source file
-src/Main.cpp.i:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Main.cpp.i
-.PHONY : src/Main.cpp.i
+src/CountDownLatch.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.i
+.PHONY : src/CountDownLatch.cpp.i
 
-src/Main.s: src/Main.cpp.s
+src/CountDownLatch.s: src/CountDownLatch.cpp.s
 
-.PHONY : src/Main.s
+.PHONY : src/CountDownLatch.s
 
 # target to generate assembly for a file
-src/Main.cpp.s:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Main.cpp.s
-.PHONY : src/Main.cpp.s
+src/CountDownLatch.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.s
+.PHONY : src/CountDownLatch.cpp.s
 
 src/RingBuffer.obj: src/RingBuffer.cpp.obj
 
@@ -311,6 +311,33 @@ src/TWAPAlgorithm.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.s
 .PHONY : src/TWAPAlgorithm.cpp.s
 
+src/TimeUtils.obj: src/TimeUtils.cpp.obj
+
+.PHONY : src/TimeUtils.obj
+
+# target to build an object file
+src/TimeUtils.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj
+.PHONY : src/TimeUtils.cpp.obj
+
+src/TimeUtils.i: src/TimeUtils.cpp.i
+
+.PHONY : src/TimeUtils.i
+
+# target to preprocess a source file
+src/TimeUtils.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TimeUtils.cpp.i
+.PHONY : src/TimeUtils.cpp.i
+
+src/TimeUtils.s: src/TimeUtils.cpp.s
+
+.PHONY : src/TimeUtils.s
+
+# target to generate assembly for a file
+src/TimeUtils.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TimeUtils.cpp.s
+.PHONY : src/TimeUtils.cpp.s
+
 src/TimedAlgorithm.obj: src/TimedAlgorithm.cpp.obj
 
 .PHONY : src/TimedAlgorithm.obj
@@ -392,6 +419,33 @@ src/VenueManager.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VenueManager.cpp.s
 .PHONY : src/VenueManager.cpp.s
 
+test/test.obj: test/test.cpp.obj
+
+.PHONY : test/test.obj
+
+# target to build an object file
+test/test.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/test/test.cpp.obj
+.PHONY : test/test.cpp.obj
+
+test/test.i: test/test.cpp.i
+
+.PHONY : test/test.i
+
+# target to preprocess a source file
+test/test.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/test/test.cpp.i
+.PHONY : test/test.cpp.i
+
+test/test.s: test/test.cpp.s
+
+.PHONY : test/test.s
+
+# target to generate assembly for a file
+test/test.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/test/test.cpp.s
+.PHONY : test/test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -410,9 +464,9 @@ help:
 	@echo ... src/BlockingQueue.obj
 	@echo ... src/BlockingQueue.i
 	@echo ... src/BlockingQueue.s
-	@echo ... src/Main.obj
-	@echo ... src/Main.i
-	@echo ... src/Main.s
+	@echo ... src/CountDownLatch.obj
+	@echo ... src/CountDownLatch.i
+	@echo ... src/CountDownLatch.s
 	@echo ... src/RingBuffer.obj
 	@echo ... src/RingBuffer.i
 	@echo ... src/RingBuffer.s
@@ -422,6 +476,9 @@ help:
 	@echo ... src/TWAPAlgorithm.obj
 	@echo ... src/TWAPAlgorithm.i
 	@echo ... src/TWAPAlgorithm.s
+	@echo ... src/TimeUtils.obj
+	@echo ... src/TimeUtils.i
+	@echo ... src/TimeUtils.s
 	@echo ... src/TimedAlgorithm.obj
 	@echo ... src/TimedAlgorithm.i
 	@echo ... src/TimedAlgorithm.s
@@ -431,6 +488,9 @@ help:
 	@echo ... src/VenueManager.obj
 	@echo ... src/VenueManager.i
 	@echo ... src/VenueManager.s
+	@echo ... test/test.obj
+	@echo ... test/test.i
+	@echo ... test/test.s
 .PHONY : help
 
 

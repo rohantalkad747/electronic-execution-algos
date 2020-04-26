@@ -35,11 +35,11 @@ public:
 
 
     void info(const std::string &msg, int v)
-    { log(Level::INFO, msg, to_string(v)); }
+    { log(Level::INFO, msg, to_string<int>(v)); }
 
 
     void info(const std::string &msg, double v)
-    { log(Level::INFO, msg, to_string(v)); }
+    { log(Level::INFO, msg, to_string<double>(v)); }
 
     void info(const std::string &msg, const std::vector<std::string> v)
     { log(Level::INFO, msg, to_string(v)); }
@@ -58,6 +58,13 @@ public:
 
     void error(const std::string &msg, const std::string &s)
     { log(Level::ERROR, msg, s); }
+
+    static std::string to_string(int v)
+    {
+        std::ostringstream ss;
+        ss << v;
+        return ss.str();
+    }
 
 private:
     std::string clazz;
@@ -84,14 +91,9 @@ private:
         std::cout << clazz << " - " << message << o1 << std::endl;
     }
 
-    static std::string to_string(int v)
-    {
-        std::ostringstream ss;
-        ss << v;
-        return ss.str();
-    }
-
-    static std::string to_string(double v)
+public:
+    template<class T>
+    static std::string to_string(T v)
     {
         std::ostringstream ss;
         ss << v;

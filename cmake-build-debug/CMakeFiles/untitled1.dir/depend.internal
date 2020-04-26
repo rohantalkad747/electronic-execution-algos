@@ -12,9 +12,12 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
  C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
@@ -25,26 +28,14 @@ CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj
 CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/BlockingQueue.h
  C:/Users/Rohan/CLionProjects/untitled1/src/BlockingQueue.cpp
-CMakeFiles/untitled1.dir/src/Main.cpp.obj
- C:/Users/Rohan/CLionProjects/untitled1/include/AvgLatency.h
- C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
- C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
- C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
- C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
- C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
- C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
- C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
- C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
- C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
- C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
- C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h
- C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
- C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
- C:/Users/Rohan/CLionProjects/untitled1/src/Main.cpp
+CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/CountDownLatch.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/RingBuffer.h
  C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/CountDownLatch.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
@@ -71,6 +62,7 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
  C:/Users/Rohan/CLionProjects/untitled1/include/TWAPAlgorithm.h
@@ -83,6 +75,9 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
  C:/Users/Rohan/CLionProjects/untitled1/src/TWAPAlgorithm.cpp
+CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/TimeUtils.cpp
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
@@ -94,6 +89,7 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
  C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
@@ -115,6 +111,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
  C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
@@ -136,7 +133,36 @@ CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
  C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp
+CMakeFiles/untitled1.dir/test/test.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/AvgLatency.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TWAPAlgorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TWAPConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/VWAPAlgorithm.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/VWAPConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
+ C:/Users/Rohan/CLionProjects/untitled1/test/catch.hpp
+ C:/Users/Rohan/CLionProjects/untitled1/test/test.cpp

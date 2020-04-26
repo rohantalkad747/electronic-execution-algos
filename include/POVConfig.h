@@ -6,6 +6,7 @@
 #define UNTITLED1_POVCONFIG_H
 
 #include <vector>
+#include "TimingContext.h"
 
 class POVConfig : public TimingContext
 {
@@ -32,12 +33,25 @@ public:
         POVConfig::participation = participation;
     }
 
+    /**
+     *
+     * @param order
+     * @param initialDelay
+     * @param startTime
+     * @param endTime
+     * @param interval
+     * @param routingType
+     * @param histParticipation
+     * @param participation
+     */
+    POVConfig(const Order &order, long initialDelay, long startTime, long endTime, long interval,
+              const RoutingConfig &routingType, const std::vector<int> &histParticipation, double participation)
+            : TimingContext(order, initialDelay, startTime, endTime, interval, routingType),
+              histParticipation(histParticipation), participation(participation)
+    {}
+
 private:
     double participation;
-public:
-    POVConfig(const std::vector<int> &histParticipation, double participation) : histParticipation(histParticipation),
-                                                                                 participation(participation)
-    {}
 };
 
 #endif //UNTITLED1_POVCONFIG_H

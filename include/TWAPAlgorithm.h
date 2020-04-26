@@ -10,11 +10,10 @@
 
 class TWAPAlgorithm : public TimedAlgorithm
 {
-private:
-
+public:
+    using TimedAlgorithm::TimedAlgorithm;
+protected:
     double getPrice();
-
-    int leavesQuantity;
 };
 
 

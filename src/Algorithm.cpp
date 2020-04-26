@@ -3,8 +3,6 @@
 //
 
 #include "../include/Algorithm.h"
-#include "../include/RoutingType.h"
-#include "../include/Venue.h"
 
 
 void Algorithm::sendToRouter()
@@ -13,22 +11,7 @@ void Algorithm::sendToRouter()
     RoutingConfig routingConfig = this->algoConfig.getRoutingConfig();
     if (routingConfig.getRoutingType() == RoutingType::DIRECT)
     {
-        const std::string& venueName = routingConfig.getVenueName();
-        std::vector<Venue> venues = venueManager.venues(this->algoConfig.getOrder().getSymbol());
-        int i = -1;
-        Venue* v;
-        while (++i < venues.size())
-        {
-            if ((v = &venues[i])->getName() == venueName)
-            {
-                if (v->isAvailable())
-                {
-                    // TODO send to venue
-                    return;
-                }
-                throw new std::exception;
-            }
-        }
+       this->venueManager.sendOrder(routingConfig.getVenueName(), child);
     }
     else if (routingConfig.getRoutingType() == RoutingType::SPRAY)
     {
@@ -36,7 +19,8 @@ void Algorithm::sendToRouter()
     }
     else
     {
-        // TODO
+        // TODO for serial router and possibly other types
+        throw *(new std::exception);
     }
 }
 

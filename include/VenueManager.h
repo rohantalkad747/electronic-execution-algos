@@ -26,6 +26,8 @@ public:
 
     void sendOrder(const Venue &venue, const Order &order);
 
+    void sendOrder(const std::string &venueName, const Order &order);
+
     void process_exec(const Execution &exec);
 
 private:

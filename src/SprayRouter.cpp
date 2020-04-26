@@ -3,6 +3,7 @@
 //
 
 #include <chrono>
+#include <thread>
 #include "../include/SprayRouter.h"
 #include "../include/TimeUtils.h"
 
@@ -49,8 +50,7 @@ void SprayRouter::route(const Order &order)
                       << std::endl;
             Order child(order);
             child.setQuantity(childQuantity);
-            unsigned __int64 time = TimeUtils::getCurTimeEpochMs() + adjustments[i];
-            TimeUtils::wait(time);
+            std::this_thread::sleep_for(std::chrono::milliseconds(adjustments[i]));
             VenueManager.sendOrder(venue, child);
         }
     }

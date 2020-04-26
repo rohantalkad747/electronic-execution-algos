@@ -12,12 +12,12 @@ void TimedAlgorithm::executeAlgo()
     {
         TimingContext timingContext = static_cast<TimingContext &>(this->algoConfig);
         int delay = timingContext.getInitialDelay();
-        TimeUtils::wait(delay);
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay));
         int interval = timingContext.getInterval();
         while (this->algoActive())
         {
             this->sendToRouter();
-            TimeUtils::wait(interval);
+            std::this_thread::sleep_for(std::chrono::milliseconds(interval));
         }
     });
 }

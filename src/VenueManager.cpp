@@ -90,3 +90,21 @@ void VenueManager::init()
         }
     }
 }
+
+void VenueManager::sendOrder(const std::string &venueName, const Order &order) {
+    int i = -1;
+    Venue* v;
+    std::vector<Venue> venues = this->venues(order.getSymbol());
+    while (++i < venues.size())
+    {
+        if ((v = &(venues[i]))->getName() == venueName)
+        {
+            if (v->isAvailable())
+            {
+                VenueManager::sendOrder(*v, order);
+                return;
+            }
+            throw *(new std::exception);
+        }
+    }
+}

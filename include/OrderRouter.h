@@ -11,6 +11,6 @@
 class OrderRouter
 {
 public:
-    virtual void route(Order &order) = 0;
+    virtual void route(const Order &order) = 0;
 };
 #endif //UNTITLED1_ORDERROUTER_H

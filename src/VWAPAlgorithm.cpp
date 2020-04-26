@@ -16,8 +16,8 @@ double VWAPAlgorithm::getPrice()
     double num = 0, den = 0;
     for (int i = intervalStart; i < tillIntervalEnd; i++)
     {
-    num += histVol[i] * histPrice[i];
-    den += histPrice[i];
+        num += histVol[i] * histPrice[i];
+        den += histPrice[i];
     }
     return num / den;
 }

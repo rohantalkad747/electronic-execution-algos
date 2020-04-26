@@ -12,14 +12,15 @@ class Algorithm
 {
 public:
 
-    Algorithm(const AlgoConfig &algoConfig, const SprayRouter &sprayRouter) : algoConfig(
-            algoConfig), cancel(false), sprayRouter(sprayRouter)
-    {}
 
+    Algorithm(const AlgoConfig &algoConfig, bool cancel, const SprayRouter &sprayRouter,
+              const VenueManager &venueManager) : algoConfig(algoConfig), cancel(cancel), sprayRouter(sprayRouter),
+                                                  venueManager(venueManager)
+    {}
 
     virtual void executeAlgo() = 0;
 
-    bool cancelAlgo()
+    void cancelAlgo()
     {
         this->cancel = true;
     }
@@ -47,6 +48,9 @@ protected:
     bool cancel;
 private:
     SprayRouter sprayRouter;
+    VenueManager venueManager;
+
+    Order getChildOrder();
 };
 
 #endif //UNTITLED1_ALGORITHM_H

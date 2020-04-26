@@ -7,15 +7,15 @@
 #include "../include/SprayRouter.h"
 #include "../include/AvgLatency.h"
 
-VenueManager create_venue_manager();
+VenueManager createVenueManager();
 
 int main()
 {
     Logger Log("Main");
 
-    VenueManager vm = create_venue_manager();
+    VenueManager vm = createVenueManager();
 
-    SprayRouter sr(vm);
+    SprayRouter sr(vm, Log);
 
     std::vector<Order> orders;
     for (int i = 50; i < 100; i++)
@@ -40,7 +40,7 @@ int main()
     Log.info("done.");
 }
 
-VenueManager create_venue_manager()
+VenueManager createVenueManager()
 {
     VenueRank vr1(0.1, 0.5, 0.1, 0.5, 0.5);
     VenueRank vr2(0.2, 0.5, 0.3, 0.4, 0.2);

@@ -8,6 +8,7 @@
 
 #include "OrderSide.h"
 #include "Order.h"
+#include "RoutingConfig.h"
 
 class AlgoConfig
 {
@@ -34,11 +35,18 @@ public:
         AlgoConfig::order = order;
     }
 
+public:
+    AlgoConfig(OrderSide orderSide, const Order &order, RoutingConfig routingConfig)
+            : orderSide(orderSide), order(order), routingConfig(routingConfig)
+    {}
 protected:
     Order order;
+    RoutingConfig routingConfig;
 public:
-    AlgoConfig(OrderSide orderSide, const Order &order) : orderSide(orderSide), order(order)
-    {}
+    const RoutingConfig &getRoutingConfig() const
+    {
+        return routingConfig;
+    }
 };
 
 

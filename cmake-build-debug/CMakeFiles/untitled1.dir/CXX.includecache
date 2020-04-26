@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
+OrderSide.h
+C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
+Order.h
+C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+RoutingType.h
+C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
+AlgoConfig.h
+C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
+SprayRouter.h
+C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
+
 C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
 OrderSide.h
 C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
@@ -50,11 +64,19 @@ C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
 OrderStatus.h
 C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
 
+C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
+Order.h
+C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+VenueManager.h
+C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
+
 C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
 
 C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
 
 C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h
 
 C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
 VenueManager.h
@@ -63,8 +85,44 @@ Order.h
 C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
 Logger.h
 C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
+OrderRouter.h
+C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/TWAPAlgorithm.h
+TimedAlgorithm.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/TWAPConfig.h
+vector
+-
+TimingContext.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h
 
 C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
+chrono
+-
+
+C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h
+Algorithm.h
+C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
+TimingContext.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h
+AlgoConfig.h
+C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/VWAPAlgorithm.h
+TimedAlgorithm.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h
+
+C:/Users/Rohan/CLionProjects/untitled1/include/VWAPConfig.h
+vector
+-
+TimingContext.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h
 
 C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h
 string
@@ -92,9 +150,31 @@ C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
 
 C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
 
-C:/Users/Rohan/CLionProjects/untitled1/src/SprayRouter.cpp
-chrono
+C:/Users/Rohan/CLionProjects/untitled1/src/Algorithm.cpp
+../include/Algorithm.h
+C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
+
+C:/Users/Rohan/CLionProjects/untitled1/src/TWAPAlgorithm.cpp
+../include/TWAPAlgorithm.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TWAPAlgorithm.h
+../include/TWAPConfig.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TWAPConfig.h
+../include/TimeUtils.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
+
+C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp
+future
 -
-../include/SprayRouter.h
-C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h
+../include/TimedAlgorithm.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h
+../include/TimeUtils.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
+
+C:/Users/Rohan/CLionProjects/untitled1/src/VWAPAlgorithm.cpp
+../include/VWAPAlgorithm.h
+C:/Users/Rohan/CLionProjects/untitled1/include/VWAPAlgorithm.h
+../include/VWAPConfig.h
+C:/Users/Rohan/CLionProjects/untitled1/include/VWAPConfig.h
+../include/TimeUtils.h
+C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h
 

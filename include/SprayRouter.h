@@ -15,11 +15,12 @@
 class SprayRouter : public OrderRouter
 {
 public:
-    SprayRouter(const VenueManager &vm, const Logger &log);
-
+    SprayRouter(const VenueManager &venueManager, const Logger &log) : VenueManager(venueManager), Log(log)
+    {}
     void route(const Order &order);
 private:
-    VenueManager venueManager;
+    VenueManager VenueManager;
+private:
     Logger Log;
 };
 

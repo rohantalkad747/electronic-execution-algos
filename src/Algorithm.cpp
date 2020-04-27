@@ -45,7 +45,7 @@ Order Algorithm::getChildOrder()
 bool Algorithm::algoActive()
 {
     return
-            TimeUtils::getCurTimeEpoch() <= ((TimingContext *) (this->algoConfig))->getEndTime() &&
+            TimeUtils::getCurTimeEpoch() <= this->algoConfig->getEndTime() &&
             !this->cancel &&
             this->sharesTraded != this->algoConfig->getOrder().getQuantity();
 }

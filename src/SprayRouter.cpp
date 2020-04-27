@@ -46,26 +46,27 @@ void SprayRouter::route(const Order &order)
             Order child(order);
             child.setQuantity(childQuantity);
             long adjustment = adjustments[i];
-            tasks.push_back([adjustment, &venue, &child](CountDownLatch *latch)
-                            {
-                                if (adjustment != 0)
-                                {
-                                    std::this_thread::sleep_for(std::chrono::milliseconds(adjustment));
-                                }
-                                venue.acceptOrder(child);
-                                latch->countDown();
-                            });
+            tasks.emplace_back([adjustment, &venue, &child](CountDownLatch *latch)
+                               {
+                                   if (adjustment != 0)
+                                   {
+                                       std::this_thread::sleep_for(std::chrono::milliseconds(adjustment));
+                                   }
+                                   venue.acceptOrder(child);
+                                   latch->countDown();
+                               });
             std::cout << "v: " << venue << ", prob:" << executionProbability << ", child_qty: " << childQuantity
                       << ", price: " << order.getPrice()
                       << std::endl;
         }
-        CountDownLatch *latch = new CountDownLatch(tasks.size());
+        auto *latch = new CountDownLatch(tasks.size());
         for (auto &task : tasks)
         {
             std::thread thread_obj(task, latch);
             thread_obj.detach();
         }
         latch->await();
+        delete latch; latch = nullptr;
         if (curRouted == order.getQuantity())
         {
             Log.info("Routed all shares ", symbol);

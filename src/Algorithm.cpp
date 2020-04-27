@@ -3,8 +3,6 @@
 //
 
 #include "../include/Algorithm.h"
-#include "../include/TimeUtils.h"
-#include "../include/TimingContext.h"
 
 
 void Algorithm::sendToRouter()
@@ -47,13 +45,18 @@ bool Algorithm::algoActive()
     return
             TimeUtils::getCurTimeEpoch() <= this->algoConfig->getEndTime() &&
             !this->cancel &&
-            this->sharesTraded != this->algoConfig->getOrder().getQuantity();
+            this->sharesTraded < this->algoConfig->getOrder().getQuantity();
 }
 
-bool Algorithm::pxIncompatibleWithLimit(double px, Order order)
+bool Algorithm::pxIncompatibleWithLimit(double px, const Order &order)
 {
     double lmt = order.getPrice();
     return (order.getSide() == OrderSide::BUY) ? px <= lmt : px >= lmt;
+}
+
+int Algorithm::getSharesTraded() const
+{
+    return sharesTraded;
 }
 
 

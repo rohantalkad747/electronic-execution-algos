@@ -4,10 +4,10 @@
 
 #include "../include/AntiGaming.h"
 
-long AntiGaming::randomize(long ts, long a, long b)
+long AntiGaming::randomize(long a, long b)
 {
     static std::random_device rd;
     std::mt19937 eng(rd());
     std::uniform_int_distribution<> distr(a, b);
-    return ts + distr(eng);
+    return distr(eng);
 }

@@ -34,6 +34,10 @@ protected:
     void sendToRouter();
 
     int sharesTraded = 0;
+public:
+    int getSharesTraded() const;
+
+protected:
     AlgoConfig *algoConfig;
 
 protected:
@@ -46,7 +50,7 @@ private:
 
     Order getChildOrder();
 
-    bool pxIncompatibleWithLimit(double px, Order order);
+    static bool pxIncompatibleWithLimit(double px, const Order& order);
 };
 
 #endif //UNTITLED1_ALGORITHM_H

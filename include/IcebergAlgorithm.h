@@ -10,6 +10,7 @@
 class IcebergAlgorithm : public Algorithm
 {
 public:
+    using Algorithm::Algorithm;
     void executeAlgo();
     void triggerNextDisplay();
 protected:

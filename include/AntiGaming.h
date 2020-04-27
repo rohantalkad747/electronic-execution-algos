@@ -11,7 +11,7 @@
 class AntiGaming
 {
 public:
-    static long randomize(long ts, long a, long b);
+    static long randomize(long a, long b);
 };
 
 

@@ -47,10 +47,10 @@ int IcebergAlgorithm::getLeavesQuantity()
     int rawDisplay = icebergConfig->getIcebergDisplay();
     if (icebergConfig->getDisplayVariance() > 0)
     {
-        display = AntiGaming::randomize(rawDisplay, this->upper, this->lower);
+        display = AntiGaming::randomize(this->lower, this->upper);
     } else
     {
         display = rawDisplay;
     }
-    return display;
+    return std::min(display, this->algoConfig->getOrder().getQuantity() - this->sharesTraded);
 }

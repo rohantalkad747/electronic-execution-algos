@@ -24,7 +24,7 @@ void TimedAlgorithm::executeAlgo()
         {
             log.info("--- Algorithm active ... sending to router  ---");
             this->sendToRouter();
-            long adjustedInterval = AntiGaming::randomize(interval, 0, 2);
+            long adjustedInterval = interval + AntiGaming::randomize(0, 2);
             std::this_thread::sleep_for(std::chrono::seconds(adjustedInterval));
         }
         log.info("Algorithm executed! " + std::to_string(this->sharesTraded) + "/" +

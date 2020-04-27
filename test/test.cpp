@@ -18,6 +18,8 @@
 #include "../include/VWAPConfig.h"
 #include "../include/VWAPAlgorithm.h"
 #include "../include/ParticipateConfig.h"
+#include "../include/IcebergConfig.h"
+#include "../include/IcebergAlgorithm.h"
 
 
 VenueManager createVenueManager();
@@ -30,6 +32,8 @@ template<class T>
 std::vector<T> seedVector(int a, int b, int amt);
 
 void testAlgos(const VenueManager &vm);
+
+void testIceberg(const VenueManager &manager, SprayRouter router);
 
 template<class T>
 std::vector<T> seedVector(int a, int b, int amt)
@@ -61,6 +65,24 @@ void testAlgos(const VenueManager &vm)
 //    testTWAP(vm, sr, histPrice);
 //    testVWAP(vm, sr, histPrice, histVol);
 //    testPOV(vm, sr, histVol);
+    testIceberg(vm, sr);
+}
+
+void testIceberg(const VenueManager &manager, SprayRouter router)
+{
+    Order order(OrderSide::BUY, "GOOG", 150000, OrderType::LIMIT, 1200.99, TimeInForce::DAY);
+    long curTime = TimeUtils::getCurTimeEpoch();
+    RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
+    auto* icebergConfig = new IcebergConfig(order, routingConfig, curTime, curTime + 30, 20000, 0.35);
+    AlgoConfig* algoConfig = ((AlgoConfig*) icebergConfig);
+    auto* algo = new IcebergAlgorithm(algoConfig, router, manager);
+    algo->executeAlgo();
+    while (algo->algoActive())
+    {
+        algo->triggerNextDisplay();
+        std::this_thread::sleep_for(std::chrono::duration(std::chrono::milliseconds(500)));
+    }
+    std::cout << "Iceberg algo executed! " << std::endl;
 }
 
 void testVWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double> histPrice, std::vector<int> histVol)
@@ -68,9 +90,9 @@ void testVWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double>
     Order order(OrderSide::BUY, "GOOG", 100000, OrderType::MARKET, -1, TimeInForce::DAY);
     long curTime = TimeUtils::getCurTimeEpoch();
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    VWAPConfig* vwapConfig = new VWAPConfig(order, 0, curTime, curTime + 30, 5, routingConfig,histVol, histPrice);
+    auto* vwapConfig = new VWAPConfig(order, 0, curTime, curTime + 30, 5, routingConfig,histVol, histPrice);
     AlgoConfig* algoConfig = ((AlgoConfig*) vwapConfig);
-    VWAPAlgorithm* algo = new VWAPAlgorithm(algoConfig, sr, vm);
+    auto* algo = new VWAPAlgorithm(algoConfig, sr, vm);
     algo->executeAlgo();
 }
 
@@ -79,9 +101,9 @@ void testTWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double>
     Order order(OrderSide::BUY, "JPM", 100000, OrderType::MARKET, -1, TimeInForce::DAY);
     long curTime = TimeUtils::getCurTimeEpoch();
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    TWAPConfig* twapCfg = new TWAPConfig(order, 0, curTime,curTime + 30, 5, histPrice, routingConfig);
+    auto* twapCfg = new TWAPConfig(order, 0, curTime,curTime + 30, 5, histPrice, routingConfig);
     AlgoConfig* algoConfig = ((AlgoConfig*) twapCfg);
-    TWAPAlgorithm* algo = new TWAPAlgorithm(algoConfig, sr, vm);
+    auto* algo = new TWAPAlgorithm(algoConfig, sr, vm);
     algo->executeAlgo();
 }
 
@@ -106,8 +128,6 @@ void testSprayRouter(VenueManager vm)
         Log.info("order-count:", ++ncount);
         sr.route(order);
         Log.info("=======================================");
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));  // Mock execution
-        order.setQuantity(order.getQuantity() - order.getQuantity());
     }
 
     Log.info("done.");
@@ -160,8 +180,8 @@ void testPOV(const VenueManager &manager, SprayRouter &sr, std::vector<int> hist
     Order order(OrderSide::BUY, "GOOG", 790000, OrderType::LIMIT, 1282, TimeInForce::DAY);
     long curTime = TimeUtils::getCurTimeEpoch();
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    ParticipateConfig* povCOnfig = new ParticipateConfig(order, 0, curTime, curTime + 30, 5, routingConfig, histVol, 0.20);
+    auto* povCOnfig = new ParticipateConfig(order, 0, curTime, curTime + 30, 5, routingConfig, histVol, 0.20);
     AlgoConfig* algoConfig = ((AlgoConfig*) povCOnfig);
-    ParticipateAlgorithm* algo = new ParticipateAlgorithm(algoConfig, sr, manager);
+    auto* algo = new ParticipateAlgorithm(algoConfig, sr, manager);
     algo->executeAlgo();
 }

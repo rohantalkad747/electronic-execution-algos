@@ -27,7 +27,8 @@ void TimedAlgorithm::executeAlgo()
             long adjustedInterval = AntiGaming::randomize(interval, 0, 2);
             std::this_thread::sleep_for(std::chrono::seconds(adjustedInterval));
         }
-        log.info("Algorithm executed! " + std::to_string(this->sharesTraded) + "/" + std::to_string(this->algoConfig->getOrder().getQuantity()) + " shares traded.");
+        log.info("Algorithm executed! " + std::to_string(this->sharesTraded) + "/" +
+                 std::to_string(this->algoConfig->getOrder().getQuantity()) + " shares traded.");
     });
 }
 

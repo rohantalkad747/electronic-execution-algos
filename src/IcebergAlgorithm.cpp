@@ -23,7 +23,7 @@ void IcebergAlgorithm::triggerNextDisplay()
 
 void IcebergAlgorithm::init()
 {
-    IcebergConfig* icebergConfig = (IcebergConfig*)this->algoConfig;
+    IcebergConfig *icebergConfig = (IcebergConfig *) this->algoConfig;
     int display = icebergConfig->getIcebergDisplay();
     double variance = icebergConfig->getDisplayVariance();
     if (variance > 0)
@@ -42,14 +42,13 @@ double IcebergAlgorithm::getPrice()
 
 int IcebergAlgorithm::getLeavesQuantity()
 {
-    auto* icebergConfig = (IcebergConfig*)this->algoConfig;
+    auto *icebergConfig = (IcebergConfig *) this->algoConfig;
     int display;
     int rawDisplay = icebergConfig->getIcebergDisplay();
     if (icebergConfig->getDisplayVariance() > 0)
     {
         display = AntiGaming::randomize(rawDisplay, this->upper, this->lower);
-    }
-    else
+    } else
     {
         display = rawDisplay;
     }

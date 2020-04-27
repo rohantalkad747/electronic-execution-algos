@@ -23,5 +23,5 @@ int ParticipateAlgorithm::getLeavesQuantity()
 
 double ParticipateAlgorithm::getPrice()
 {
-   return this->algoConfig->getOrder().getPrice();
+    return this->algoConfig->getOrder().getPrice();
 }

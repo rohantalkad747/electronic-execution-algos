@@ -12,7 +12,7 @@ void TimedAlgorithm::executeAlgo()
     std::async(std::launch::async, [this]()
     {
         log.info("========= Booting algorithm ========= ");
-        TimingContext *timingContext = (TimingContext *) (this->algoConfig);
+        TimingContext *timingContext = static_cast<TimingContext *> (this->algoConfig);
         int startTimeDifferential = std::max(0L, timingContext->getStartTime() - TimeUtils::getCurTimeEpoch());
         int sleepTime = startTimeDifferential + timingContext->getInitialDelay();
         if (sleepTime != 0)
@@ -36,7 +36,8 @@ int TimedAlgorithm::getLeavesQuantity()
 {
     if (leavesQuantity == -1)
     {
-        leavesQuantity = (algoConfig->getOrder().getQuantity() / ((TimingContext *) (this->algoConfig))->getInterval());
+        leavesQuantity = (algoConfig->getOrder().getQuantity() /
+                          (static_cast<TimingContext *> (this->algoConfig))->getInterval());
     }
     return leavesQuantity;
 }

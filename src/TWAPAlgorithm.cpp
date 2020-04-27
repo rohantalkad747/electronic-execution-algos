@@ -4,12 +4,11 @@
 
 #include "../include/TWAPAlgorithm.h"
 #include "../include/TWAPConfig.h"
-#include "../include/TimeUtils.h"
 
 double TWAPAlgorithm::getPrice()
 {
     double numerator = 0.0;
-    TWAPConfig *twapConfig = (TWAPConfig *) (this->algoConfig);
+    TWAPConfig *twapConfig = static_cast<TWAPConfig *>(this->algoConfig);
     long intervalStart = TimeUtils::getSecondsSinceMidnight();
     long tillIntervalEnd = intervalStart + twapConfig->getInterval();
     std::vector<double> histPrice = twapConfig->getHistPrice();

@@ -64,8 +64,8 @@ void testAlgos(const VenueManager &vm)
     std::vector<int> histVol = seedVector<int>(20, 40, 86400);
 //    testTWAP(vm, sr, histPrice);
 //    testVWAP(vm, sr, histPrice, histVol);
-//    testPOV(vm, sr, histVol);
-    testIceberg(vm, sr);
+    testPOV(vm, sr, histVol);
+//    testIceberg(vm, sr);
 }
 
 void testIceberg(const VenueManager &manager, SprayRouter router)
@@ -177,10 +177,10 @@ VenueManager createVenueManager()
 
 void testPOV(const VenueManager &manager, SprayRouter &sr, std::vector<int> histVol)
 {
-    Order order(OrderSide::BUY, "GOOG", 790000, OrderType::LIMIT, 1282, TimeInForce::DAY);
+    Order order(OrderSide::BUY, "GOOG", 1000, OrderType::LIMIT, 1282, TimeInForce::DAY);
     long curTime = TimeUtils::getCurTimeEpoch();
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    auto* povCOnfig = new ParticipateConfig(order, 0, curTime, curTime + 30, 5, routingConfig, histVol, 0.20);
+    auto* povCOnfig = new ParticipateConfig(order, 0, curTime, curTime + 600000, 5, routingConfig, histVol, 0.20);
     AlgoConfig* algoConfig = ((AlgoConfig*) povCOnfig);
     auto* algo = new ParticipateAlgorithm(algoConfig, sr, manager);
     algo->executeAlgo();

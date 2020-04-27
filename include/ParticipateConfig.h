@@ -46,7 +46,7 @@ public:
      */
     ParticipateConfig(const Order &order, long initialDelay, long startTime, long endTime, long interval,
                       const RoutingConfig &routingType, std::vector<int> histVolume, double participation)
-            : TimingContext(order, routingType, initialDelay, startTime, endTime, interval),
+            : TimingContext(order, routingType, startTime, endTime, initialDelay, interval),
               histVolume(histVolume), participation(participation)
     {}
 

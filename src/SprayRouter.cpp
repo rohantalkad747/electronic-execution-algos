@@ -66,7 +66,8 @@ void SprayRouter::route(const Order &order)
             thread_obj.detach();
         }
         latch->await();
-        delete latch; latch = nullptr;
+        delete latch;
+        latch = nullptr;
         if (curRouted == order.getQuantity())
         {
             Log.info("Routed all shares ", symbol);

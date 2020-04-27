@@ -8,7 +8,7 @@
 
 int ParticipateAlgorithm::getLeavesQuantity()
 {
-    ParticipateConfig *povConfig = (ParticipateConfig *) this->algoConfig;
+    ParticipateConfig *povConfig = static_cast<ParticipateConfig *>( this->algoConfig);
     long intervalStart = TimeUtils::getSecondsSinceMidnight();
     long tillIntervalEnd = intervalStart + povConfig->getInterval();
     int totalVolume = 0;
@@ -18,7 +18,7 @@ int ParticipateAlgorithm::getLeavesQuantity()
         totalVolume += histVol[i];
     }
     std::cout << "Total volume " << totalVolume << std::endl;
-    return totalVolume * povConfig->getParticipation();
+    return std::min((int) (povConfig->getOrder().getQuantity() - this->sharesTraded), (int) (totalVolume * povConfig->getParticipation()));
 }
 
 double ParticipateAlgorithm::getPrice()

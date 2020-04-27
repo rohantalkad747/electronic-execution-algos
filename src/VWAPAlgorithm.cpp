@@ -8,7 +8,7 @@
 
 double VWAPAlgorithm::getPrice()
 {
-    VWAPConfig *vwapConfig = (VWAPConfig *) (this->algoConfig);
+    VWAPConfig *vwapConfig = static_cast<VWAPConfig *>(this->algoConfig);
     std::vector<int> histVol = vwapConfig->getHistVolume();
     std::vector<double> histPrice = vwapConfig->getHistPrice();
     long intervalStart = TimeUtils::getSecondsSinceMidnight();

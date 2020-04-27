@@ -10,16 +10,13 @@
 class TimingContext : public AlgoConfig
 {
 public:
-    TimingContext(const Order &order, long initialDelay, long startTime, long endTime,
-                  long interval, RoutingConfig routingType) : AlgoConfig(order, routingType),
-                                                              initialDelay(initialDelay), startTime(startTime),
-                                                              endTime(endTime), interval(interval)
-    {
-    }
+    TimingContext(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime,
+                  long initialDelay, long interval) : AlgoConfig(order, routingConfig, startTime, endTime),
+                                                      initialDelay(initialDelay), interval(interval)
+    {}
 
 private:
     long initialDelay;
-    long startTime;
 public:
     long getInitialDelay() const
     {
@@ -29,26 +26,6 @@ public:
     void setInitialDelay(long initialDelay)
     {
         TimingContext::initialDelay = initialDelay;
-    }
-
-    long getStartTime() const
-    {
-        return startTime;
-    }
-
-    void setStartTime(long startTime)
-    {
-        TimingContext::startTime = startTime;
-    }
-
-    long getEndTime() const
-    {
-        return endTime;
-    }
-
-    void setEndTime(long endTime)
-    {
-        TimingContext::endTime = endTime;
     }
 
     long getInterval() const
@@ -62,7 +39,6 @@ public:
     }
 
 private:
-    long endTime;
     long interval;
 };
 

@@ -257,6 +257,33 @@ src/CountDownLatch.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.s
 .PHONY : src/CountDownLatch.cpp.s
 
+src/IcebergAlgorithm.obj: src/IcebergAlgorithm.cpp.obj
+
+.PHONY : src/IcebergAlgorithm.obj
+
+# target to build an object file
+src/IcebergAlgorithm.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj
+.PHONY : src/IcebergAlgorithm.cpp.obj
+
+src/IcebergAlgorithm.i: src/IcebergAlgorithm.cpp.i
+
+.PHONY : src/IcebergAlgorithm.i
+
+# target to preprocess a source file
+src/IcebergAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.i
+.PHONY : src/IcebergAlgorithm.cpp.i
+
+src/IcebergAlgorithm.s: src/IcebergAlgorithm.cpp.s
+
+.PHONY : src/IcebergAlgorithm.s
+
+# target to generate assembly for a file
+src/IcebergAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.s
+.PHONY : src/IcebergAlgorithm.cpp.s
+
 src/ParticipateAlgorithm.obj: src/ParticipateAlgorithm.cpp.obj
 
 .PHONY : src/ParticipateAlgorithm.obj
@@ -524,6 +551,9 @@ help:
 	@echo ... src/CountDownLatch.obj
 	@echo ... src/CountDownLatch.i
 	@echo ... src/CountDownLatch.s
+	@echo ... src/IcebergAlgorithm.obj
+	@echo ... src/IcebergAlgorithm.i
+	@echo ... src/IcebergAlgorithm.s
 	@echo ... src/ParticipateAlgorithm.obj
 	@echo ... src/ParticipateAlgorithm.i
 	@echo ... src/ParticipateAlgorithm.s

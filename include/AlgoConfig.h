@@ -27,13 +27,45 @@ public:
     }
 
 public:
-    AlgoConfig(const Order &order, RoutingConfig routingConfig)
-            : order(order), routingConfig(routingConfig)
+    AlgoConfig(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime) : order(order),
+                                                                                                       routingConfig(
+                                                                                                               routingConfig),
+                                                                                                       startTime(
+                                                                                                               startTime),
+                                                                                                       endTime(endTime)
     {}
 
 protected:
     Order order;
     RoutingConfig routingConfig;
+    long startTime;
+    long endTime;
+public:
+    void setRoutingConfig(const RoutingConfig &routingConfig)
+    {
+        AlgoConfig::routingConfig = routingConfig;
+    }
+
+    long getStartTime() const
+    {
+        return startTime;
+    }
+
+    void setStartTime(long startTime)
+    {
+        AlgoConfig::startTime = startTime;
+    }
+
+    long getEndTime() const
+    {
+        return endTime;
+    }
+
+    void setEndTime(long endTime)
+    {
+        AlgoConfig::endTime = endTime;
+    }
+
 public:
     const RoutingConfig &getRoutingConfig() const
     {

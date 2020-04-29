@@ -6,10 +6,25 @@
 #define UNTITLED1_ORDERBOOK_H
 
 
+#include "Order.h"
+#include "PricePoint.h"
+#include "../include/Node.h"
+
 class OrderBook
 {
 public:
+    void addOrder(const Order& order);
+
+    Node<PricePoint>* getRoot() const
+    {
+        return this->root;
+    }
+
 private:
+    Node<PricePoint>* root;
+
+public:
+    Node<PricePoint> *getRoot() const;
 };
 
 

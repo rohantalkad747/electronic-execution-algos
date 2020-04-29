@@ -8,9 +8,10 @@
 
 enum class OrderStatus : char
 {
-    NEW = '1',
-    PARTIAL = '2',
-    FILLED = '4',
+    NEW = '0',
+    PARTIAL = '1',
+    FILLED = '2',
+    CANCELLED = '4',
     REJECTED = '8',
     EXPIRE = 'C'
 };

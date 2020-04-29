@@ -5,7 +5,7 @@
 #include "../include/SplayTree.h"
 
 template<class T>
-Node<T> *SplayTree<T>::rightRotate(Node<T> *node)
+Node<T> *SplayTree::rightRotate(Node<T> *node)
 {
     Node<T> *left = node->left;
     node->left = left->right;
@@ -14,7 +14,7 @@ Node<T> *SplayTree<T>::rightRotate(Node<T> *node)
 }
 
 template<class T>
-Node<T> *SplayTree<T>::leftRotate(Node<T> *node)
+Node<T> *SplayTree::leftRotate(Node<T> *node)
 {
     Node<T> *right = node->right;
     node->right = right->left;
@@ -23,7 +23,7 @@ Node<T> *SplayTree<T>::leftRotate(Node<T> *node)
 }
 
 template<class T>
-Node<T> *SplayTree<T>::search(Node<T> *root, T &key)
+Node<T> *SplayTree::search(Node<T> *root, T &key)
 {
     if (root == nullptr || root->key == key)
     {
@@ -43,7 +43,6 @@ Node<T> *SplayTree<T>::search(Node<T> *root, T &key)
             if (root->left->right != nullptr)
             {
                 root->left = leftRotate(root->left);
-
             }
         }
         if (root->left == nullptr)
@@ -78,7 +77,7 @@ Node<T> *SplayTree<T>::search(Node<T> *root, T &key)
 }
 
 template<class T>
-Node<T> *SplayTree<T>::insert(Node<T>* root, T &val)
+Node<T> *SplayTree::insert(Node<T>* root, T &val)
 {
     if (root == nullptr)
     {

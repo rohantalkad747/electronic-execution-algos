@@ -140,6 +140,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/PricePoint.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/RingBuffer.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -203,6 +206,12 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/ExecutionService.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/ExecutionService.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/IcebergAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -215,6 +224,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/PricePoint.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -225,6 +237,12 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TWAPAlgorithm.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TakeLiquidityManager.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TakeLiquidityManager.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimeUtils.cpp">

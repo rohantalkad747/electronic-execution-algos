@@ -36,6 +36,7 @@ public:
         std::string received = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(
                 std::chrono::system_clock::now().time_since_epoch()).count());
         log.info("Received order at " + name + " at " + received);
+
     }
 
     std::vector<std::string> getSymbols() const

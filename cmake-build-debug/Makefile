@@ -257,6 +257,33 @@ src/CountDownLatch.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.s
 .PHONY : src/CountDownLatch.cpp.s
 
+src/ExecutionService.obj: src/ExecutionService.cpp.obj
+
+.PHONY : src/ExecutionService.obj
+
+# target to build an object file
+src/ExecutionService.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/ExecutionService.cpp.obj
+.PHONY : src/ExecutionService.cpp.obj
+
+src/ExecutionService.i: src/ExecutionService.cpp.i
+
+.PHONY : src/ExecutionService.i
+
+# target to preprocess a source file
+src/ExecutionService.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/ExecutionService.cpp.i
+.PHONY : src/ExecutionService.cpp.i
+
+src/ExecutionService.s: src/ExecutionService.cpp.s
+
+.PHONY : src/ExecutionService.s
+
+# target to generate assembly for a file
+src/ExecutionService.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/ExecutionService.cpp.s
+.PHONY : src/ExecutionService.cpp.s
+
 src/IcebergAlgorithm.obj: src/IcebergAlgorithm.cpp.obj
 
 .PHONY : src/IcebergAlgorithm.obj
@@ -365,6 +392,33 @@ src/ParticipateAlgorithm.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.s
 .PHONY : src/ParticipateAlgorithm.cpp.s
 
+src/PricePoint.obj: src/PricePoint.cpp.obj
+
+.PHONY : src/PricePoint.obj
+
+# target to build an object file
+src/PricePoint.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj
+.PHONY : src/PricePoint.cpp.obj
+
+src/PricePoint.i: src/PricePoint.cpp.i
+
+.PHONY : src/PricePoint.i
+
+# target to preprocess a source file
+src/PricePoint.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/PricePoint.cpp.i
+.PHONY : src/PricePoint.cpp.i
+
+src/PricePoint.s: src/PricePoint.cpp.s
+
+.PHONY : src/PricePoint.s
+
+# target to generate assembly for a file
+src/PricePoint.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/PricePoint.cpp.s
+.PHONY : src/PricePoint.cpp.s
+
 src/RingBuffer.obj: src/RingBuffer.cpp.obj
 
 .PHONY : src/RingBuffer.obj
@@ -472,6 +526,33 @@ src/TWAPAlgorithm.s: src/TWAPAlgorithm.cpp.s
 src/TWAPAlgorithm.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.s
 .PHONY : src/TWAPAlgorithm.cpp.s
+
+src/TakeLiquidityManager.obj: src/TakeLiquidityManager.cpp.obj
+
+.PHONY : src/TakeLiquidityManager.obj
+
+# target to build an object file
+src/TakeLiquidityManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.obj
+.PHONY : src/TakeLiquidityManager.cpp.obj
+
+src/TakeLiquidityManager.i: src/TakeLiquidityManager.cpp.i
+
+.PHONY : src/TakeLiquidityManager.i
+
+# target to preprocess a source file
+src/TakeLiquidityManager.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.i
+.PHONY : src/TakeLiquidityManager.cpp.i
+
+src/TakeLiquidityManager.s: src/TakeLiquidityManager.cpp.s
+
+.PHONY : src/TakeLiquidityManager.s
+
+# target to generate assembly for a file
+src/TakeLiquidityManager.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.s
+.PHONY : src/TakeLiquidityManager.cpp.s
 
 src/TimeUtils.obj: src/TimeUtils.cpp.obj
 
@@ -632,6 +713,9 @@ help:
 	@echo ... src/CountDownLatch.obj
 	@echo ... src/CountDownLatch.i
 	@echo ... src/CountDownLatch.s
+	@echo ... src/ExecutionService.obj
+	@echo ... src/ExecutionService.i
+	@echo ... src/ExecutionService.s
 	@echo ... src/IcebergAlgorithm.obj
 	@echo ... src/IcebergAlgorithm.i
 	@echo ... src/IcebergAlgorithm.s
@@ -644,6 +728,9 @@ help:
 	@echo ... src/ParticipateAlgorithm.obj
 	@echo ... src/ParticipateAlgorithm.i
 	@echo ... src/ParticipateAlgorithm.s
+	@echo ... src/PricePoint.obj
+	@echo ... src/PricePoint.i
+	@echo ... src/PricePoint.s
 	@echo ... src/RingBuffer.obj
 	@echo ... src/RingBuffer.i
 	@echo ... src/RingBuffer.s
@@ -656,6 +743,9 @@ help:
 	@echo ... src/TWAPAlgorithm.obj
 	@echo ... src/TWAPAlgorithm.i
 	@echo ... src/TWAPAlgorithm.s
+	@echo ... src/TakeLiquidityManager.obj
+	@echo ... src/TakeLiquidityManager.i
+	@echo ... src/TakeLiquidityManager.s
 	@echo ... src/TimeUtils.obj
 	@echo ... src/TimeUtils.i
 	@echo ... src/TimeUtils.s

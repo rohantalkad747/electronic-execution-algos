@@ -17,7 +17,7 @@ public:
     {
     }
 
-    void route(const Order &order);
+    int route(const Order &order);
 
 private:
     VenueManager VenueManager;

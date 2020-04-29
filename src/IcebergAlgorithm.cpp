@@ -23,7 +23,7 @@ void IcebergAlgorithm::triggerNextDisplay()
 
 void IcebergAlgorithm::init()
 {
-    IcebergConfig *icebergConfig = static_cast<IcebergConfig *>(this->algoConfig);
+    auto *icebergConfig = dynamic_cast<IcebergConfig *>(this->algoConfig);
     int display = icebergConfig->getIcebergDisplay();
     double variance = icebergConfig->getDisplayVariance();
     if (variance > 0)
@@ -42,7 +42,7 @@ double IcebergAlgorithm::getPrice()
 
 int IcebergAlgorithm::getLeavesQuantity()
 {
-    auto *icebergConfig = static_cast<IcebergConfig *>( this->algoConfig);
+    auto *icebergConfig = dynamic_cast<IcebergConfig *>( this->algoConfig);
     int display;
     int rawDisplay = icebergConfig->getIcebergDisplay();
     if (icebergConfig->getDisplayVariance() > 0)

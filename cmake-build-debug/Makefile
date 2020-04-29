@@ -284,6 +284,60 @@ src/IcebergAlgorithm.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.s
 .PHONY : src/IcebergAlgorithm.cpp.s
 
+src/Node.obj: src/Node.cpp.obj
+
+.PHONY : src/Node.obj
+
+# target to build an object file
+src/Node.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Node.cpp.obj
+.PHONY : src/Node.cpp.obj
+
+src/Node.i: src/Node.cpp.i
+
+.PHONY : src/Node.i
+
+# target to preprocess a source file
+src/Node.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Node.cpp.i
+.PHONY : src/Node.cpp.i
+
+src/Node.s: src/Node.cpp.s
+
+.PHONY : src/Node.s
+
+# target to generate assembly for a file
+src/Node.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/Node.cpp.s
+.PHONY : src/Node.cpp.s
+
+src/OrderBook.obj: src/OrderBook.cpp.obj
+
+.PHONY : src/OrderBook.obj
+
+# target to build an object file
+src/OrderBook.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj
+.PHONY : src/OrderBook.cpp.obj
+
+src/OrderBook.i: src/OrderBook.cpp.i
+
+.PHONY : src/OrderBook.i
+
+# target to preprocess a source file
+src/OrderBook.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/OrderBook.cpp.i
+.PHONY : src/OrderBook.cpp.i
+
+src/OrderBook.s: src/OrderBook.cpp.s
+
+.PHONY : src/OrderBook.s
+
+# target to generate assembly for a file
+src/OrderBook.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/OrderBook.cpp.s
+.PHONY : src/OrderBook.cpp.s
+
 src/ParticipateAlgorithm.obj: src/ParticipateAlgorithm.cpp.obj
 
 .PHONY : src/ParticipateAlgorithm.obj
@@ -337,6 +391,33 @@ src/RingBuffer.s: src/RingBuffer.cpp.s
 src/RingBuffer.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/RingBuffer.cpp.s
 .PHONY : src/RingBuffer.cpp.s
+
+src/SplayTree.obj: src/SplayTree.cpp.obj
+
+.PHONY : src/SplayTree.obj
+
+# target to build an object file
+src/SplayTree.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj
+.PHONY : src/SplayTree.cpp.obj
+
+src/SplayTree.i: src/SplayTree.cpp.i
+
+.PHONY : src/SplayTree.i
+
+# target to preprocess a source file
+src/SplayTree.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SplayTree.cpp.i
+.PHONY : src/SplayTree.cpp.i
+
+src/SplayTree.s: src/SplayTree.cpp.s
+
+.PHONY : src/SplayTree.s
+
+# target to generate assembly for a file
+src/SplayTree.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/SplayTree.cpp.s
+.PHONY : src/SplayTree.cpp.s
 
 src/SprayRouter.obj: src/SprayRouter.cpp.obj
 
@@ -554,12 +635,21 @@ help:
 	@echo ... src/IcebergAlgorithm.obj
 	@echo ... src/IcebergAlgorithm.i
 	@echo ... src/IcebergAlgorithm.s
+	@echo ... src/Node.obj
+	@echo ... src/Node.i
+	@echo ... src/Node.s
+	@echo ... src/OrderBook.obj
+	@echo ... src/OrderBook.i
+	@echo ... src/OrderBook.s
 	@echo ... src/ParticipateAlgorithm.obj
 	@echo ... src/ParticipateAlgorithm.i
 	@echo ... src/ParticipateAlgorithm.s
 	@echo ... src/RingBuffer.obj
 	@echo ... src/RingBuffer.i
 	@echo ... src/RingBuffer.s
+	@echo ... src/SplayTree.obj
+	@echo ... src/SplayTree.i
+	@echo ... src/SplayTree.s
 	@echo ... src/SprayRouter.obj
 	@echo ... src/SprayRouter.i
 	@echo ... src/SprayRouter.s

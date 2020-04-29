@@ -7,72 +7,69 @@
 #include "../include/SprayRouter.h"
 #include "../include/CountDownLatch.h"
 
-
 std::vector<long> getLatencyAdjustments(const std::vector<Venue> &venues);
 
-void SprayRouter::route(const Order &order)
+int SprayRouter::route(const Order &order)
 {
     const std::string &symbol = order.getSymbol();
     if (order.isTerminal())
     {
         Log.error("Order is terminal!");
-        return;
+        return 0;
     }
     int leaves = order.leaves();
     Log.info("leavesQty: ", leaves);
     if (leaves == 0)
     {
         Log.error("order is fully filled.");
-        return;
+        return 0;
     }
     std::vector<Venue> venues = VenueManager.venues(symbol);
     if (venues.empty())
     {
         Log.error("No venues for symbol: ", symbol);
-        return;
+        return 0;
     }
     std::vector<long> adjustments = getLatencyAdjustments(venues);
     int curRouted = 0;
-    for (;;)
+    std::vector<std::function<void(CountDownLatch *)>> tasks;
+    for (int i = 0; i < venues.size() && curRouted < order.getQuantity() && !this->cancelled; i++)
     {
-        std::vector<std::function<void(CountDownLatch *)>> tasks;
-        for (int i = 0; i < venues.size() && curRouted < order.getQuantity(); i++)
-        {
-            auto &venue = venues[i];
-            double executionProbability = venue.getExecutionProbability();
-            int childQuantity = std::min(order.getQuantity() - curRouted,
-                                         static_cast<int>(leaves * executionProbability));
-            curRouted += childQuantity;
-            Order child(order);
-            child.setQuantity(childQuantity);
-            long adjustment = adjustments[i];
-            tasks.emplace_back([adjustment, &venue, &child](CountDownLatch *latch)
+        auto &venue = venues[i];
+        double executionProbability = venue.getExecutionProbability();
+        int childQuantity = std::min(order.getQuantity() - curRouted, static_cast<int>(leaves * executionProbability));
+        curRouted += childQuantity;
+        Order child(order);
+        child.setQuantity(childQuantity);
+        long adjustment = adjustments[i];
+        tasks.emplace_back([adjustment, &venue, &child](CountDownLatch *latch)
+                           {
+                               if (adjustment != 0)
                                {
-                                   if (adjustment != 0)
-                                   {
-                                       std::this_thread::sleep_for(std::chrono::milliseconds(adjustment));
-                                   }
-                                   venue.acceptOrder(child);
-                                   latch->countDown();
-                               });
-            std::cout << "v: " << venue << ", prob:" << executionProbability << ", child_qty: " << childQuantity
-                      << ", price: " << order.getPrice()
-                      << std::endl;
-        }
-        auto *latch = new CountDownLatch(tasks.size());
-        for (auto &task : tasks)
-        {
-            std::thread thread_obj(task, latch);
-            thread_obj.detach();
-        }
-        latch->await();
-        delete latch;
-        latch = nullptr;
-        if (curRouted == order.getQuantity())
-        {
-            Log.info("Routed all shares ", symbol);
-            return;
-        }
+                                   std::this_thread::sleep_for(std::chrono::milliseconds(adjustment));
+                               }
+                               venue.acceptOrder(child);
+                               latch->countDown();
+                           });
+        std::cout << "v: " << venue << ", prob:" << executionProbability << ", child_qty: " << childQuantity
+                  << ", price: " << order.getPrice()
+                  << std::endl;
+    }
+    if (this->cancelled)
+    {
+        return 0;
+    }
+    auto latch = std::make_unique<CountDownLatch *>(new CountDownLatch(tasks.size()));
+    for (auto &task : tasks)
+    {
+        std::thread thread_obj(task, *latch);
+        thread_obj.detach();
+    }
+    (*latch)->await();
+    if (curRouted == order.getQuantity())
+    {
+        Log.info("Routed all shares ", symbol);
+        return curRouted;
     }
 }
 

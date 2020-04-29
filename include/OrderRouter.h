@@ -10,8 +10,18 @@
 
 class OrderRouter
 {
+protected:
+    bool cancelled;
 public:
-    virtual void route(const Order &order) = 0;
+    /**
+     * @return the number of shares routed.
+     */
+    virtual int route(const Order &order) = 0;
+
+    void cancel()
+    {
+        this->cancelled = true;
+    }
 };
 
 #endif //UNTITLED1_ORDERROUTER_H

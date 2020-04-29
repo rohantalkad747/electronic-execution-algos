@@ -18,7 +18,8 @@ int ParticipateAlgorithm::getLeavesQuantity()
         totalVolume += histVol[i];
     }
     std::cout << "Total volume " << totalVolume << std::endl;
-    return std::min((int) (povConfig->getOrder().getQuantity() - this->sharesTraded), (int) (totalVolume * povConfig->getParticipation()));
+    return std::min((int) (povConfig->getOrder().getQuantity() - this->sharesTraded),
+                    (int) (totalVolume * povConfig->getParticipation()));
 }
 
 double ParticipateAlgorithm::getPrice()

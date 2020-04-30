@@ -8,19 +8,15 @@
 
 void OrderBook::addOrder(const Order &order) {
     PricePoint* searchPp = PricePoint::of(order);
-    Node<PricePoint>* foundPp = SplayTree::search(this->root, *searchPp);
-    bool ppTemp = false;
+    Node<PricePoint>* foundPp = SplayTree::search<PricePoint>(this->root, *searchPp);
     if (foundPp == nullptr)
     {
-        ppTemp = true;
         foundPp = new Node<PricePoint>(*searchPp);
         this->root = foundPp;
     }
-    searchPp->addOrder(order);
-    PricePoint& pp = foundPp->key;
-    pp.addOrder(order);
-    if (ppTemp)
+    else
     {
         delete searchPp;
     }
+    foundPp->key.addOrder(order);
 }

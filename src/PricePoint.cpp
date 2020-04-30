@@ -6,7 +6,7 @@
 
 void PricePoint::addOrder(const Order &order)
 {
-    std::lock_guard grd(this->mtx_);
+    std::lock_guard grd(*(this->mtx_));
     int quantity = order.getQuantity();
     this->incSize(quantity);
     this->incVolume(quantity);

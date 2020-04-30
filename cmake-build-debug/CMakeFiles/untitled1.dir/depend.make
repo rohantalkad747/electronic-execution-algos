@@ -5,6 +5,7 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj: ../include/OrderRouter.h
@@ -33,6 +34,15 @@ CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj: ../src/BlockingQueue.cpp
 CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj: ../include/CountDownLatch.h
 CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj: ../src/CountDownLatch.cpp
 
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../include/FillService.h
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../include/Order.h
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../src/FillService.cpp
+
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/AntiGaming.h
@@ -40,6 +50,7 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/ExecutionType.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/IcebergAlgorithm.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/IcebergConfig.h
+CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/OrderRouter.h
@@ -56,10 +67,39 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/VenueManager.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj: ../src/IcebergAlgorithm.cpp
 
+CMakeFiles/untitled1.dir/src/Node.cpp.obj: ../include/Node.h
+CMakeFiles/untitled1.dir/src/Node.cpp.obj: ../src/Node.cpp
+
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/Node.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/Order.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/SplayTree.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../src/OrderBook.cpp
+
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/FillService.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/Node.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/Order.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderBookManager.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../src/OrderBookManager.cpp
+
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/OrderRouter.h
@@ -80,12 +120,26 @@ CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/VenueManag
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../src/ParticipateAlgorithm.cpp
 
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../include/Order.h
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../src/PricePoint.cpp
+
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: ../include/RingBuffer.h
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: ../src/RingBuffer.cpp
+
+CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: ../include/Node.h
+CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: ../include/SplayTree.h
+CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: ../src/SplayTree.cpp
 
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/CountDownLatch.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/OrderRouter.h
@@ -104,6 +158,7 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj: ../include/OrderRouter.h
@@ -132,6 +187,7 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/AntiGaming.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj: ../include/OrderRouter.h
@@ -154,6 +210,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../include/OrderRouter.h
@@ -176,6 +233,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj: ../src/VWAPAlgorithm.cpp
 
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/OrderSide.h
@@ -195,6 +253,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/Execution.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/ExecutionType.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/IcebergAlgorithm.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/IcebergConfig.h
+CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/Logger.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/OrderRouter.h

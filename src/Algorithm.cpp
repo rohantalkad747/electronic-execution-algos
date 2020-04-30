@@ -4,6 +4,13 @@
 
 #include "../include/Algorithm.h"
 
+struct InvalidRouteException : public std::exception
+{
+    std::string s;
+    explicit InvalidRouteException(std::string ss) : s(ss) {}
+    ~InvalidRouteException() noexcept override {}
+    const char* what() const noexcept { return s.c_str(); }
+};
 
 void Algorithm::sendToRouter()
 {
@@ -20,7 +27,7 @@ void Algorithm::sendToRouter()
         case (RoutingType::SERIAL): // TODO
             break;
         default:
-            throw *(new std::exception);
+            throw InvalidRouteException("Invalid routing type!");
     }
     this->sharesTraded += child.getQuantity();
 }

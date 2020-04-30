@@ -7,10 +7,12 @@
 
 
 #include <string>
+#include <mutex>
 #include "OrderSide.h"
 #include "OrderType.h"
 #include "TimeInForce.h"
 #include "OrderStatus.h"
+#include "LiquidityIndicator.h"
 
 class Order
 {
@@ -163,6 +165,18 @@ private:
     std::string tradeDate;
     std::string exDestination;
     std::string minQty;
+    LiquidityIndicator liquidityIndicator;
+    std::mutex* mtx_;
+public:
+    LiquidityIndicator getLiquidityIndicator() const
+    {
+        return liquidityIndicator;
+    }
+
+    std::mutex *getMtx() const
+    {
+        return mtx_;
+    }
 };
 
 

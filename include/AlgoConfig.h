@@ -23,7 +23,7 @@ public:
 
     void setOrder(const Order &order)
     {
-        AlgoConfig::order = order;
+        this->order = order;
     }
 
 public:

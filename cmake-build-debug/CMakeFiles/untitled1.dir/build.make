@@ -277,22 +277,9 @@ CMakeFiles/untitled1.dir/src/Node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/Node.cpp.s"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\Node.cpp -o CMakeFiles\untitled1.dir\src\Node.cpp.s
 
-CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: ../src/SplayTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\SplayTree.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\SplayTree.cpp
-
-CMakeFiles/untitled1.dir/src/SplayTree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/SplayTree.cpp.i"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\SplayTree.cpp > CMakeFiles\untitled1.dir\src\SplayTree.cpp.i
-
-CMakeFiles/untitled1.dir/src/SplayTree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/SplayTree.cpp.s"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\SplayTree.cpp -o CMakeFiles\untitled1.dir\src\SplayTree.cpp.s
-
 CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../src/PricePoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\PricePoint.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\PricePoint.cpp
 
 CMakeFiles/untitled1.dir/src/PricePoint.cpp.i: cmake_force
@@ -303,31 +290,31 @@ CMakeFiles/untitled1.dir/src/PricePoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/PricePoint.cpp.s"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\PricePoint.cpp -o CMakeFiles\untitled1.dir\src\PricePoint.cpp.s
 
-CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.obj: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.obj: ../src/TakeLiquidityManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.obj"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\TakeLiquidityManager.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\TakeLiquidityManager.cpp
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../src/OrderBookManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\OrderBookManager.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\OrderBookManager.cpp
 
-CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.i"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\TakeLiquidityManager.cpp > CMakeFiles\untitled1.dir\src\TakeLiquidityManager.cpp.i
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\OrderBookManager.cpp > CMakeFiles\untitled1.dir\src\OrderBookManager.cpp.i
 
-CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.s"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\TakeLiquidityManager.cpp -o CMakeFiles\untitled1.dir\src\TakeLiquidityManager.cpp.s
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\OrderBookManager.cpp -o CMakeFiles\untitled1.dir\src\OrderBookManager.cpp.s
 
-CMakeFiles/untitled1.dir/src/ExecutionService.cpp.obj: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/src/ExecutionService.cpp.obj: ../src/ExecutionService.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/untitled1.dir/src/ExecutionService.cpp.obj"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\ExecutionService.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\ExecutionService.cpp
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../src/FillService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/untitled1.dir/src/FillService.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\FillService.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\FillService.cpp
 
-CMakeFiles/untitled1.dir/src/ExecutionService.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/ExecutionService.cpp.i"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\ExecutionService.cpp > CMakeFiles\untitled1.dir\src\ExecutionService.cpp.i
+CMakeFiles/untitled1.dir/src/FillService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/FillService.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\FillService.cpp > CMakeFiles\untitled1.dir\src\FillService.cpp.i
 
-CMakeFiles/untitled1.dir/src/ExecutionService.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/ExecutionService.cpp.s"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\ExecutionService.cpp -o CMakeFiles\untitled1.dir\src\ExecutionService.cpp.s
+CMakeFiles/untitled1.dir/src/FillService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/FillService.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\FillService.cpp -o CMakeFiles\untitled1.dir\src\FillService.cpp.s
 
 # Object files for target untitled1
 untitled1_OBJECTS = \
@@ -348,10 +335,9 @@ untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/Node.cpp.obj" \
-"CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj" \
-"CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.obj" \
-"CMakeFiles/untitled1.dir/src/ExecutionService.cpp.obj"
+"CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj" \
+"CMakeFiles/untitled1.dir/src/FillService.cpp.obj"
 
 # External object files for target untitled1
 untitled1_EXTERNAL_OBJECTS =
@@ -373,15 +359,14 @@ untitled1.exe: CMakeFiles/untitled1.dir/src/AntiGaming.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/Node.cpp.obj
-untitled1.exe: CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj
-untitled1.exe: CMakeFiles/untitled1.dir/src/TakeLiquidityManager.cpp.obj
-untitled1.exe: CMakeFiles/untitled1.dir/src/ExecutionService.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/src/FillService.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/build.make
 untitled1.exe: CMakeFiles/untitled1.dir/linklibs.rsp
 untitled1.exe: CMakeFiles/untitled1.dir/objects1.rsp
 untitled1.exe: CMakeFiles/untitled1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable untitled1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable untitled1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\untitled1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

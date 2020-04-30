@@ -75,7 +75,7 @@ public:
 private:
     double price;
     std::vector<Order> orders;
-    std::mutex mtx_;
+    std::mutex* mtx_;
 
 };
 

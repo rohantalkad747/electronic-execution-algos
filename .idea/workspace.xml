@@ -41,12 +41,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rohan\CLionProjects\untitled1\test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rohan\CLionProjects\untitled1\include" />
       <recent name="C:\Users\Rohan\CLionProjects\untitled1\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rohan\CLionProjects\untitled1\test" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.untitled1 (1)">
@@ -93,14 +93,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="711" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586399932421" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1588196355102">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1588227903914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588196355102" />
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587934313367">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588227903914" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588229972072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587934313367" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588229972072" />
     <state x="715" y="222" key="#xdebugger.evaluate" timestamp="1587940542763">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -153,14 +153,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="349" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585980039528" />
-    <state x="690" y="122" width="587" height="795" key="find.popup" timestamp="1588196415714">
+    <state x="690" y="122" width="587" height="795" key="find.popup" timestamp="1588227908705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="122" width="587" height="795" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588196415714" />
-    <state x="1042" y="206" width="448" height="398" key="refactoring.ChangeSignatureDialog" timestamp="1587969110488">
+    <state x="690" y="122" width="587" height="795" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588227908705" />
+    <state x="1042" y="206" width="448" height="394" key="refactoring.ChangeSignatureDialog" timestamp="1588227223214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1042" y="206" width="448" height="398" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587969110488" />
+    <state x="1042" y="206" width="448" height="394" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588227223214" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1588185348040">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

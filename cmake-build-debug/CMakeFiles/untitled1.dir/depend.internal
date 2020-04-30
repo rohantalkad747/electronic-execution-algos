@@ -6,6 +6,7 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
@@ -33,6 +34,15 @@ CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj
 CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/CountDownLatch.h
  C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp
+CMakeFiles/untitled1.dir/src/FillService.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/FillService.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/FillService.cpp
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
@@ -41,6 +51,7 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/IcebergAlgorithm.h
  C:/Users/Rohan/CLionProjects/untitled1/include/IcebergConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
@@ -56,11 +67,40 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
  C:/Users/Rohan/CLionProjects/untitled1/src/IcebergAlgorithm.cpp
+CMakeFiles/untitled1.dir/src/Node.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/Node.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/Node.cpp
+CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Node.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderBook.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/PricePoint.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/SplayTree.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/OrderBook.cpp
+CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/FillService.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Node.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderBook.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderBookManager.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/PricePoint.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/OrderBookManager.cpp
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
@@ -80,13 +120,27 @@ CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h
  C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h
  C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp
+CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/PricePoint.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/PricePoint.cpp
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/RingBuffer.h
  C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp
+CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj
+ C:/Users/Rohan/CLionProjects/untitled1/include/Node.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/SplayTree.h
+ C:/Users/Rohan/CLionProjects/untitled1/src/SplayTree.cpp
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/CountDownLatch.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
@@ -105,6 +159,7 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
@@ -133,6 +188,7 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/AntiGaming.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
@@ -155,6 +211,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h
@@ -177,6 +234,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h
@@ -196,6 +254,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.obj
  C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h
  C:/Users/Rohan/CLionProjects/untitled1/include/IcebergAlgorithm.h
  C:/Users/Rohan/CLionProjects/untitled1/include/IcebergConfig.h
+ C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h
  C:/Users/Rohan/CLionProjects/untitled1/include/Order.h
  C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h

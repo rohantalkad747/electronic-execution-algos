@@ -11,6 +11,7 @@ std::vector<long> getLatencyAdjustments(const std::vector<Venue> &venues);
 
 int SprayRouter::route(const Order &order)
 {
+    Log.debug("-------------- BEGIN SOR ------------------- ");
     const std::string &symbol = order.getSymbol();
     if (order.isTerminal())
     {
@@ -66,11 +67,8 @@ int SprayRouter::route(const Order &order)
         thread_obj.detach();
     }
     (*latch)->await();
-    if (curRouted == order.getQuantity())
-    {
-        Log.info("Routed all shares ", symbol);
-        return curRouted;
-    }
+    Log.debug("-------------- DONE ROUTING ------------------- ");
+    return curRouted;
 }
 
 

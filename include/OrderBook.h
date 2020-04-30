@@ -22,9 +22,6 @@ public:
 
 private:
     Node<PricePoint>* root;
-
-public:
-    Node<PricePoint> *getRoot() const;
 };
 
 

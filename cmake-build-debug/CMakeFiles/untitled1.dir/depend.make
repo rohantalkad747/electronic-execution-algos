@@ -82,19 +82,6 @@ CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/SplayTree.h
 CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj: ../src/OrderBook.cpp
 
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/FillService.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/LiquidityIndicator.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/Node.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/Order.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderBook.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderBookManager.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderSide.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderStatus.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/OrderType.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/PricePoint.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../include/TimeInForce.h
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../src/OrderBookManager.cpp
-
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj: ../include/Execution.h
@@ -131,10 +118,6 @@ CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj: ../src/PricePoint.cpp
 
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: ../include/RingBuffer.h
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj: ../src/RingBuffer.cpp
-
-CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: ../include/Node.h
-CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: ../include/SplayTree.h
-CMakeFiles/untitled1.dir/src/SplayTree.cpp.obj: ../src/SplayTree.cpp
 
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/CountDownLatch.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj: ../include/Execution.h
@@ -246,6 +229,19 @@ CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/VenueManager.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj: ../src/VenueManager.cpp
 
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/FillService.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/Node.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/Order.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../include/VenueOrderManager.h
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../src/VenueOrderManager.cpp
+
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/AvgLatency.h
@@ -255,6 +251,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/IcebergAlgorithm.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/IcebergConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/Logger.h
+CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/Node.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/Order.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/OrderSide.h
@@ -264,6 +261,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/ParticipateAlgorithm.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/ParticipateConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/RoutingConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/RoutingType.h
+CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/SplayTree.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/SprayRouter.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/TWAPAlgorithm.h
 CMakeFiles/untitled1.dir/test/test.cpp.obj: ../include/TWAPConfig.h

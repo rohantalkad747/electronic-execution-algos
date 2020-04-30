@@ -50,5 +50,5 @@ double PricePoint::getPrice() const
 
 void PricePoint::setPrice(double price)
 {
-    PricePoint::price = price;
+    this->price = price;
 }

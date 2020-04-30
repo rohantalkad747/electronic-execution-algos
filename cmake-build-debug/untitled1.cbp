@@ -128,9 +128,6 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderBook.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderBookManager.h">
-			<Option target="untitled1"/>
-		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -197,6 +194,9 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueOrderManager.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -227,9 +227,6 @@
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/OrderBook.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/OrderBookManager.cpp">
-			<Option target="untitled1"/>
-		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -255,6 +252,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueOrderManager.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/test/test.cpp">

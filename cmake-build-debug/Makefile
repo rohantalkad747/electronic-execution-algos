@@ -365,33 +365,6 @@ src/OrderBook.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/OrderBook.cpp.s
 .PHONY : src/OrderBook.cpp.s
 
-src/OrderBookManager.obj: src/OrderBookManager.cpp.obj
-
-.PHONY : src/OrderBookManager.obj
-
-# target to build an object file
-src/OrderBookManager.cpp.obj:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj
-.PHONY : src/OrderBookManager.cpp.obj
-
-src/OrderBookManager.i: src/OrderBookManager.cpp.i
-
-.PHONY : src/OrderBookManager.i
-
-# target to preprocess a source file
-src/OrderBookManager.cpp.i:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.i
-.PHONY : src/OrderBookManager.cpp.i
-
-src/OrderBookManager.s: src/OrderBookManager.cpp.s
-
-.PHONY : src/OrderBookManager.s
-
-# target to generate assembly for a file
-src/OrderBookManager.cpp.s:
-	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.s
-.PHONY : src/OrderBookManager.cpp.s
-
 src/ParticipateAlgorithm.obj: src/ParticipateAlgorithm.cpp.obj
 
 .PHONY : src/ParticipateAlgorithm.obj
@@ -635,6 +608,33 @@ src/VenueManager.cpp.s:
 	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VenueManager.cpp.s
 .PHONY : src/VenueManager.cpp.s
 
+src/VenueOrderManager.obj: src/VenueOrderManager.cpp.obj
+
+.PHONY : src/VenueOrderManager.obj
+
+# target to build an object file
+src/VenueOrderManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj
+.PHONY : src/VenueOrderManager.cpp.obj
+
+src/VenueOrderManager.i: src/VenueOrderManager.cpp.i
+
+.PHONY : src/VenueOrderManager.i
+
+# target to preprocess a source file
+src/VenueOrderManager.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.i
+.PHONY : src/VenueOrderManager.cpp.i
+
+src/VenueOrderManager.s: src/VenueOrderManager.cpp.s
+
+.PHONY : src/VenueOrderManager.s
+
+# target to generate assembly for a file
+src/VenueOrderManager.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled1.dir\build.make CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.s
+.PHONY : src/VenueOrderManager.cpp.s
+
 test/test.obj: test/test.cpp.obj
 
 .PHONY : test/test.obj
@@ -698,9 +698,6 @@ help:
 	@echo ... src/OrderBook.obj
 	@echo ... src/OrderBook.i
 	@echo ... src/OrderBook.s
-	@echo ... src/OrderBookManager.obj
-	@echo ... src/OrderBookManager.i
-	@echo ... src/OrderBookManager.s
 	@echo ... src/ParticipateAlgorithm.obj
 	@echo ... src/ParticipateAlgorithm.i
 	@echo ... src/ParticipateAlgorithm.s
@@ -728,6 +725,9 @@ help:
 	@echo ... src/VenueManager.obj
 	@echo ... src/VenueManager.i
 	@echo ... src/VenueManager.s
+	@echo ... src/VenueOrderManager.obj
+	@echo ... src/VenueOrderManager.i
+	@echo ... src/VenueOrderManager.s
 	@echo ... test/test.obj
 	@echo ... test/test.i
 	@echo ... test/test.s

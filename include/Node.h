@@ -10,20 +10,23 @@ template<class T>
 class Node
 {
 public:
-    Node<T>(T& val) : key(val)
+    explicit Node<T>(T& val) : key(val)
+    {}
+
+    explicit Node<T>(T&& val) : key(val)
     {}
 
     Node<T>* newNode(T& val)
     {
         auto* nd = new Node<T>();
-        nd->left = nd->right = nullptr;
         nd->data = val;
         return nd;
     }
 
     T key;
-    Node<T>* left;
-    Node<T>* right;
+    // Default
+    Node<T>* left = nullptr;
+    Node<T>* right = nullptr;
 };
 
 

@@ -8,8 +8,9 @@
 
 enum class LiquidityIndicator : char
 {
-    ADD ='A',
-    REMOVE = 'R'
+    ADD = 'A',
+    REMOVE = 'R',
+    BOTH = 'B'
 };
 
 

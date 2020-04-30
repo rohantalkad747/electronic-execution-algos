@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Rohan/CLionProjects/untitled1/src/IcebergAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/src/Node.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/Node.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/src/OrderBook.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/OrderBookManager.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/src/PricePoint.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj"
@@ -23,6 +22,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/src/VWAPAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj"
+  "C:/Users/Rohan/CLionProjects/untitled1/src/VenueOrderManager.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj"
   "C:/Users/Rohan/CLionProjects/untitled1/test/test.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/test/test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

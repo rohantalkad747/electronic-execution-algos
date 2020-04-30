@@ -6,6 +6,7 @@
 #define UNTITLED1_SPLAYTREE_H
 
 
+#include <iostream>
 #include "Node.h"
 
 /**
@@ -36,18 +37,50 @@ private:
     }
 
 public:
+    template<class T> static
+    void printBT(const std::string& prefix, const Node<T>* node, bool isLeft)
+    {
+
+        if( node != nullptr )
+        {
+            std::cout << prefix;
+
+            std::cout << (isLeft ? "|---" : "^---" );
+
+            // print the value of the node
+            std::cout << node->key << std::endl;
+
+            // enter the next tree level - left and right branch
+            printBT( prefix + (isLeft ? "|   " : "   "), node->left, true);
+            printBT( prefix + (isLeft ? "|   " : "   "), node->right, false);
+        }
+    }
+
+    template<class T> static
+    void printBT(const Node<T>* node)
+    {
+        printBT("", node, false);
+    }
+
+    template<class T> static Node<T>* insert(Node<T>* root, T &&val)
+    {
+        return insert(root, val);
+    }
+
+
     template<class T> static Node<T>* insert(Node<T>* root, T &val)
     {
         if (root == nullptr)
         {
             return new Node<T>(val);
         }
+        root = SplayTree::search<T>(root, val);
         if (root->key == val)
         {
             return root;
         }
-        Node<T>* new_root = new Node(val);
-        if (root->key < val)
+        Node<T>* new_root = new Node<T>(val);
+        if (root->key > val)
         {
             new_root->right = root;
             new_root->left = root->left;
@@ -62,6 +95,11 @@ public:
         return new_root;
     }
 
+    template<class T> static Node<T>* search(Node<T> *root, T&& key)
+    {
+        return search<T>(root, key);
+    }
+
     template<class T> static Node<T>* search(Node<T> *root, T& key)
     {
         if (root == nullptr || root->key == key)
@@ -70,15 +108,17 @@ public:
         }
         if (root->key > key)
         {
-            if (root->left == nullptr) return root;
-
+            if (root->left == nullptr)
+            {
+                return root;
+            }
             if (root->left->key > key)
             {
-                root->left->left = search(root->left->left, key);
-                root = rightRotate(root);
+                root->left->left = search<T>(root->left->left, key);
+                root = rightRotate<T>(root);
             } else if (root->left->key < key)
             {
-                root->left->right = search(root->left->right, key);
+                root->left->right = search<T>(root->left->right, key);
                 if (root->left->right != nullptr)
                 {
                     root->left = leftRotate(root->left);
@@ -88,7 +128,7 @@ public:
             {
                 return root;
             }
-            return rightRotate(root);
+            return rightRotate<T>(root);
         } else
         {
             if (root->right == nullptr)
@@ -97,21 +137,21 @@ public:
             }
             if (root->right->key > key)
             {
-                root->right->left = search(root->right->left, key);
+                root->right->left = search<T>(root->right->left, key);
                 if (root->right->left != nullptr)
                 {
-                    root->right = rightRotate(root->right);
+                    root->right = rightRotate<T>(root->right);
                 }
             } else if (root->right->key < key)
             {
-                root->right->right = search(root->right->right, key);
-                root = leftRotate(root);
+                root->right->right = search<T>(root->right->right, key);
+                root = leftRotate<T>(root);
             }
             if (root->right == nullptr)
             {
                 return root;
             }
-            return leftRotate(root);
+            return leftRotate<T>(root);
         }
     }
 };

@@ -12,7 +12,14 @@ void OrderBook::addOrder(const Order &order) {
     if (foundPp == nullptr)
     {
         foundPp = new Node<PricePoint>(*searchPp);
-        this->root = foundPp;
+        if (this->root == nullptr)
+        {
+            this->root = foundPp;
+        }
+        else
+        {
+            SplayTree::insert<PricePoint>(this->root, foundPp->key);
+        }
     }
     else
     {

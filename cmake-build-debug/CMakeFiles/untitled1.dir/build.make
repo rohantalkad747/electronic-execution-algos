@@ -290,18 +290,18 @@ CMakeFiles/untitled1.dir/src/PricePoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/PricePoint.cpp.s"
 	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\PricePoint.cpp -o CMakeFiles\untitled1.dir\src\PricePoint.cpp.s
 
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj: ../src/OrderBookManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\OrderBookManager.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\OrderBookManager.cpp
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj: ../src/VenueOrderManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Rohan\CLionProjects\untitled1\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\untitled1.dir\src\VenueOrderManager.cpp.obj -c C:\Users\Rohan\CLionProjects\untitled1\src\VenueOrderManager.cpp
 
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.i"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\OrderBookManager.cpp > CMakeFiles\untitled1.dir\src\OrderBookManager.cpp.i
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.i"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Rohan\CLionProjects\untitled1\src\VenueOrderManager.cpp > CMakeFiles\untitled1.dir\src\VenueOrderManager.cpp.i
 
-CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.s"
-	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\OrderBookManager.cpp -o CMakeFiles\untitled1.dir\src\OrderBookManager.cpp.s
+CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.s"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Rohan\CLionProjects\untitled1\src\VenueOrderManager.cpp -o CMakeFiles\untitled1.dir\src\VenueOrderManager.cpp.s
 
 CMakeFiles/untitled1.dir/src/FillService.cpp.obj: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/FillService.cpp.obj: ../src/FillService.cpp
@@ -336,7 +336,7 @@ untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/Node.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj" \
-"CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj" \
+"CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj" \
 "CMakeFiles/untitled1.dir/src/FillService.cpp.obj"
 
 # External object files for target untitled1
@@ -360,7 +360,7 @@ untitled1.exe: CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/Node.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj
-untitled1.exe: CMakeFiles/untitled1.dir/src/OrderBookManager.cpp.obj
+untitled1.exe: CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/src/FillService.cpp.obj
 untitled1.exe: CMakeFiles/untitled1.dir/build.make
 untitled1.exe: CMakeFiles/untitled1.dir/linklibs.rsp

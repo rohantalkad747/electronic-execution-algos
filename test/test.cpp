@@ -15,6 +15,8 @@
 #include "../include/ParticipateAlgorithm.h"
 #include "../include/TWAPConfig.h"
 #include "../include/TimeUtils.h"
+#include "../include/Node.h"
+#include "../include/SplayTree.h"
 #include "../include/VWAPConfig.h"
 #include "../include/VWAPAlgorithm.h"
 #include "../include/ParticipateConfig.h"
@@ -26,7 +28,8 @@ VenueManager createVenueManager();
 void testSprayRouter(const VenueManager &vm);
 void testTWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double> histPrice);
 void testVWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double> histPrice, std::vector<int> histVol);
-void testPOV(const VenueManager &manager, SprayRouter& sr, std::vector<int> histVol);
+void testPOV(const VenueManager &vm, SprayRouter &sr, std::vector<int> histVol);
+void testSplayTree();
 
 template<class T>
 std::vector<T> seedVector(int a, int b, int amt);
@@ -53,8 +56,9 @@ std::vector<T> seedVector(int a, int b, int amt)
 int main()
 {
     VenueManager vm = createVenueManager();
-    testAlgos(vm);
+//    testAlgos(vm);
 //    testSprayRouter(vm);
+    testSplayTree();
 }
 
 void testAlgos(const VenueManager &vm)
@@ -184,4 +188,17 @@ void testPOV(const VenueManager &manager, SprayRouter &sr, std::vector<int> hist
     AlgoConfig* algoConfig = ((AlgoConfig*) povCOnfig);
     auto* algo = new ParticipateAlgorithm(algoConfig, sr, manager);
     algo->executeAlgo();
+}
+
+void testSplayTree()
+{
+    auto* rt  = new Node<int>(0);
+    for (int i = 0 ; i < 10; i++)
+    {
+        rt = SplayTree::insert<int>(rt, ((i & 1) == 1) ? i - 1: i + 1);
+    }
+    Node<int>* fv = SplayTree::search<int>(rt, 5);
+    assert ( fv->key == 5 );
+    Node<int>* zero = SplayTree::search<int>(fv, 0);
+    assert ( zero->key ==  0 );
 }

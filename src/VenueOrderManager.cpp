@@ -42,7 +42,7 @@ void VenueOrderManager::acceptOrder(Order& order)
 
 void VenueOrderManager::dispatchToExecutionService(Node<PricePoint> *depth, Order &order, std::function<bool(PricePoint &)>& isCompatible)
 {
-    if (depth == nullptr || !isCompatible(depth->key))
+    if (depth == nullptr || !(order.getOrderType() == OrderType::MARKET || isCompatible(depth->key))
     {
         return;
     }
@@ -51,19 +51,16 @@ void VenueOrderManager::dispatchToExecutionService(Node<PricePoint> *depth, Orde
     {
         return;
     }
-    if (order.getOrderType() == OrderType::MARKET || isCompatible(depth->key))
+    std::vector ppOdrs = depth->key.getOrders();
+    for (auto& ordr : ppOdrs)
     {
-        std::vector ppOdrs = depth->key.getOrders();
-        for (auto& ordr : ppOdrs)
+        std::scoped_lock<std::mutex, std::mutex> lck(*(order.getMtx()), *(ordr.getMtx()));
+        if (!ordr.isTerminal())
         {
-            std::scoped_lock<std::mutex, std::mutex> lck(*(order.getMtx()), *(ordr.getMtx()));
-            if (!ordr.isTerminal())
+            fillService.execute(order, ordr);
+            if (order.isTerminal())
             {
-                fillService.execute(order, ordr);
-                if (order.isTerminal())
-                {
-                    return;
-                }
+                return;
             }
         }
     }

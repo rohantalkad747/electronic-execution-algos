@@ -9,7 +9,7 @@
 #include <functional>
 #include <map>
 #include "OrderBook.h"
-#include "FillService.h"
+#include "ExecutionService.h"
 #include "OrderSide.h"
 
 /**
@@ -18,7 +18,7 @@
 class VenueOrderManager
 {
 private:
-    FillService fillService;
+    ExecutionService executionService;
     std::map<std::string, std::map<OrderSide, OrderBook>> books;
     std::map<std::string, Order*> orderArena;
 

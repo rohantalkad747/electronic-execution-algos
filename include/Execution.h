@@ -14,6 +14,18 @@
 class Execution
 {
 public:
+    /**
+     *
+     * @param orderID
+     * @param execID
+     * @param execType
+     * @param ordStatus
+     * @param symbol
+     * @param side
+     * @param leavesQty
+     * @param cumQty
+     * @param avgPx
+     */
     explicit Execution(std::string orderID, std::string execID, ExecutionType execType, OrderStatus ordStatus,
                        std::string symbol, OrderSide side, int leavesQty, int cumQty, double avgPx) :
             OrderID(orderID),

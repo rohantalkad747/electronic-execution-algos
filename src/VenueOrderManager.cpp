@@ -19,7 +19,7 @@ void VenueOrderManager::acceptOrder(Order& order)
         OrderBook book = this->books[sym][side];
         LiquidityIndicator li = order.getLiquidityIndicator();
         bool removeLiquidity = li == LiquidityIndicator::REMOVE;
-        if (removeLiquidity || (li == LiquidityIndicator::BOTH))
+        if (removeLiquidity || li == LiquidityIndicator::BOTH)
         {
             Node<PricePoint>* depth = book.getRoot();
             if ( depth != nullptr )
@@ -29,14 +29,13 @@ void VenueOrderManager::acceptOrder(Order& order)
                 dispatchToExecutionService(depth, order, isCompatibleFunct);
             }
         }
-        if (!removeLiquidity)
+        if (!removeLiquidity && !order.isTerminal())
         {
             if (order.getTimeInForce() == TimeInForce::IOC || order.getCumulativeQuantity() < order.getMinQuantity())
             {
-                order.setQuantity(0);
-                order.setOrderStatus(OrderStatus::CANCELLED);
+                executionService.cancel(order);
             }
-            else if (!order.isTerminal())
+            else
             {
                 book.addOrder(order);
             }
@@ -58,14 +57,11 @@ void VenueOrderManager::dispatchToExecutionService(Node<PricePoint> *depth, Orde
     std::vector ppOdrs = depth->key.getOrders();
     for (auto& ordr : ppOdrs)
     {
-        std::scoped_lock<std::mutex, std::mutex> lck(*(order.getMtx()), *(ordr.getMtx()));
-        if (!ordr.isTerminal())
+        std::lock_guard<std::mutex> lock(*(ordr.getMtx()) );
+        executionService.execute(order, ordr);
+        if (order.isTerminal())
         {
-            fillService.execute(order, ordr);
-            if (order.isTerminal())
-            {
-                return;
-            }
+            return;
         }
     }
     dispatchToExecutionService(depth->right, order, isCompatible);

@@ -19,8 +19,8 @@ class VenueOrderManager
 {
 private:
     FillService fillService;
-    // Each tuple has buy and sell books
     std::map<std::string, std::map<OrderSide, OrderBook>> books;
+    std::map<std::string, Order*> orderArena;
 
     static std::function<bool(PricePoint&)> isCompatibleBuy(Order& o)
     {

@@ -13,13 +13,13 @@
 void VenueOrderManager::acceptOrder(Order& order)
 {
     {
+        this->orderArena.insert_or_assign(order.getClOrdId(), order);
         OrderSide side = order.getSide();
         std::string sym = order.getSymbol();
         OrderBook book = this->books[sym][side];
         LiquidityIndicator li = order.getLiquidityIndicator();
-        bool remove = li  == LiquidityIndicator::REMOVE;
-        bool both;
-        if ( remove || ( both = ( li  == LiquidityIndicator::BOTH ) ) )
+        bool removeLiquidity = li == LiquidityIndicator::REMOVE;
+        if (removeLiquidity || (li == LiquidityIndicator::BOTH))
         {
             Node<PricePoint>* depth = book.getRoot();
             if ( depth != nullptr )
@@ -29,20 +29,24 @@ void VenueOrderManager::acceptOrder(Order& order)
                 dispatchToExecutionService(depth, order, isCompatibleFunct);
             }
         }
-        if ( !remove )
+        if (!removeLiquidity)
         {
-            if ( both && order.isTerminal())
+            if (order.getTimeInForce() == TimeInForce::IOC || order.getCumulativeQuantity() < order.getMinQuantity())
             {
-                return;
+                order.setQuantity(0);
+                order.setOrderStatus(OrderStatus::CANCELLED);
             }
-            book.addOrder(order);
+            else if (!order.isTerminal())
+            {
+                book.addOrder(order);
+            }
         }
     }
 }
 
 void VenueOrderManager::dispatchToExecutionService(Node<PricePoint> *depth, Order &order, std::function<bool(PricePoint &)>& isCompatible)
 {
-    if (depth == nullptr || !(order.getOrderType() == OrderType::MARKET || isCompatible(depth->key))
+    if (depth == nullptr || !(order.getOrderType() == OrderType::MARKET || isCompatible(depth->key)))
     {
         return;
     }

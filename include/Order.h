@@ -26,6 +26,15 @@ public:
         orderStatus = OrderStatus::NEW;
     };
 
+    explicit Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
+                   TimeInForce timeInForce, LiquidityIndicator liquidityIndicator) :
+            side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price), timeInForce(timeInForce), liquidityIndicator(liquidityIndicator)
+    {
+        minQuantity = quantity;
+        cumulativeQuantity = 0;
+        orderStatus = OrderStatus::NEW;
+    };
+
     Order(const Order &o) :
             side(o.side),
             symbol(o.symbol),
@@ -129,11 +138,6 @@ public:
         return exDestination;
     }
 
-    const std::string &getMinQty() const
-    {
-        return minQty;
-    }
-
     void setQuantity(int newQuantity)
     {
         quantity = newQuantity;
@@ -156,6 +160,88 @@ private:
     int minQuantity;
     int cumulativeQuantity;
     OrderStatus orderStatus;
+public:
+    void setSide(OrderSide side)
+    {
+        Order::side = side;
+    }
+
+    void setSymbol(const std::string &symbol)
+    {
+        Order::symbol = symbol;
+    }
+
+    void setOrderType(OrderType orderType)
+    {
+        Order::orderType = orderType;
+    }
+
+    void setTimeInForce(TimeInForce timeInForce)
+    {
+        Order::timeInForce = timeInForce;
+    }
+
+    void setMinQuantity(int minQuantity)
+    {
+        Order::minQuantity = minQuantity;
+    }
+
+    void setCumulativeQuantity(int cumulativeQuantity)
+    {
+        Order::cumulativeQuantity = cumulativeQuantity;
+    }
+
+    void setOrderStatus(OrderStatus orderStatus)
+    {
+        Order::orderStatus = orderStatus;
+    }
+
+    void setAccount(const std::string &account)
+    {
+        Order::account = account;
+    }
+
+    void setClOrdId(const std::string &clOrdId)
+    {
+        ClOrdID = clOrdId;
+    }
+
+    void setMsgType(const std::string &msgType)
+    {
+        Order::msgType = msgType;
+    }
+
+    void setText(const std::string &text)
+    {
+        Order::text = text;
+    }
+
+    void setTransactTime(const std::string &transactTime)
+    {
+        Order::transactTime = transactTime;
+    }
+
+    void setTradeDate(const std::string &tradeDate)
+    {
+        Order::tradeDate = tradeDate;
+    }
+
+    void setExDestination(const std::string &exDestination)
+    {
+        Order::exDestination = exDestination;
+    }
+
+    void setLiquidityIndicator(LiquidityIndicator liquidityIndicator)
+    {
+        Order::liquidityIndicator = liquidityIndicator;
+    }
+
+    void setMtx(std::mutex *mtx)
+    {
+        mtx_ = mtx;
+    }
+
+private:
     // Other FIX fields
     std::string account;
     std::string ClOrdID;
@@ -164,7 +250,6 @@ private:
     std::string transactTime;
     std::string tradeDate;
     std::string exDestination;
-    std::string minQty;
     LiquidityIndicator liquidityIndicator;
     std::mutex* mtx_;
 public:

@@ -7,6 +7,7 @@
 
 
 #include "Order.h"
+#include "Logger.h"
 
 /**
  * Handles filling orders and reporting executions
@@ -15,6 +16,8 @@
  */
 class FillService
 {
+private:
+    Logger log = *(new Logger("Fill Service"));
 public:
     void execute(Order& orderOne, Order&orderTwo);
     void reportExecution(int quantity, Order& ordOne, Order& ordTwo);

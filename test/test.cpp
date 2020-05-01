@@ -36,7 +36,9 @@ std::vector<T> seedVector(int a, int b, int amt);
 
 void testAlgos(const VenueManager &vm);
 
-void testIceberg(const VenueManager &manager, SprayRouter router);
+void testIceberg(const VenueManager &manager, const SprayRouter& router);
+
+void testOrderBook(VenueManager manager);
 
 template<class T>
 std::vector<T> seedVector(int a, int b, int amt)
@@ -58,7 +60,16 @@ int main()
     VenueManager vm = createVenueManager();
 //    testAlgos(vm);
 //    testSprayRouter(vm);
-    testSplayTree();
+//    testSplayTree();
+        testOrderBook(vm);
+}
+
+void testOrderBook(VenueManager vm)
+{
+    std::vector venues = vm.venues("JPM");
+    Venue v = venues[0];
+    Order order(OrderSide::BUY, "JPM", 100000, OrderType::MARKET, -1, TimeInForce::DAY, LiquidityIndicator::ADD);
+    v.acceptOrder(order);
 }
 
 void testAlgos(const VenueManager &vm)
@@ -72,7 +83,7 @@ void testAlgos(const VenueManager &vm)
 //    testIceberg(vm, sr);
 }
 
-void testIceberg(const VenueManager &manager, SprayRouter router)
+void testIceberg(const VenueManager &manager, const SprayRouter& router)
 {
     Order order(OrderSide::BUY, "GOOG", 150000, OrderType::LIMIT, 1200.99, TimeInForce::DAY);
     long curTime = TimeUtils::getCurTimeEpoch();

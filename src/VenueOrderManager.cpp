@@ -13,10 +13,10 @@
 void VenueOrderManager::acceptOrder(Order& order)
 {
     {
-        this->orderArena.insert_or_assign(order.getClOrdId(), order);
+        this->orderArena.insert_or_assign(order.getClOrdId(), &order);
         OrderSide side = order.getSide();
         std::string sym = order.getSymbol();
-        OrderBook book = this->books[sym][side];
+        OrderBook& book = this->books[sym][side];
         LiquidityIndicator li = order.getLiquidityIndicator();
         bool removeLiquidity = li == LiquidityIndicator::REMOVE;
         if (removeLiquidity || li == LiquidityIndicator::BOTH)
@@ -31,7 +31,7 @@ void VenueOrderManager::acceptOrder(Order& order)
         }
         if (!removeLiquidity && !order.isTerminal())
         {
-            if (order.getTimeInForce() == TimeInForce::IOC || order.getCumulativeQuantity() < order.getMinQuantity())
+            if ((order.getTimeInForce() == TimeInForce::IOC) && (order.getCumulativeQuantity() < order.getMinQuantity()))
             {
                 executionService.cancel(order);
             }
@@ -58,7 +58,7 @@ void VenueOrderManager::dispatchToExecutionService(Node<PricePoint> *depth, Orde
     for (auto& ordr : ppOdrs)
     {
         std::lock_guard<std::mutex> lock(*(ordr.getMtx()) );
-        executionService.execute(order, ordr);
+        executionService.execute(order, ordr, fillTable);
         if (order.isTerminal())
         {
             return;

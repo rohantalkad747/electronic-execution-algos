@@ -68,8 +68,20 @@ void testOrderBook(VenueManager vm)
 {
     std::vector venues = vm.venues("JPM");
     Venue v = venues[0];
-    Order order(OrderSide::BUY, "JPM", 100000, OrderType::MARKET, -1, TimeInForce::DAY, LiquidityIndicator::ADD);
-    v.acceptOrder(order);
+    for (int i = 10; i < 20; i++)
+    {
+        bool odd = (i & 1) == 1;
+        Order prnt(odd ? OrderSide::BUY : OrderSide::SELL, odd ? "JPM" : "GOOG", i, OrderType::LIMIT, odd ? 110 : 1500,
+                   TimeInForce::DAY, odd ? LiquidityIndicator::ADD : LiquidityIndicator::REMOVE);
+        v.acceptOrder(prnt);
+    }
+    for (int i = 30; i < 50; i++)
+    {
+        bool odd = (i & 1) == 1;
+        Order prnt(odd ? OrderSide::BUY : OrderSide::SELL, odd ? "JPM" : "GOOG", i, OrderType::MARKET, -1,
+                   TimeInForce::DAY, LiquidityIndicator::BOTH);
+        v.acceptOrder(prnt);
+    }
 }
 
 void testAlgos(const VenueManager &vm)
@@ -131,7 +143,7 @@ void testSprayRouter(VenueManager vm)
     for (int i = 50; i < 100; i++)
     {
         bool odd = (i & 1) == 1;
-        Order prnt(odd ? OrderSide::BUY : OrderSide::SELL, odd ? "IBM" : "GOOG", i, OrderType::MARKET, odd ? 110 : 1500,
+        Order prnt(odd ? OrderSide::BUY : OrderSide::SELL, odd ? "IBM" : "GOOG", i, OrderType::MARKET, -1,
                    TimeInForce::DAY);
         orders.push_back(prnt);
     }

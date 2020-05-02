@@ -18,9 +18,11 @@
 class VenueOrderManager
 {
 private:
+    Logger log = *(new Logger("VenueOrderManager"));
     ExecutionService executionService;
     std::map<std::string, std::map<OrderSide, OrderBook>> books;
     std::map<std::string, Order*> orderArena;
+    std::map<std::string, double> fillTable;
 
     static std::function<bool(PricePoint&)> isCompatibleBuy(Order& o)
     {

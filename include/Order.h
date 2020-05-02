@@ -251,7 +251,7 @@ private:
     std::string tradeDate;
     std::string exDestination;
     LiquidityIndicator liquidityIndicator;
-    std::mutex* mtx_;
+    std::mutex* mtx_ = new std::mutex();
 public:
     LiquidityIndicator getLiquidityIndicator() const
     {

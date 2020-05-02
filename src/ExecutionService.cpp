@@ -2,9 +2,17 @@
 // Created by Rohan on 4/29/2020.
 //
 
-#include <bits/shared_ptr.h>
+#include <bits/unique_ptr.h>
 #include "../include/ExecutionService.h"
 #include "../include/Execution.h"
+struct Motherfucker
+{
+public:
+    void printMofo()
+    {
+        std::cout << "mofo" <<std::endl;
+    }
+};
 
 void ExecutionService::cancel(Order &order)
 {
@@ -18,23 +26,32 @@ void ExecutionService::cancel(Order &order)
  * Executes the given orders. It is assumed that only
  * {@code orderTwo} needs to be locked.
  */
-inline void ExecutionService::execute(Order &orderOne, Order &fromBook)
+void ExecutionService::execute(Order &orderOne, Order &fromBook, std::map<std::string, double>& fillTable)
 {
     if (!fromBook.isTerminal() && !orderOne.isTerminal())
     {
         int trgtQuantity = orderOne.getQuantity();
         int bookEntryQuantity = fromBook.getQuantity();
-        int executed = std::abs(trgtQuantity - bookEntryQuantity);
+        int executed = std::min(trgtQuantity, bookEntryQuantity);
         orderOne.setQuantity(trgtQuantity - executed);
+        orderOne.setCumulativeQuantity(orderOne.getCumulativeQuantity() + executed);
         fromBook.setQuantity(bookEntryQuantity - executed);
+        fromBook.setCumulativeQuantity(fromBook.getCumulativeQuantity() + executed);
         if (executed != 0)
         {
-            reportExecution(orderOne, fromBook);
+            reportExecution(orderOne, fromBook, fillTable);
         }
     }
 }
 
-void ExecutionService::reportExecution(Order &ordOne, Order &fromBook)
+void ExecutionService::reportExecution(Order &ordOne, Order &fromBook, std::map<std::string, double>& fillTable)
+{
+    double avPx = resolvePx(ordOne, fromBook, fillTable);
+    buildExec(ordOne, avPx);
+    buildExec(fromBook, avPx);
+}
+
+double ExecutionService::resolvePx(const Order &ordOne, const Order &fromBook, std::map<std::string, double>& fillTable) const
 {
     double avPx;
     OrderType ordOneType = ordOne.getOrderType();
@@ -43,7 +60,7 @@ void ExecutionService::reportExecution(Order &ordOne, Order &fromBook)
     {
         if (fromBookType == OrderType::MARKET)
         {
-            avPx = lastFill;
+            avPx = fillTable[ordOne.getSymbol()];
         }
         else
         {
@@ -58,11 +75,10 @@ void ExecutionService::reportExecution(Order &ordOne, Order &fromBook)
     {
         avPx = fromBook.getPrice();
     }
-    buildExec(ordOne, avPx);
-    buildExec(fromBook, avPx);
+    return avPx;
 }
 
-void ExecutionService::buildExec(const Order &ordOne, double avPx)
+void ExecutionService::buildExec(const Order &ordOne, double& avPx)
 {
     bool isFullExec = ordOne.isTerminal();
     ExecutionType execType;
@@ -77,7 +93,8 @@ void ExecutionService::buildExec(const Order &ordOne, double avPx)
         execType = ExecutionType::TRADE;
         ordStatus = OrderStatus::PARTIAL;
     }
-    std::shared_ptr<Execution*> exec = std::make_shared<Execution*>(
+    std::lock_guard<std::mutex> grd(*(this->mtx));
+    std::unique_ptr<Execution*> exec = std::make_unique<Execution*>(
             new Execution(
                     ordOne.getClOrdId(),
                     std::to_string(execId++),
@@ -90,5 +107,6 @@ void ExecutionService::buildExec(const Order &ordOne, double avPx)
                     avPx
                     )
             );
-    // send to execution listener for FIX message broadcast
+    std::cout << "Execution Report: S " << ordOne.getSymbol() << "C" << " " << ordOne.getCumulativeQuantity() << std::endl;
+    // Send to execution listener for FIX exec broadcast e.g., executionListener.onExec(std::move(exec));
 }

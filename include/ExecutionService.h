@@ -7,6 +7,7 @@
 
 
 #include <atomic>
+#include <map>
 #include "Order.h"
 #include "Logger.h"
 
@@ -18,14 +19,17 @@
 class ExecutionService
 {
 private:
-    std::atomic_long execId = 0;
-    double lastFill;
+    int execId;
+
+private:
     Logger log = *(new Logger("Fill Service"));
+    std::mutex* mtx = new std::mutex();
+    void reportExecution(Order& ordOne, Order& fromBook, std::map<std::string, double>& fillTable);
+    double resolvePx(const Order &ordOne, const Order &fromBook, std::map<std::string, double>& fillTable) const;
+    void buildExec(const Order &ordOne, double& avPx);
 public:
-    void execute(Order& orderOne, Order&fromBook);
-    void reportExecution(Order& ordOne, Order& fromBook);
-    void cancel(Order &order);
-    void buildExec(const Order &ordOne, double avPx);
+    void execute(Order& orderOne, Order&fromBook, std::map<std::string, double>& fillTable);
+    void cancel(Order& order);
 };
 
 

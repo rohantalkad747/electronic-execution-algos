@@ -4,7 +4,6 @@
 
 #include <future>
 #include "../include/TimedAlgorithm.h"
-#include <algorithm>
 #include"../include/AntiGaming.h"
 
 void TimedAlgorithm::executeAlgo()

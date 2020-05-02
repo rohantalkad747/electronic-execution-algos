@@ -15,6 +15,7 @@
 #include "Logger.h"
 #include "TimeUtils.h"
 #include "Order.h"
+#include "VenueOrderManager.h"
 
 
 class Venue
@@ -32,11 +33,11 @@ public:
 
     const void acceptOrder(Order &order)
     {
-        std::this_thread::sleep_for(std::chrono::milliseconds(getAvgLatency()));
-        std::string received = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(
-                std::chrono::system_clock::now().time_since_epoch()).count());
-        log.info("Received order at " + name + " at " + received);
-
+//        std::this_thread::sleep_for(std::chrono::milliseconds(getAvgLatency()));
+//        std::string received = std::to_string(std::chrono::duration_cast<std::chrono::milliseconds>(
+//                std::chrono::system_clock::now().time_since_epoch()).count());
+//        log.info("Received order at " + name + " at " + received);
+        vom.acceptOrder(order);
     }
 
     std::vector<std::string> getSymbols() const
@@ -95,6 +96,7 @@ private:
     std::map<std::string, VenueRank> rankMapping;
     long avgLatency;
     Logger log;
+    VenueOrderManager vom;
 
     friend std::ostream &operator<<(std::ostream &os, const Venue &venue)
     {

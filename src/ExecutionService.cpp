@@ -5,14 +5,6 @@
 #include <bits/unique_ptr.h>
 #include "../include/ExecutionService.h"
 #include "../include/Execution.h"
-struct Motherfucker
-{
-public:
-    void printMofo()
-    {
-        std::cout << "mofo" <<std::endl;
-    }
-};
 
 void ExecutionService::cancel(Order &order)
 {

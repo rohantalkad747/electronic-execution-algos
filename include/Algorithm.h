@@ -8,6 +8,9 @@
 #include "AlgoConfig.h"
 #include "SprayRouter.h"
 
+/**
+ * Base-level class for all trading algorithms.
+ */
 class Algorithm
 {
 public:

@@ -22,14 +22,13 @@ public:
 
     virtual void executeAlgo() = 0;
 
-    void cancelAlgo()
-    {
-        this->cancel = true;
-    }
+    void cancelAlgo();
 
     bool algoActive();
 
 protected:
+    std::condition_variable schedGuard_;
+    std::mutex mtx_;
     virtual double getPrice() = 0;
 
     virtual int getLeavesQuantity() = 0;

@@ -12,6 +12,14 @@ struct InvalidRouteException : public std::exception
     const char* what() const noexcept { return s.c_str(); }
 };
 
+void Algorithm::cancelAlgo()
+{
+    std::unique_lock<std::mutex> lk(mtx_);
+    this->cancel = true;
+    lk.unlock();
+    this->schedGuard_.notify_one();
+}
+
 void Algorithm::sendToRouter()
 {
     Order child = getChildOrder();
@@ -23,8 +31,6 @@ void Algorithm::sendToRouter()
             break;
         case (RoutingType::SPRAY):
             this->sprayRouter.route(child);
-            break;
-        case (RoutingType::SERIAL): // TODO
             break;
         default:
             throw InvalidRouteException("Invalid routing type!");
@@ -51,7 +57,6 @@ bool Algorithm::algoActive()
 {
     return
             TimeUtils::getCurTimeEpoch() <= this->algoConfig->getEndTime() &&
-            !this->cancel &&
             this->sharesTraded < this->algoConfig->getOrder().getQuantity();
 }
 

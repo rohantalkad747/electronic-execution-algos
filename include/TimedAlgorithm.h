@@ -18,7 +18,6 @@ public:
 
 protected:
     int getLeavesQuantity();
-
     int leavesQuantity = -1;
 
 protected:

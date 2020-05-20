@@ -16,12 +16,13 @@
  * to a post-execution listener, which routes a FIX
  * message back to the broker.
  */
-class ExecutionService {
+class ExecutionService
+{
 private:
     int execId;
 
 private:
-    Logger log = *(new Logger("Fill Service"));
+    Logger     log  = *(new Logger("Fill Service"));
     std::mutex *mtx = new std::mutex();
 
     void reportExecution(Order &ordOne, Order &fromBook, std::map<std::string, double> &fillTable);

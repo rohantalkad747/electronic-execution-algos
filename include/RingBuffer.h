@@ -10,7 +10,8 @@
 #include <condition_variable>
 
 template<class T, long Q_SIZE>
-class RingBuffer {
+class RingBuffer
+{
 public:
     void push(T *item);
 
@@ -18,11 +19,11 @@ public:
 
 private:
     static const unsigned long Q_MASK = Q_SIZE - 1;
-    std::mutex mtx_;
-    unsigned long read_ptr_, write_ptr_;
-    T **ptrs_;
-    std::condition_variable cond_empty_;
-    std::condition_variable cond_overflow_;
+    std::mutex                 mtx_;
+    unsigned long              read_ptr_, write_ptr_;
+    T                          **ptrs_;
+    std::condition_variable    cond_empty_;
+    std::condition_variable    cond_overflow_;
 };
 
 

@@ -11,12 +11,14 @@
 /**
  * Base-level class for all trading algorithms.
  */
-class Algorithm {
+class Algorithm
+{
 public:
 
-    Algorithm(AlgoConfig *algoConfig, const SprayRouter &sprayRouter, const VenueManager &venueManager)
-            : algoConfig(algoConfig), sprayRouter(sprayRouter), venueManager(venueManager),
-              log(*(new Logger("Algorithm"))), cancel(false) {}
+    Algorithm(AlgoConfig *algoConfig, const VenueManager &venueManager)
+            : algoConfig(algoConfig), sprayRouter(SprayRouter(venueManager)), venueManager(venueManager),
+              log(*(new Logger("Algorithm"))), cancel(false)
+    {}
 
     virtual void executeAlgo() = 0;
 
@@ -24,13 +26,14 @@ public:
 
     bool algoActive();
 
-    AlgoConfig *getAlgoConfig() {
+    AlgoConfig *getAlgoConfig()
+    {
         return this->algoConfig;
     }
 
 protected:
     std::condition_variable schedGuard_;
-    std::mutex mtx_;
+    std::mutex              mtx_;
 
     virtual double getPrice() = 0;
 
@@ -50,7 +53,7 @@ protected:
 
     Logger log;
 private:
-    SprayRouter sprayRouter;
+    SprayRouter  sprayRouter;
     VenueManager venueManager;
 
     Order getChildOrder();

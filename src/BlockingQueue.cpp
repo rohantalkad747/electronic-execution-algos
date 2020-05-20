@@ -5,9 +5,12 @@
 #include "../include/BlockingQueue.h"
 
 template<class T>
-bool BlockingQueue<T>::tryPut(T item) {
-    if (mtx.try_lock()) {
-        if (queue.size() == size) {
+bool BlockingQueue<T>::tryPut(T item)
+{
+    if (mtx.try_lock())
+    {
+        if (queue.size() == size)
+        {
             return false;
         }
         queue.push_back(item);
@@ -19,9 +22,11 @@ bool BlockingQueue<T>::tryPut(T item) {
 }
 
 template<class T>
-bool BlockingQueue<T>::put(T item) {
+bool BlockingQueue<T>::put(T item)
+{
     mtx.lock();
-    if (queue.size() == size) {
+    if (queue.size() == size)
+    {
         return false;
     }
     queue.push_back(item);
@@ -31,14 +36,16 @@ bool BlockingQueue<T>::put(T item) {
 }
 
 template<class T>
-T BlockingQueue<T>::pop() {
+T BlockingQueue<T>::pop()
+{
     while (size == 0);
     mtx.lock();
     std::iterator iter = queue.begin();
-    T item = *item;
+    T             item = *item;
     queue.erase(iter);
     int i = 0, j;
-    while ((j = (i + 1)) < queue.size()) {
+    while ((j = (i + 1)) < queue.size())
+    {
         queue[i++] = queue[j];
     }
     mtx.unlock();

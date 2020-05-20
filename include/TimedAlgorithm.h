@@ -9,7 +9,8 @@
 #include "Algorithm.h"
 #include "TimingContext.h"
 
-class TimedAlgorithm : public Algorithm {
+class TimedAlgorithm : public Algorithm
+{
 public:
     using Algorithm::Algorithm;
 

@@ -8,7 +8,8 @@
 #include <vector>
 #include "TimingContext.h"
 
-class VWAPConfig : public TimingContext {
+class VWAPConfig : public TimingContext
+{
 public:
 
 private:
@@ -19,26 +20,31 @@ public:
                             startTime, endTime,
                             initialDelay,
                             interval),
-              histVolume(histVolume), histPrice(histPrice) {}
+              histVolume(histVolume), histPrice(histPrice)
+    {}
 
 private:
-    std::vector<int> histVolume;
+    std::vector<int>    histVolume;
     std::vector<double> histPrice;
 public:
-    const std::vector<double> &getHistPrice() const {
+    const std::vector<double> &getHistPrice() const
+    {
         return histPrice;
     }
 
-    void setHistPrice(const std::vector<double> &histPrice) {
+    void setHistPrice(const std::vector<double> &histPrice)
+    {
         VWAPConfig::histPrice = histPrice;
     }
 
 public:
-    const std::vector<int> &getHistVolume() const {
+    const std::vector<int> &getHistVolume() const
+    {
         return histVolume;
     }
 
-    void setHistVolume(const std::vector<int> &histVolume) {
+    void setHistVolume(const std::vector<int> &histVolume)
+    {
         VWAPConfig::histVolume = histVolume;
     }
 

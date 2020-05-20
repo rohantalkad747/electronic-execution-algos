@@ -7,28 +7,34 @@
 
 #include "AlgoConfig.h"
 
-class TimingContext : public AlgoConfig {
+class TimingContext : public AlgoConfig
+{
 public:
     TimingContext(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime,
                   long initialDelay, long interval) : AlgoConfig(order, routingConfig, startTime, endTime),
-                                                      initialDelay(initialDelay), interval(interval) {}
+                                                      initialDelay(initialDelay), interval(interval)
+    {}
 
 private:
     long initialDelay;
 public:
-    long getInitialDelay() const {
+    long getInitialDelay() const
+    {
         return initialDelay;
     }
 
-    void setInitialDelay(long initialDelay) {
+    void setInitialDelay(long initialDelay)
+    {
         TimingContext::initialDelay = initialDelay;
     }
 
-    long getInterval() const {
+    long getInterval() const
+    {
         return interval;
     }
 
-    void setInterval(long interval) {
+    void setInterval(long interval)
+    {
         TimingContext::interval = interval;
     }
 

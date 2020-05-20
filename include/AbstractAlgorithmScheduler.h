@@ -19,7 +19,8 @@
 #include <algorithm>
 #include <type_traits>
 
-class AbstractAlgorithmScheduler {
+class AbstractAlgorithmScheduler
+{
 public:
     AbstractAlgorithmScheduler();
 
@@ -40,20 +41,23 @@ public:
     void clear();
 
 private:
-    struct Task {
+    struct Task
+    {
         std::chrono::steady_clock::time_point time;
-        std::function<void()> func;
+        std::function<void()>                 func;
     };
 
-    struct TaskComparer {
-        bool operator()(const Task &left, const Task &right) const { return right.time < left.time; }
+    struct TaskComparer
+    {
+        bool operator()(const Task &left, const Task &right) const
+        { return right.time < left.time; }
     };
 
-    std::vector<Task> mTasks;
-    std::mutex mMutex;
+    std::vector<Task>       mTasks;
+    std::mutex              mMutex;
     std::condition_variable mCv;
-    bool mExit;
-    std::thread mThread;
+    bool                    mExit;
+    std::thread             mThread;
 };
 
 

@@ -7,7 +7,8 @@
 
 #include "./Algorithm.h"
 
-class IcebergAlgorithm : public Algorithm {
+class IcebergAlgorithm : public Algorithm
+{
 public:
     using Algorithm::Algorithm;
 

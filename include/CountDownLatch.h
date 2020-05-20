@@ -10,9 +10,11 @@
 #include <condition_variable>
 #include <mutex>
 
-class CountDownLatch {
+class CountDownLatch
+{
 public:
-    explicit CountDownLatch(const unsigned int count) : m_count(count) {}
+    explicit CountDownLatch(const unsigned int count) : m_count(count)
+    {}
 
     virtual ~CountDownLatch() = default;
 
@@ -26,9 +28,9 @@ public:
     unsigned int getCount(void);
 
 protected:
-    std::mutex m_mutex;
+    std::mutex              m_mutex;
     std::condition_variable m_cv;
-    unsigned int m_count = 0;
+    unsigned int            m_count = 0;
 };
 
 #endif //UNTITLED1_COUNTDOWNLATCH_H

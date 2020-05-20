@@ -6,10 +6,11 @@
 #define UNTITLED1_LIQUIDITYINDICATOR_H
 
 
-enum class LiquidityIndicator : char {
-    ADD = 'A',
+enum class LiquidityIndicator : char
+{
+    ADD    = 'A',
     REMOVE = 'R',
-    BOTH = 'B'
+    BOTH   = 'B'
 };
 
 

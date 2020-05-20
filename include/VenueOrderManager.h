@@ -15,22 +15,27 @@
 /**
  * Th is the interface through which the venue interacts with its order books.
  */
-class VenueOrderManager {
+class VenueOrderManager
+{
 private:
-    Logger log = *(new Logger("VenueOrderManager"));
-    ExecutionService executionService;
+    Logger                                                log = *(new Logger("VenueOrderManager"));
+    ExecutionService                                      executionService;
     std::map<std::string, std::map<OrderSide, OrderBook>> books;
-    std::map<std::string, Order *> orderArena;
-    std::map<std::string, double> fillTable;
+    std::map<std::string, Order *>                        orderArena;
+    std::map<std::string, double>                         fillTable;
 
-    static std::function<bool(PricePoint &)> isCompatibleBuy(Order &o) {
-        return [&](PricePoint &pp) {
+    static std::function<bool(PricePoint &)> isCompatibleBuy(Order &o)
+    {
+        return [&](PricePoint &pp)
+        {
             return o.getPrice() <= pp.getPrice();
         };
     }
 
-    static std::function<bool(PricePoint &)> isCompatibleSell(Order &o) {
-        return [&](PricePoint &pp) {
+    static std::function<bool(PricePoint &)> isCompatibleSell(Order &o)
+    {
+        return [&](PricePoint &pp)
+        {
             return o.getPrice() >= pp.getPrice();
         };
     }

@@ -10,39 +10,43 @@
 #include "Basket.h"
 
 template<typename A>
-class Wave {
+class Wave
+{
 private:
-    static const PENDING = 1;
-    static const SENT = 2;
-    static const EXECUTED = 4;
-    static const CANCELLED = 8;
-    int timestamp;
-    double waveNumber;
-    double percentage;
-    A *algorithm;
-    OrderType orderType;
+    static const        PENDING          = 1;
+    static const        SENT             = 2;
+    static const        EXECUTED         = 4;
+    static const        PARTIAL_EX       = 8;
+    static const        CANCELLED        = 16;
+    int                 timestamp;
+    double              waveNumber;
+    double              percentage;
+    A                   *algoConfig;
+    OrderType           orderType;
     std::vector<double> prices;
-    std::vector<Orders> orders;
-    unsigned char waveStatusHistory = 0;
-
-    std::atomic<int> traded(
-
-    0);
+    std::vector<Order>  orders;
+    unsigned char       waveSymbolStatus = 0;
+    std::atomic<int>    traded           = 0;
+    int                 total            = 0;
 
     std::vector<Order> splitBySecurity(Basket *b);
 
-    std::mutex mtx_;
+    std::mutex      mtx_;
     std::lock_guard grd_;
 
-    Algorithm *getAlgorithm() {
-        return dynamic_cast<Algorithm *>(algorithm);
+    Algorithm *getAlgorithm()
+    {
+        return dynamic_cast<Algorithm *>(algoConfig);
     }
 
-    Order *findOrder(std::string orderId);
+    Order *findOrder(const std::string &orderId);
 
 public:
-    Wave(double percentage, A *algorithm, int waveNumber) : percentage(percentage), algorithm(algorithm),
-                                                            waveNumber(waveNumber) {}
+
+    Wave(double waveNumber, double percentage, A *algoConfig, OrderType orderType,
+         const std::vector<double> &prices) : waveNumber(waveNumber), percentage(percentage), algoConfig(algoConfig),
+                                              orderType(orderType), prices(prices)
+    {};
 
     virtual ~Wave();
 
@@ -50,11 +54,12 @@ public:
 
     void cancelWave();
 
-    void replaceWave(Wave *v);
+    std::string getStatus();
 
     void executeWave(Basket *b);
 
-    std::vector<Order> getOrders() {
+    std::vector<Order> getOrders()
+    {
         return this->orders;
     }
 };

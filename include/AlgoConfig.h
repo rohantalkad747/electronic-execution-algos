@@ -10,15 +10,19 @@
 #include "Order.h"
 #include "RoutingConfig.h"
 
-class AlgoConfig {
+class AlgoConfig
+{
 public:
-    virtual ~AlgoConfig() {}
+    virtual ~AlgoConfig()
+    {}
 
-    const Order &getOrder() const {
+    const Order &getOrder() const
+    {
         return order;
     }
 
-    void setOrder(const Order &order) {
+    void setOrder(const Order &order)
+    {
         this->order = order;
     }
 
@@ -28,36 +32,43 @@ public:
                                                                                                                routingConfig),
                                                                                                        startTime(
                                                                                                                startTime),
-                                                                                                       endTime(endTime) {}
+                                                                                                       endTime(endTime)
+    {}
 
 protected:
-    Order order;
+    Order         order;
     RoutingConfig routingConfig;
-    long startTime;
-    long endTime;
+    long          startTime;
+    long          endTime;
 public:
-    void setRoutingConfig(const RoutingConfig &routingConfig) {
+    void setRoutingConfig(const RoutingConfig &routingConfig)
+    {
         AlgoConfig::routingConfig = routingConfig;
     }
 
-    long getStartTime() const {
+    long getStartTime() const
+    {
         return startTime;
     }
 
-    void setStartTime(long startTime) {
+    void setStartTime(long startTime)
+    {
         AlgoConfig::startTime = startTime;
     }
 
-    long getEndTime() const {
+    long getEndTime() const
+    {
         return endTime;
     }
 
-    void setEndTime(long endTime) {
+    void setEndTime(long endTime)
+    {
         AlgoConfig::endTime = endTime;
     }
 
 public:
-    const RoutingConfig &getRoutingConfig() const {
+    const RoutingConfig &getRoutingConfig() const
+    {
         return routingConfig;
     }
 };

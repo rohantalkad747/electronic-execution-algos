@@ -10,14 +10,17 @@
  * @tparam T
  */
 template<class T>
-class BlockingQueue {
+class BlockingQueue
+{
 public:
 
-    BlockingQueue(int size) {
+    BlockingQueue(int size)
+    {
         this->size = size;
     }
 
-    BlockingQueue() : size(0) {
+    BlockingQueue() : size(0)
+    {
     }
 
     /**
@@ -46,8 +49,8 @@ public:
 
 private:
     std::vector<T> queue;
-    std::mutex mtx;
-    int size;
+    std::mutex     mtx;
+    int            size;
 };
 
 

@@ -17,10 +17,12 @@
  *
  * @author Rohan Talkad
  */
-class SplayTree {
+class SplayTree
+{
 private:
     template<class T>
-    static Node<T> *leftRotate(Node<T> *node) {
+    static Node<T> *leftRotate(Node<T> *node)
+    {
         Node<T> *right = node->right;
         node->right = right->left;
         right->left = node;
@@ -28,9 +30,10 @@ private:
     }
 
     template<class T>
-    static Node<T> *rightRotate(Node<T> *node) {
+    static Node<T> *rightRotate(Node<T> *node)
+    {
         Node<T> *left = node->left;
-        node->left = left->right;
+        node->left  = left->right;
         left->right = node;
         return left;
     }
@@ -38,9 +41,11 @@ private:
 public:
     template<class T>
     static
-    void printBT(const std::string &prefix, const Node<T> *node, bool isLeft) {
+    void printBT(const std::string &prefix, const Node<T> *node, bool isLeft)
+    {
 
-        if (node != nullptr) {
+        if (node != nullptr)
+        {
             std::cout << prefix;
 
             std::cout << (isLeft ? "|---" : "^---");
@@ -56,79 +61,101 @@ public:
 
     template<class T>
     static
-    void printBT(const Node<T> *node) {
+    void printBT(const Node<T> *node)
+    {
         printBT("", node, false);
     }
 
     template<class T>
-    static Node<T> *insert(Node<T> *root, T &&val) {
+    static Node<T> *insert(Node<T> *root, T &&val)
+    {
         return insert(root, val);
     }
 
 
     template<class T>
-    static Node<T> *insert(Node<T> *root, T &val) {
-        if (root == nullptr) {
+    static Node<T> *insert(Node<T> *root, T &val)
+    {
+        if (root == nullptr)
+        {
             return new Node<T>(val);
         }
-        root = SplayTree::search<T>(root, val);
-        if (root->key == val) {
+        root              = SplayTree::search<T>(root, val);
+        if (root->key == val)
+        {
             return root;
         }
         Node<T> *new_root = new Node<T>(val);
-        if (root->key > val) {
+        if (root->key > val)
+        {
             new_root->right = root;
-            new_root->left = root->left;
-            root->left = nullptr;
-        } else {
-            new_root->left = root;
+            new_root->left  = root->left;
+            root->left      = nullptr;
+        } else
+        {
+            new_root->left  = root;
             new_root->right = root->right;
-            root->right = nullptr;
+            root->right     = nullptr;
         }
         return new_root;
     }
 
     template<class T>
-    static Node<T> *search(Node<T> *root, T &&key) {
+    static Node<T> *search(Node<T> *root, T &&key)
+    {
         return search<T>(root, key);
     }
 
     template<class T>
-    static Node<T> *search(Node<T> *root, T &key) {
-        if (root == nullptr || root->key == key) {
+    static Node<T> *search(Node<T> *root, T &key)
+    {
+        if (root == nullptr || root->key == key)
+        {
             return root;
         }
-        if (root->key > key) {
-            if (root->left == nullptr) {
+        if (root->key > key)
+        {
+            if (root->left == nullptr)
+            {
                 return root;
             }
-            if (root->left->key > key) {
+            if (root->left->key > key)
+            {
                 root->left->left = search<T>(root->left->left, key);
                 root = rightRotate<T>(root);
-            } else if (root->left->key < key) {
+            } else if (root->left->key < key)
+            {
                 root->left->right = search<T>(root->left->right, key);
-                if (root->left->right != nullptr) {
+                if (root->left->right != nullptr)
+                {
                     root->left = leftRotate(root->left);
                 }
             }
-            if (root->left == nullptr) {
+            if (root->left == nullptr)
+            {
                 return root;
             }
             return rightRotate<T>(root);
-        } else {
-            if (root->right == nullptr) {
+        } else
+        {
+            if (root->right == nullptr)
+            {
                 return root;
             }
-            if (root->right->key > key) {
+            if (root->right->key > key)
+            {
                 root->right->left = search<T>(root->right->left, key);
-                if (root->right->left != nullptr) {
+                if (root->right->left != nullptr)
+                {
                     root->right = rightRotate<T>(root->right);
                 }
-            } else if (root->right->key < key) {
+            } else if (root->right->key < key)
+            {
                 root->right->right = search<T>(root->right->right, key);
                 root = leftRotate<T>(root);
             }
-            if (root->right == nullptr) {
+            if (root->right == nullptr)
+            {
                 return root;
             }
             return leftRotate<T>(root);

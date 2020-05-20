@@ -6,13 +6,15 @@
 #include "../include/ParticipateAlgorithm.h"
 #include "../include/ParticipateConfig.h"
 
-int ParticipateAlgorithm::getLeavesQuantity() {
-    ParticipateConfig *povConfig = static_cast<ParticipateConfig *>( this->algoConfig);
-    long intervalStart = TimeUtils::getSecondsSinceMidnight();
-    long tillIntervalEnd = intervalStart + povConfig->getInterval();
-    int totalVolume = 0;
-    std::vector<int> histVol = povConfig->getHistVolume();
-    for (int i = intervalStart; i < tillIntervalEnd; i++) {
+int ParticipateAlgorithm::getLeavesQuantity()
+{
+    ParticipateConfig *povConfig      = static_cast<ParticipateConfig *>( this->algoConfig);
+    long              intervalStart   = TimeUtils::getSecondsSinceMidnight();
+    long              tillIntervalEnd = intervalStart + povConfig->getInterval();
+    int               totalVolume     = 0;
+    std::vector<int>  histVol         = povConfig->getHistVolume();
+    for (int          i               = intervalStart; i < tillIntervalEnd; i++)
+    {
         totalVolume += histVol[i];
     }
     std::cout << "Total volume " << totalVolume << std::endl;
@@ -20,6 +22,7 @@ int ParticipateAlgorithm::getLeavesQuantity() {
                     (int) (totalVolume * povConfig->getParticipation()));
 }
 
-double ParticipateAlgorithm::getPrice() {
+double ParticipateAlgorithm::getPrice()
+{
     return this->algoConfig->getOrder().getPrice();
 }

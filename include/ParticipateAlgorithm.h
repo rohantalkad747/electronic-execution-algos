@@ -7,7 +7,8 @@
 
 #include "TimedAlgorithm.h"
 
-class ParticipateAlgorithm : public TimedAlgorithm {
+class ParticipateAlgorithm : public TimedAlgorithm
+{
 public:
     using TimedAlgorithm::TimedAlgorithm;
 

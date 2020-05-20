@@ -7,21 +7,25 @@
 
 
 template<class T>
-class Node {
+class Node
+{
 public:
-    explicit Node<T>(T &val) : key(val) {}
+    explicit Node<T>(T &val) : key(val)
+    {}
 
-    explicit Node<T>(T &&val) : key(val) {}
+    explicit Node<T>(T &&val) : key(val)
+    {}
 
-    Node<T> *newNode(T &val) {
+    Node<T> *newNode(T &val)
+    {
         auto *nd = new Node<T>();
         nd->data = val;
         return nd;
     }
 
-    T key;
+    T       key;
     // Default
-    Node<T> *left = nullptr;
+    Node<T> *left  = nullptr;
     Node<T> *right = nullptr;
 };
 

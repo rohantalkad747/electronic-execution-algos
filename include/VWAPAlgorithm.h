@@ -7,7 +7,8 @@
 
 #include "TimedAlgorithm.h"
 
-class VWAPAlgorithm : public TimedAlgorithm {
+class VWAPAlgorithm : public TimedAlgorithm
+{
 public:
     using TimedAlgorithm::TimedAlgorithm;
 private:

@@ -6,7 +6,8 @@
 #define UNTITLED1_TIMEINFORCE_H
 
 
-enum class TimeInForce : char {
+enum class TimeInForce : char
+{
     DAY = '0',
     GTC = '1',
     OPG = '2',

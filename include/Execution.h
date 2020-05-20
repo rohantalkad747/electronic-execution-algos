@@ -11,7 +11,8 @@
 #include <iostream>
 
 
-class Execution {
+class Execution
+{
 public:
     /**
      *
@@ -35,29 +36,34 @@ public:
             Side(side),
             LeavesQty(leavesQty),
             CumQty(cumQty),
-            AvgPx(avgPx) {}
+            AvgPx(avgPx)
+    {}
 
 
-    int leavesQty() const { return LeavesQty; }
+    int leavesQty() const
+    { return LeavesQty; }
 
 
-    std::string symbol() const { return Symbol; }
+    std::string symbol() const
+    { return Symbol; }
 
-    std::string exec_id() const { return ExecID; }
+    std::string exec_id() const
+    { return ExecID; }
 
-    std::string order_id() const { return OrderID; }
+    std::string order_id() const
+    { return OrderID; }
 
 
 private:
-    std::string OrderID;
-    std::string ExecID;
+    std::string   OrderID;
+    std::string   ExecID;
     ExecutionType ExecType;
-    OrderStatus OrdStatus;
-    std::string Symbol;
-    OrderSide Side;
-    int LeavesQty;
-    int CumQty;
-    double AvgPx;
+    OrderStatus   OrdStatus;
+    std::string   Symbol;
+    OrderSide     Side;
+    int           LeavesQty;
+    int           CumQty;
+    double        AvgPx;
 };
 
 #endif

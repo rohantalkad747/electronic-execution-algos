@@ -5,8 +5,7 @@
 #ifndef UNTITLED1_ROUTINGTYPE_H
 #define UNTITLED1_ROUTINGTYPE_H
 
-enum class RoutingType : short
-{
+enum class RoutingType : short {
     DIRECT = 1,
     SPRAY = 2,
     SERIAL = 3

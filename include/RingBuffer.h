@@ -10,8 +10,7 @@
 #include <condition_variable>
 
 template<class T, long Q_SIZE>
-class RingBuffer
-{
+class RingBuffer {
 public:
     void push(T *item);
 

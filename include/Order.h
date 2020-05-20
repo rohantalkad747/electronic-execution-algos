@@ -14,13 +14,12 @@
 #include "OrderStatus.h"
 #include "LiquidityIndicator.h"
 
-class Order
-{
+class Order {
 public:
     explicit Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
                    TimeInForce timeInForce) :
-            side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price), timeInForce(timeInForce)
-    {
+            side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price),
+            timeInForce(timeInForce) {
         minQuantity = quantity;
         cumulativeQuantity = 0;
         orderStatus = OrderStatus::NEW;
@@ -28,8 +27,8 @@ public:
 
     explicit Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
                    TimeInForce timeInForce, LiquidityIndicator liquidityIndicator) :
-            side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price), timeInForce(timeInForce), liquidityIndicator(liquidityIndicator)
-    {
+            side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price),
+            timeInForce(timeInForce), liquidityIndicator(liquidityIndicator) {
         minQuantity = quantity;
         cumulativeQuantity = 0;
         orderStatus = OrderStatus::NEW;
@@ -41,105 +40,85 @@ public:
             quantity(o.quantity),
             orderType(o.orderType),
             price(o.price),
-            timeInForce(o.timeInForce)
-    {
+            timeInForce(o.timeInForce) {
         minQuantity = o.quantity;
         cumulativeQuantity = o.cumulativeQuantity;
         orderStatus = OrderStatus::NEW;
     }
 
-    int leaves() const
-    {
+    int leaves() const {
         return quantity - cumulativeQuantity;
     }
 
-    bool isTerminal() const
-    {
+    bool isTerminal() const {
         return leaves() == 0;
     }
 
-    OrderSide getSide() const
-    {
+    OrderSide getSide() const {
         return side;
     }
 
-    const std::string &getSymbol() const
-    {
+    const std::string &getSymbol() const {
         return symbol;
     }
 
-    int getQuantity() const
-    {
+    int getQuantity() const {
         return quantity;
     }
 
-    OrderType getOrderType() const
-    {
+    OrderType getOrderType() const {
         return orderType;
     }
 
-    double getPrice() const
-    {
+    double getPrice() const {
         return price;
     }
 
-    TimeInForce getTimeInForce() const
-    {
+    TimeInForce getTimeInForce() const {
         return timeInForce;
     }
 
-    int getMinQuantity() const
-    {
+    int getMinQuantity() const {
         return minQuantity;
     }
 
-    int getCumulativeQuantity() const
-    {
+    int getCumulativeQuantity() const {
         return cumulativeQuantity;
     }
 
-    OrderStatus getOrderStatus() const
-    {
+    OrderStatus getOrderStatus() const {
         return orderStatus;
     }
 
-    const std::string &getAccount() const
-    {
+    const std::string &getAccount() const {
         return account;
     }
 
-    const std::string &getClOrdId() const
-    {
+    const std::string &getClOrdId() const {
         return ClOrdID;
     }
 
-    const std::string &getMsgType() const
-    {
+    const std::string &getMsgType() const {
         return msgType;
     }
 
-    const std::string &getText() const
-    {
+    const std::string &getText() const {
         return text;
     }
 
-    const std::string &getTransactTime() const
-    {
+    const std::string &getTransactTime() const {
         return transactTime;
     }
 
-    const std::string &getTradeDate() const
-    {
+    const std::string &getTradeDate() const {
         return tradeDate;
     }
 
-    const std::string &getExDestination() const
-    {
+    const std::string &getExDestination() const {
         return exDestination;
     }
 
-    void setQuantity(int newQuantity)
-    {
+    void setQuantity(int newQuantity) {
         quantity = newQuantity;
     }
 
@@ -150,8 +129,7 @@ private:
     OrderType orderType;
     double price;
 public:
-    void setPrice(double price)
-    {
+    void setPrice(double price) {
         Order::price = price;
     }
 
@@ -161,83 +139,67 @@ private:
     int cumulativeQuantity;
     OrderStatus orderStatus;
 public:
-    void setSide(OrderSide side)
-    {
+    void setSide(OrderSide side) {
         Order::side = side;
     }
 
-    void setSymbol(const std::string &symbol)
-    {
+    void setSymbol(const std::string &symbol) {
         Order::symbol = symbol;
     }
 
-    void setOrderType(OrderType orderType)
-    {
+    void setOrderType(OrderType orderType) {
         Order::orderType = orderType;
     }
 
-    void setTimeInForce(TimeInForce timeInForce)
-    {
+    void setTimeInForce(TimeInForce timeInForce) {
         Order::timeInForce = timeInForce;
     }
 
-    void setMinQuantity(int minQuantity)
-    {
+    void setMinQuantity(int minQuantity) {
         Order::minQuantity = minQuantity;
     }
 
-    void setCumulativeQuantity(int cumulativeQuantity)
-    {
+    void setCumulativeQuantity(int cumulativeQuantity) {
         Order::cumulativeQuantity = cumulativeQuantity;
     }
 
-    void setOrderStatus(OrderStatus orderStatus)
-    {
+    void setOrderStatus(OrderStatus orderStatus) {
         Order::orderStatus = orderStatus;
     }
 
-    void setAccount(const std::string &account)
-    {
+    void setAccount(const std::string &account) {
         Order::account = account;
     }
 
-    void setClOrdId(const std::string &clOrdId)
-    {
+    void setClOrdId(const std::string &clOrdId) {
         ClOrdID = clOrdId;
     }
 
-    void setMsgType(const std::string &msgType)
-    {
+    void setMsgType(const std::string &msgType) {
         Order::msgType = msgType;
     }
 
-    void setText(const std::string &text)
-    {
+    void setText(const std::string &text) {
         Order::text = text;
     }
 
-    void setTransactTime(const std::string &transactTime)
-    {
+    void setTransactTime(const std::string &transactTime) {
         Order::transactTime = transactTime;
     }
 
-    void setTradeDate(const std::string &tradeDate)
-    {
+    void setTradeDate(const std::string &tradeDate) {
         Order::tradeDate = tradeDate;
     }
 
-    void setExDestination(const std::string &exDestination)
-    {
+    void setExDestination(const std::string &exDestination) {
         Order::exDestination = exDestination;
     }
 
-    void setLiquidityIndicator(LiquidityIndicator liquidityIndicator)
-    {
+    void setLiquidityIndicator(LiquidityIndicator liquidityIndicator) {
         Order::liquidityIndicator = liquidityIndicator;
     }
 
-    void setMtx(std::mutex *mtx)
-    {
+    void setMtx(std::mutex *mtx) {
         mtx_ = mtx;
     }
 
@@ -251,15 +213,13 @@ private:
     std::string tradeDate;
     std::string exDestination;
     LiquidityIndicator liquidityIndicator;
-    std::mutex* mtx_ = new std::mutex();
+    std::mutex *mtx_ = new std::mutex();
 public:
-    LiquidityIndicator getLiquidityIndicator() const
-    {
+    LiquidityIndicator getLiquidityIndicator() const {
         return liquidityIndicator;
     }
 
-    std::mutex *getMtx() const
-    {
+    std::mutex *getMtx() const {
         return mtx_;
     }
 };

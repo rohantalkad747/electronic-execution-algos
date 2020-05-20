@@ -8,268 +8,280 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option working_dir="/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="untitled1">
-				<Option output="C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/untitled1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="untitled1/fast">
-				<Option output="C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/untitled1.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1/fast"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug"/>
+				<Option working_dir="/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled1">
+				<Option output="/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="untitled1/fast">
+				<Option output="/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/untitled1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AbstractAlgorithmScheduler.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/AbstractAlgorithmScheduler.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AlgoConfig.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgoConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Algorithm.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AntiGaming.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/AntiGaming.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/AvgLatency.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/AvgLatency.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/BlockingQueue.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/CountDownLatch.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BlockingQueue.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Execution.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/CountDownLatch.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionService.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Execution.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ExecutionType.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/ExecutionService.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/IcebergAlgorithm.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/ExecutionType.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/IcebergConfig.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/IcebergAlgorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/LiquidityIndicator.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/IcebergConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Logger.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/LiquidityIndicator.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Node.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Logger.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Order.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderBook.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderRouter.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderSide.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderStatus.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/OrderType.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateAlgorithm.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderType.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/ParticipateConfig.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/ParticipateAlgorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/PricePoint.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/ParticipateConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/RingBuffer.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/PricePoint.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/RoutingConfig.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/RingBuffer.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/RoutingType.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/SplayTree.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingType.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/SprayRouter.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/SelfBalancingBasket.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TWAPAlgorithm.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/SplayTree.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TWAPConfig.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/SprayRouter.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimeInForce.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/TWAPAlgorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimeUtils.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/TWAPConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimedAlgorithm.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/TimeInForce.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/TimingContext.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/TimeUtils.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VWAPAlgorithm.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/TimedAlgorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VWAPConfig.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/TimingContext.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/Venue.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/VWAPAlgorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueManager.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/VWAPConfig.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueOrderManager.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Venue.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/include/VenueRank.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueManager.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/AbstractAlgorithmScheduler.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueOrderManager.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/Algorithm.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueRank.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/AntiGaming.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Wave.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/AvgLatency.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AbstractAlgorithmScheduler.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/BlockingQueue.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Algorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AntiGaming.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/ExecutionService.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/IcebergAlgorithm.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BlockingQueue.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/Node.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/CountDownLatch.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/OrderBook.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/ExecutionService.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/IcebergAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/PricePoint.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Node.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/OrderBook.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/SprayRouter.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/ParticipateAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TWAPAlgorithm.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/PricePoint.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimeUtils.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/RingBuffer.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/SprayRouter.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VWAPAlgorithm.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/TWAPAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/TimeUtils.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/src/VenueOrderManager.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/TimedAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/test/test.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/VWAPAlgorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/test/test.h">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/VenueManager.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="C:/Users/Rohan/CLionProjects/untitled1/CMakeLists.txt">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/VenueOrderManager.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Wave.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/test/test.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/test/test.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

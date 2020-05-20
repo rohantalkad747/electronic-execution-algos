@@ -8,18 +8,15 @@
 #include <vector>
 #include "TimingContext.h"
 
-class TWAPConfig : public TimingContext
-{
+class TWAPConfig : public TimingContext {
 private:
     std::vector<double> histPrice;
 public:
-    const std::vector<double> &getHistPrice() const
-    {
+    const std::vector<double> &getHistPrice() const {
         return histPrice;
     }
 
-    void setHistPrice(const std::vector<double> &histPrice)
-    {
+    void setHistPrice(const std::vector<double> &histPrice) {
         TWAPConfig::histPrice = histPrice;
     }
 
@@ -29,8 +26,7 @@ public:
                                                                                                 startTime, endTime,
                                                                                                 initialDelay,
                                                                                                 interval),
-                                                                                  histPrice(histPrice)
-    {
+                                                                                  histPrice(histPrice) {
         std::cout << histPrice.size() << std::endl;
     }
 };

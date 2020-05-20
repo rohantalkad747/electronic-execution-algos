@@ -6,8 +6,7 @@
 #define UNTITLED1_ORDERSIDE_H
 
 
-enum class OrderSide : char
-{
+enum class OrderSide : char {
     BUY = '0',
     SELL = '1'
 };

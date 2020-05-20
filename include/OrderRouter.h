@@ -8,8 +8,7 @@
 #include "Order.h"
 #include "VenueManager.h"
 
-class OrderRouter
-{
+class OrderRouter {
 protected:
     bool cancelled;
 public:
@@ -18,8 +17,7 @@ public:
      */
     virtual int route(const Order &order) = 0;
 
-    void cancel()
-    {
+    void cancel() {
         this->cancelled = true;
     }
 };

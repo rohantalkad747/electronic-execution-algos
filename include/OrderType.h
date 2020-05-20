@@ -6,8 +6,7 @@
 #define UNTITLED1_ORDERTYPE_H
 
 
-enum class OrderType : char
-{
+enum class OrderType : char {
     MARKET = '1',
     LIMIT = '2'
 };

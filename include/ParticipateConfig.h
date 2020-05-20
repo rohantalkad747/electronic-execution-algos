@@ -8,29 +8,24 @@
 #include <vector>
 #include "TimingContext.h"
 
-class ParticipateConfig : public TimingContext
-{
+class ParticipateConfig : public TimingContext {
 private:
     std::vector<int> histVolume;
 public:
-    const std::vector<int> &getHistVolume() const
-    {
+    const std::vector<int> &getHistVolume() const {
         return histVolume;
     }
 
-    void setHistVolume(const std::vector<int> &histVolume)
-    {
+    void setHistVolume(const std::vector<int> &histVolume) {
         ParticipateConfig::histVolume = histVolume;
     }
 
 public:
-    double getParticipation() const
-    {
+    double getParticipation() const {
         return participation;
     }
 
-    void setParticipation(double participation)
-    {
+    void setParticipation(double participation) {
         ParticipateConfig::participation = participation;
     }
 
@@ -47,8 +42,7 @@ public:
     ParticipateConfig(const Order &order, long initialDelay, long startTime, long endTime, long interval,
                       const RoutingConfig &routingType, std::vector<int> histVolume, double participation)
             : TimingContext(order, routingType, startTime, endTime, initialDelay, interval),
-              histVolume(histVolume), participation(participation)
-    {}
+              histVolume(histVolume), participation(participation) {}
 
 private:
     double participation;

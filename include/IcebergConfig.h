@@ -7,35 +7,30 @@
 
 #include "AlgoConfig.h"
 
-class IcebergConfig : public AlgoConfig
-{
+class IcebergConfig : public AlgoConfig {
 private:
 public:
     IcebergConfig(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime,
-                  int icebergDisplay, double variance=-1) : AlgoConfig(order, routingConfig, startTime, endTime),
-                                                         icebergDisplay(icebergDisplay), displayVariance(variance)
-    {}
+                  int icebergDisplay, double variance = -1) : AlgoConfig(order, routingConfig, startTime, endTime),
+                                                              icebergDisplay(icebergDisplay),
+                                                              displayVariance(variance) {}
 
 private:
     int icebergDisplay;
 public:
-    int getIcebergDisplay() const
-    {
+    int getIcebergDisplay() const {
         return icebergDisplay;
     }
 
-    void setIcebergDisplay(int icebergDisplay)
-    {
+    void setIcebergDisplay(int icebergDisplay) {
         IcebergConfig::icebergDisplay = icebergDisplay;
     }
 
-    double getDisplayVariance() const
-    {
+    double getDisplayVariance() const {
         return displayVariance;
     }
 
-    void setDisplayVariance(double displayVariance)
-    {
+    void setDisplayVariance(double displayVariance) {
         IcebergConfig::displayVariance = displayVariance;
     }
 

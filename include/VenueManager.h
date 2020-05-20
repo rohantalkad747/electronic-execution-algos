@@ -12,11 +12,9 @@
 #include "Order.h"
 #include "Execution.h"
 
-class VenueManager
-{
+class VenueManager {
 public:
-    explicit VenueManager(std::vector<Venue> &venues) : Venues(venues), Log("VenueManager")
-    { init(); }
+    explicit VenueManager(std::vector<Venue> &venues) : Venues(venues), Log("VenueManager") { init(); }
 
     void add_venue(const Venue &venue);
 

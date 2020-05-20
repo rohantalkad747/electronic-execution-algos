@@ -6,8 +6,7 @@
 #define UNTITLED1_ORDERSTATUS_H
 
 
-enum class OrderStatus : char
-{
+enum class OrderStatus : char {
     NEW = '0',
     PARTIAL = '1',
     FILLED = '2',

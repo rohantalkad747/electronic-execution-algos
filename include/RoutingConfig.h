@@ -7,48 +7,39 @@
 
 #include "RoutingType.h"
 
-class RoutingConfig
-{
+class RoutingConfig {
 private:
     RoutingType routingType;
     std::string venueName;
 
-    RoutingConfig(RoutingType routingType) : routingType(routingType)
-    {}
+    RoutingConfig(RoutingType routingType) : routingType(routingType) {}
 
     RoutingConfig(RoutingType routingType, const std::string &venueName) : routingType(routingType),
-                                                                           venueName(venueName)
-    {}
+                                                                           venueName(venueName) {}
 
 public:
-    static RoutingConfig getSOR(RoutingType routingType)
-    {
+    static RoutingConfig getSOR(RoutingType routingType) {
         return *(new RoutingConfig(routingType, ""));
 
     }
 
-    static RoutingConfig getDirectRouter(const std::string &venueName)
-    {
+    static RoutingConfig getDirectRouter(const std::string &venueName) {
         return *(new RoutingConfig(RoutingType::DIRECT, venueName));
     }
 
-    RoutingType getRoutingType() const
-    {
+    RoutingType getRoutingType() const {
         return routingType;
     }
 
-    void setRoutingType(RoutingType routingType)
-    {
+    void setRoutingType(RoutingType routingType) {
         RoutingConfig::routingType = routingType;
     }
 
-    std::string &getVenueName()
-    {
+    std::string &getVenueName() {
         return venueName;
     }
 
-    void setVenueName(const std::string &venueName)
-    {
+    void setVenueName(const std::string &venueName) {
         RoutingConfig::venueName = venueName;
     }
 };

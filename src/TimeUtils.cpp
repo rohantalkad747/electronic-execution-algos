@@ -4,8 +4,7 @@
 
 #include "../include/TimeUtils.h"
 
-long TimeUtils::getSecondsSinceMidnight()
-{
+long TimeUtils::getSecondsSinceMidnight() {
     auto now = std::chrono::system_clock::now();
     time_t tnow = std::chrono::system_clock::to_time_t(now);
     tm *date = std::localtime(&tnow);
@@ -16,8 +15,7 @@ long TimeUtils::getSecondsSinceMidnight()
     return std::chrono::duration_cast<std::chrono::seconds>(now - midnight).count();
 }
 
-long TimeUtils::getCurTimeEpoch()
-{
+long TimeUtils::getCurTimeEpoch() {
     return std::chrono::duration_cast<std::chrono::seconds>(
             std::chrono::system_clock::now().time_since_epoch()).count();
 }

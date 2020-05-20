@@ -10,47 +10,39 @@
 #include <mutex>
 #include "Order.h"
 
-class PricePoint
-{
+class PricePoint {
 public:
-    int getVolume() const
-    {
+    int getVolume() const {
         return volume;
     }
 
-    void incVolume(int v)
-    {
+    void incVolume(int v) {
         PricePoint::volume += v;
     }
 
-    int getSize() const
-    {
+    int getSize() const {
         return size;
     }
 
-    void incSize(int inc)
-    {
+    void incSize(int inc) {
         PricePoint::size += inc;
     }
 
-    const std::vector<Order> &getOrders() const
-    {
+    const std::vector<Order> &getOrders() const {
         return orders;
     }
 
-    void setOrders(const std::vector<Order> &orders)
-    {
+    void setOrders(const std::vector<Order> &orders) {
         PricePoint::orders = orders;
     }
 
-    static PricePoint* of(const Order& order)
-    {
-        PricePoint* p = new PricePoint();
+    static PricePoint *of(const Order &order) {
+        PricePoint *p = new PricePoint();
         p->price = order.getPrice();
         return p;
     }
 
-    void addOrder(const Order& order);
+    void addOrder(const Order &order);
 
     bool operator<(const PricePoint &rhs) const;
 
@@ -75,10 +67,9 @@ public:
 private:
     double price;
     std::vector<Order> orders;
-    std::mutex* mtx_ = new std::mutex();
+    std::mutex *mtx_ = new std::mutex();
 
 };
-
 
 
 #endif //UNTITLED1_PRICEPOINT_H

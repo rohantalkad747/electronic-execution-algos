@@ -8,8 +8,7 @@
 
 #include <chrono>
 
-class TimeUtils
-{
+class TimeUtils {
 public:
     static long getCurTimeEpoch();
 

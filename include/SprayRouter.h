@@ -10,11 +10,9 @@
 #ifndef UNTITLED1_SERIALROUTER_H
 #define UNTITLED1_SERIALROUTER_H
 
-class SprayRouter : public OrderRouter
-{
+class SprayRouter : public OrderRouter {
 public:
-    SprayRouter(const VenueManager &venueManager) : VenueManager(venueManager), Log(*(new Logger("SprayRouter")))
-    {
+    SprayRouter(const VenueManager &venueManager) : VenueManager(venueManager), Log(*(new Logger("SprayRouter"))) {
     }
 
     int route(const Order &order);

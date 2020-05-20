@@ -4,29 +4,30 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Rohan/CLionProjects/untitled1/src/AbstractAlgorithmScheduler.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/Algorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/Algorithm.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/AntiGaming.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/AntiGaming.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/AvgLatency.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/AvgLatency.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/BlockingQueue.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/CountDownLatch.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/ExecutionService.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/ExecutionService.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/IcebergAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/Node.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/Node.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/OrderBook.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/OrderBook.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/ParticipateAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/PricePoint.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/PricePoint.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/RingBuffer.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/RingBuffer.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/SprayRouter.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/SprayRouter.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/TWAPAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/TimeUtils.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/TimeUtils.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/TimedAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/VWAPAlgorithm.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/VenueManager.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueManager.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/src/VenueOrderManager.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.obj"
-  "C:/Users/Rohan/CLionProjects/untitled1/test/test.cpp" "C:/Users/Rohan/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/untitled1.dir/test/test.cpp.obj"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/AbstractAlgorithmScheduler.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/Algorithm.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/Algorithm.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/AntiGaming.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/BlockingQueue.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/CountDownLatch.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/ExecutionService.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/ExecutionService.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/IcebergAlgorithm.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/Node.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/Node.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/OrderBook.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/OrderBook.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/ParticipateAlgorithm.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/PricePoint.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/PricePoint.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/RingBuffer.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/RingBuffer.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/SprayRouter.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/TWAPAlgorithm.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/TimeUtils.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/TimeUtils.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/TimedAlgorithm.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/VWAPAlgorithm.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/VenueManager.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueManager.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/VenueOrderManager.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/Wave.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/Wave.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/test/test.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/test/test.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

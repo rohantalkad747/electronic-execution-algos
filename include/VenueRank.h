@@ -11,61 +11,53 @@
 #define UNTITLED1_VENUERANK_H
 
 
-class VenueRank
-{
+class VenueRank {
 public:
-    void setVenueTradingCost(double venueTradingCost)
-    {
+    void setVenueTradingCost(double venueTradingCost) {
         venueTradingCost = venueTradingCost;
     }
 
-    void incRouterHistoricTradingVolume(double routerHistoricTradingVolume)
-    {
+    void incRouterHistoricTradingVolume(double routerHistoricTradingVolume) {
         while ((locks & RHTV_TS) == RHTV_TS);
         locks = locks | RHTV_TS;
         VenueRank::routerHistoricTradingVolume += routerHistoricTradingVolume;
         locks = locks & ~RHTV_TS;
     }
 
-    void incMarketHistoricTradingVolume(double marketHistoricTradingVolume)
-    {
+    void incMarketHistoricTradingVolume(double marketHistoricTradingVolume) {
         while ((locks & MHTV) == MHTV);
         locks = locks | MHTV;
         VenueRank::marketHistoricTradingVolume += marketHistoricTradingVolume;
         locks = locks & ~MHTV;
     }
 
-    void incImmediateTradingVolume(double immediateTradingVolume)
-    {
+    void incImmediateTradingVolume(double immediateTradingVolume) {
         while ((locks & ITV) == ITV);
         locks = locks | ITV;
         VenueRank::immediateTradingVolume += immediateTradingVolume;
         locks = locks & ~ITV;
     }
 
-    void incPriceImprovementIndicator(double priceImprovementIndicator)
-    {
+    void incPriceImprovementIndicator(double priceImprovementIndicator) {
         while ((locks & PII) == PII);
         locks = locks | PII;
         VenueRank::priceImprovementIndicator += priceImprovementIndicator;
         locks = locks & ~PII;
     }
 
-    double getRank() const
-    {
+    double getRank() const {
         return (venueTradingCost * 0.15) + (routerHistoricTradingVolume * 0.2)
                + (marketHistoricTradingVolume * 0.1) + (priceImprovementIndicator * 0.15)
                + (immediateTradingVolume * 0.4);
     }
 
     explicit VenueRank() : venueTradingCost(0.0), routerHistoricTradingVolume(0.0),
-                           marketHistoricTradingVolume(0.0), immediateTradingVolume(0.0), priceImprovementIndicator(0.0)
-    {}
+                           marketHistoricTradingVolume(0.0), immediateTradingVolume(0.0),
+                           priceImprovementIndicator(0.0) {}
 
     explicit VenueRank(double vtc, double rhtv, double mhtv, double ita, double pii) :
             venueTradingCost(vtc), routerHistoricTradingVolume(rhtv), marketHistoricTradingVolume(mhtv),
-            immediateTradingVolume(ita), priceImprovementIndicator(pii)
-    {}
+            immediateTradingVolume(ita), priceImprovementIndicator(pii) {}
 
 private:
     unsigned volatile long locks = 0;

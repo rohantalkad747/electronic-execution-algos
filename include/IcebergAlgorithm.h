@@ -7,16 +7,21 @@
 
 #include "./Algorithm.h"
 
-class IcebergAlgorithm : public Algorithm
-{
+class IcebergAlgorithm : public Algorithm {
 public:
     using Algorithm::Algorithm;
+
     void executeAlgo();
+
     void triggerNextDisplay();
+
 protected:
     double getPrice();
+
     int getLeavesQuantity();
+
     void init();
+
     double upper = -1;
     double lower = -1;
 };

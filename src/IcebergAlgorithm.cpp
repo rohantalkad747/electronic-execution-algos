@@ -7,27 +7,22 @@
 #include "../include/IcebergConfig.h"
 
 
-void IcebergAlgorithm::executeAlgo()
-{
+void IcebergAlgorithm::executeAlgo() {
     init();
     triggerNextDisplay();
 }
 
-void IcebergAlgorithm::triggerNextDisplay()
-{
-    if (this->algoActive())
-    {
+void IcebergAlgorithm::triggerNextDisplay() {
+    if (this->algoActive()) {
         this->sendToRouter();
     }
 }
 
-void IcebergAlgorithm::init()
-{
+void IcebergAlgorithm::init() {
     auto *icebergConfig = dynamic_cast<IcebergConfig *>(this->algoConfig);
     int display = icebergConfig->getIcebergDisplay();
     double variance = icebergConfig->getDisplayVariance();
-    if (variance > 0)
-    {
+    if (variance > 0) {
         int delta = variance * display;
         this->upper = display + delta;
         this->lower = display - delta;
@@ -35,21 +30,17 @@ void IcebergAlgorithm::init()
 }
 
 
-double IcebergAlgorithm::getPrice()
-{
+double IcebergAlgorithm::getPrice() {
     return this->algoConfig->getOrder().getPrice();
 }
 
-int IcebergAlgorithm::getLeavesQuantity()
-{
+int IcebergAlgorithm::getLeavesQuantity() {
     auto *icebergConfig = dynamic_cast<IcebergConfig *>( this->algoConfig);
     int display;
     int rawDisplay = icebergConfig->getIcebergDisplay();
-    if (icebergConfig->getDisplayVariance() > 0)
-    {
+    if (icebergConfig->getDisplayVariance() > 0) {
         display = AntiGaming::randomize(this->lower, this->upper);
-    } else
-    {
+    } else {
         display = rawDisplay;
     }
     return std::min(display, this->algoConfig->getOrder().getQuantity() - this->sharesTraded);

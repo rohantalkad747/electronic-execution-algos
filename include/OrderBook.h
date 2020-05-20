@@ -10,18 +10,16 @@
 #include "PricePoint.h"
 #include "../include/Node.h"
 
-class OrderBook
-{
+class OrderBook {
 public:
-    void addOrder(const Order& order);
+    void addOrder(const Order &order);
 
-    Node<PricePoint>* getRoot() const
-    {
+    Node<PricePoint> *getRoot() const {
         return this->root;
     }
 
 private:
-    Node<PricePoint>* root;
+    Node<PricePoint> *root;
 };
 
 

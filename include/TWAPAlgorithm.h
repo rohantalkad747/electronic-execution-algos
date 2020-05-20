@@ -8,8 +8,7 @@
 
 #include "TimedAlgorithm.h"
 
-class TWAPAlgorithm : public TimedAlgorithm
-{
+class TWAPAlgorithm : public TimedAlgorithm {
 public:
     using TimedAlgorithm::TimedAlgorithm;
 protected:

@@ -9,8 +9,7 @@
 #include "Algorithm.h"
 #include "TimingContext.h"
 
-class TimedAlgorithm : public Algorithm
-{
+class TimedAlgorithm : public Algorithm {
 public:
     using Algorithm::Algorithm;
 
@@ -18,6 +17,7 @@ public:
 
 protected:
     int getLeavesQuantity();
+
     int leavesQuantity = -1;
 
 protected:

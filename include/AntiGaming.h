@@ -8,8 +8,7 @@
 
 #include <random>
 
-class AntiGaming
-{
+class AntiGaming {
 public:
     static long randomize(long a, long b);
 };

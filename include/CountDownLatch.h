@@ -10,11 +10,9 @@
 #include <condition_variable>
 #include <mutex>
 
-class CountDownLatch
-{
+class CountDownLatch {
 public:
-    explicit CountDownLatch(const unsigned int count) : m_count(count)
-    {}
+    explicit CountDownLatch(const unsigned int count) : m_count(count) {}
 
     virtual ~CountDownLatch() = default;
 

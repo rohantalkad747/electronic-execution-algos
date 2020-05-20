@@ -10,18 +10,15 @@
 
 #endif //UNTITLED1_THOR_H
 
-class AvgLatency
-{
+class AvgLatency {
 public:
     long getLatencyAdjustment();
 
-    void setHistLatency(std::vector<long> hist)
-    {
+    void setHistLatency(std::vector<long> hist) {
         histLatency = hist;
     }
 
-    void setTodayLatency(std::vector<long> today)
-    {
+    void setTodayLatency(std::vector<long> today) {
         todayLatency = today;
     }
 

@@ -108,7 +108,7 @@ void testIceberg(const VenueManager &manager, const SprayRouter &router)
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
     auto       *icebergConfig = new IcebergConfig(order, routingConfig, curTime, curTime + 30, 20000, 0.35);
     AlgoConfig *algoConfig    = ((AlgoConfig *) icebergConfig);
-    auto       *algo          = new IcebergAlgorithm(algoConfigs, manager);
+    auto       *algo          = new IcebergAlgorithm(algoConfig, manager);
     algo->executeAlgo();
     while (algo->algoActive())
     {

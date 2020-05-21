@@ -89,6 +89,12 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmFactory.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/AntiGaming.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -155,6 +161,9 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/PricePoint.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Raptor.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/RingBuffer.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -215,6 +224,9 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Algorithm.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AlgorithmFactory.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AntiGaming.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -243,6 +255,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/PricePoint.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Raptor.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/RingBuffer.cpp">

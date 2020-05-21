@@ -57,9 +57,17 @@ void Wave<A>::executeWave(Basket *b)
         orders = splitBySecurity(b);
         for (const auto &order : orders)
         {
-            Algorithm *algo = getAlgorithm();
-            algo->getAlgoConfig()->setOrder(order);
-            algo->executeAlgo();
+            if (algoConfig != nullptr)
+            {
+                AlgoConfig *cfg = getAlgorithmConfig();
+                cfg->setOrder(order);
+                Algorithm algorithm = *(this->templateAlgorithm); // Copy template algo
+                algorithm.setAlgoConfig(cfg);
+            }
+            else
+            {
+                raptor->send(this->routingConfig, order);
+            }
         }
         waveSymbolStatus = (waveSymbolStatus | Wave::SENT) & ~Wave::PENDING;
 

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.o"
   "CMakeFiles/untitled1.dir/src/Algorithm.cpp.o"
+  "CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o"
   "CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o"
   "CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o"
   "CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.o"
@@ -11,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/src/OrderBook.cpp.o"
   "CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o"
   "CMakeFiles/untitled1.dir/src/PricePoint.cpp.o"
+  "CMakeFiles/untitled1.dir/src/Raptor.cpp.o"
   "CMakeFiles/untitled1.dir/src/RingBuffer.cpp.o"
   "CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o"
   "CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o"

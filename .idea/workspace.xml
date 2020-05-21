@@ -30,12 +30,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c91e9999-5bbb-485e-9bfe-baa16c76a3e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/include/AlgorithmFactory.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/AlgorithmType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/Raptor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AlgorithmFactory.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Raptor.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled1.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled1.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Algorithm.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Algorithm.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/SelfBalancingBasket.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Basket.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Basket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/RoutingConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/RoutingConfig.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/Wave.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Wave.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Algorithm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ExecutionService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExecutionService.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Wave.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wave.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
     </list>
@@ -73,12 +90,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rohan\CLionProjects\untitled1\test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
       <recent name="C:\Users\Rohan\CLionProjects\untitled1\include" />
       <recent name="C:\Users\Rohan\CLionProjects\untitled1\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rohan\CLionProjects\untitled1\test" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.untitled1 (1)">
@@ -118,7 +136,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589943382513</updated>
-      <workItem from="1589943385252" duration="15733000" />
+      <workItem from="1589943385252" duration="15925000" />
+      <workItem from="1590015089501" duration="14000" />
+      <workItem from="1590040595564" duration="6372000" />
     </task>
     <servers />
   </component>
@@ -135,6 +155,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1587846206234">
@@ -158,11 +179,11 @@
     </state>
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588363618512" />
     <state x="765" y="244" key="#com.intellij.ide.util.MemberChooser/0.23.1920.977@0.23.1920.977" timestamp="1590009502129" />
-    <state x="690" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589953411738">
+    <state x="690" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590044661935">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588546205005" />
-    <state x="690" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.977@0.23.1920.977" timestamp="1589953411738" />
+    <state x="690" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.977@0.23.1920.977" timestamp="1590044661935" />
     <state x="715" y="222" key="#xdebugger.evaluate" timestamp="1587940542763">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -207,11 +228,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="257" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588461161443" />
-    <state x="461" y="177" key="SettingsEditor" timestamp="1590014789522">
+    <state x="461" y="177" key="SettingsEditor" timestamp="1590041970510">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588284694046" />
-    <state x="461" y="177" key="SettingsEditor/0.23.1920.977@0.23.1920.977" timestamp="1590014789522" />
+    <state x="461" y="177" key="SettingsEditor/0.23.1920.977@0.23.1920.977" timestamp="1590041970510" />
     <state x="668" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1585980039528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

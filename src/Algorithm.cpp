@@ -4,20 +4,6 @@
 
 #include "../include/Algorithm.h"
 
-struct InvalidRouteException : public std::exception
-{
-    std::string s;
-
-    explicit InvalidRouteException(std::string ss) : s(ss)
-    {}
-
-    ~InvalidRouteException() noexcept override
-    {}
-
-    const char *what() const noexcept
-    { return s.c_str(); }
-};
-
 void Algorithm::cancelAlgo()
 {
     std::unique_lock<std::mutex> lk(mtx_);
@@ -30,17 +16,7 @@ void Algorithm::sendToRouter()
 {
     Order         child         = getChildOrder();
     RoutingConfig routingConfig = this->algoConfig->getRoutingConfig();
-    switch (routingConfig.getRoutingType())
-    {
-        case (RoutingType::DIRECT):
-            this->venueManager.sendOrder(routingConfig.getVenueName(), child);
-            break;
-        case (RoutingType::SPRAY):
-            this->sprayRouter.route(child);
-            break;
-        default:
-            throw InvalidRouteException("Invalid routing type!");
-    }
+    raptor.send(routingConfig, child);
     this->sharesTraded += child.getQuantity();
 }
 

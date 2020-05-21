@@ -3,8 +3,8 @@
 //
 
 #include <vector>
-#include "Order.h"
 #include "Wave.h"
+#include "Order.h"
 
 #ifndef UNTITLED1_BASKET_H
 #define UNTITLED1_BASKET_H
@@ -15,7 +15,7 @@ class Basket
 {
 private:
     std::vector<std::string> symbols;
-    std::vector<Wave>        waves;
+    int                      basketId;
     int                      currentWave = 0;
 public:
     const std::vector<std::string> &getSymbols() const
@@ -47,9 +47,6 @@ public:
     {
         Basket::sides = sides;
     }
-
-    template<typename A>
-    void executeWave(double percentage, A algo);
 
 private:
     std::vector<double>    quantities;

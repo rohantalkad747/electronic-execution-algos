@@ -7,6 +7,7 @@
 
 #include "AlgoConfig.h"
 #include "SprayRouter.h"
+#include "Raptor.h"
 
 /**
  * Base-level class for all trading algorithms.
@@ -16,11 +17,19 @@ class Algorithm
 public:
 
     Algorithm(AlgoConfig *algoConfig, const VenueManager &venueManager)
-            : algoConfig(algoConfig), sprayRouter(SprayRouter(venueManager)), venueManager(venueManager),
+            : algoConfig(algoConfig), raptor(Raptor(venueManager)),
               log(*(new Logger("Algorithm"))), cancel(false)
     {}
 
-    virtual void executeAlgo() = 0;
+    Algorithm(AlgoConfig& algoConfig, const Raptor &raptor)
+            : algoConfig(&algoConfig), raptor(raptor),
+              log(*(new Logger("Algorithm"))), cancel(false)
+    {}
+
+    Algorithm(Algorithm &algo) : raptor(algo.raptor), log(algo.log), cancel(algo.cancel)
+    {}
+
+    void executeAlgo();
 
     void cancelAlgo();
 
@@ -29,6 +38,11 @@ public:
     AlgoConfig *getAlgoConfig()
     {
         return this->algoConfig;
+    }
+
+    void setAlgoConfig(AlgoConfig *cfg)
+    {
+        this->algoConfig = cfg;
     }
 
 protected:
@@ -53,8 +67,7 @@ protected:
 
     Logger log;
 private:
-    SprayRouter  sprayRouter;
-    VenueManager venueManager;
+    Raptor raptor;
 
     Order getChildOrder();
 

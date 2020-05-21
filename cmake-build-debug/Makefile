@@ -177,6 +177,33 @@ src/Algorithm.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/Algorithm.cpp.s
 .PHONY : src/Algorithm.cpp.s
 
+src/AlgorithmFactory.o: src/AlgorithmFactory.cpp.o
+
+.PHONY : src/AlgorithmFactory.o
+
+# target to build an object file
+src/AlgorithmFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o
+.PHONY : src/AlgorithmFactory.cpp.o
+
+src/AlgorithmFactory.i: src/AlgorithmFactory.cpp.i
+
+.PHONY : src/AlgorithmFactory.i
+
+# target to preprocess a source file
+src/AlgorithmFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.i
+.PHONY : src/AlgorithmFactory.cpp.i
+
+src/AlgorithmFactory.s: src/AlgorithmFactory.cpp.s
+
+.PHONY : src/AlgorithmFactory.s
+
+# target to generate assembly for a file
+src/AlgorithmFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.s
+.PHONY : src/AlgorithmFactory.cpp.s
+
 src/AntiGaming.o: src/AntiGaming.cpp.o
 
 .PHONY : src/AntiGaming.o
@@ -446,6 +473,33 @@ src/PricePoint.s: src/PricePoint.cpp.s
 src/PricePoint.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/PricePoint.cpp.s
 .PHONY : src/PricePoint.cpp.s
+
+src/Raptor.o: src/Raptor.cpp.o
+
+.PHONY : src/Raptor.o
+
+# target to build an object file
+src/Raptor.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/Raptor.cpp.o
+.PHONY : src/Raptor.cpp.o
+
+src/Raptor.i: src/Raptor.cpp.i
+
+.PHONY : src/Raptor.i
+
+# target to preprocess a source file
+src/Raptor.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/Raptor.cpp.i
+.PHONY : src/Raptor.cpp.i
+
+src/Raptor.s: src/Raptor.cpp.s
+
+.PHONY : src/Raptor.s
+
+# target to generate assembly for a file
+src/Raptor.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/Raptor.cpp.s
+.PHONY : src/Raptor.cpp.s
 
 src/RingBuffer.o: src/RingBuffer.cpp.o
 
@@ -732,6 +786,9 @@ help:
 	@echo "... src/Algorithm.o"
 	@echo "... src/Algorithm.i"
 	@echo "... src/Algorithm.s"
+	@echo "... src/AlgorithmFactory.o"
+	@echo "... src/AlgorithmFactory.i"
+	@echo "... src/AlgorithmFactory.s"
 	@echo "... src/AntiGaming.o"
 	@echo "... src/AntiGaming.i"
 	@echo "... src/AntiGaming.s"
@@ -762,6 +819,9 @@ help:
 	@echo "... src/PricePoint.o"
 	@echo "... src/PricePoint.i"
 	@echo "... src/PricePoint.s"
+	@echo "... src/Raptor.o"
+	@echo "... src/Raptor.i"
+	@echo "... src/Raptor.s"
 	@echo "... src/RingBuffer.o"
 	@echo "... src/RingBuffer.i"
 	@echo "... src/RingBuffer.s"

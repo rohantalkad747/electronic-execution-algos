@@ -8,6 +8,7 @@
 
 #include "Algorithm.h"
 #include "Basket.h"
+#include "AlgorithmType.h"
 
 template<typename A>
 class Wave
@@ -23,15 +24,13 @@ private:
     RoutingConfig       *routingConfig;
     Raptor              *raptor;
     A                   *algoConfig;
-    Algorithm           *templateAlgorithm;
-    OrderType           orderType;
+    AlgorithmType       *algoType;
     std::vector<double> prices;
     std::vector<Order>  orders;
-    unsigned char       waveSymbolStatus = 0;
+    unsigned int        waveSymbolStatus = 0;
     std::atomic<int>    traded           = 0;
     int                 total            = 0;
-    long                timestamp        = std::chrono::duration_cast<std::chrono::milliseconds>(
-            std::chrono::system_clock::now().time_since_epoch()).count();
+    long                timestamp        = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
     std::vector<Order> splitBySecurity(Basket *b);
 
@@ -46,13 +45,19 @@ private:
 
 public:
 
-    Wave(double waveNumber, double percentage, A *algoConfig, OrderType orderType,
-         const std::vector<double> &prices) : waveNumber(waveNumber), percentage(percentage), algoConfig(algoConfig),
-                                              orderType(orderType), prices(prices)
+    /**
+     * @param waveNumber
+     * @param percentage
+     * @param algoConfig
+     * @param prices
+     * @param orderTypes
+     * @param raptor
+     */
+    Wave(double waveNumber, double percentage, A *algoConfig,
+         const std::vector<double> &prices, const std::vector<OrderType> orderTypes, Raptor raptor) : waveNumber(waveNumber), percentage(percentage), algoConfig(algoConfig),
+                                              orderType(orderType), prices(prices), Raptor(raptor)
     {
     };
-
-    virtual ~Wave();
 
     void onExecution(Execution *execution);
 
@@ -61,6 +66,8 @@ public:
     std::string getStatus();
 
     void executeWave(Basket *b);
+
+    std::vector<Order> getOrders(OrderStatus orderStatus);
 
     std::vector<Order> getOrders()
     {

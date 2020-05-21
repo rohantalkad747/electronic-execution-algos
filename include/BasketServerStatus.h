@@ -1,0 +1,14 @@
+//
+// Created by Rohan Talkad on 2020-05-21.
+//
+
+#ifndef UNTITLED1_BASKETSERVERSTATUS_H
+#define UNTITLED1_BASKETSERVERSTATUS_H
+
+enum BasketServerStatus
+{
+    ACTIVE,
+    INACTIVE
+};
+
+#endif //UNTITLED1_BASKETSERVERSTATUS_H

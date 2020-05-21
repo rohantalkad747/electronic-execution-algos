@@ -104,6 +104,15 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketDB.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServerStatus.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BlockingQueue.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -233,6 +242,9 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BlockingQueue.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -243,9 +255,6 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/IcebergAlgorithm.cpp">
-			<Option target="untitled1"/>
-		</Unit>
-		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Node.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/OrderBook.cpp">

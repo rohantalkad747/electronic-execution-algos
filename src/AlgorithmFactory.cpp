@@ -8,9 +8,9 @@
 #include "../include/ParticipateAlgorithm.h"
 #include "../include/TWAPAlgorithm.h"
 
-Algorithm& AlgorithmFactory::getInstance(AlgorithmType& type, Raptor& raptor, AlgoConfig& cfg)
+Algorithm &AlgorithmFactory::getInstance(AlgorithmType &type, Raptor &raptor, AlgoConfig &cfg)
 {
-    Algorithm* algo;
+    Algorithm *algo;
     switch (type)
     {
         case (AlgorithmType::ICEBERG):
@@ -25,6 +25,8 @@ Algorithm& AlgorithmFactory::getInstance(AlgorithmType& type, Raptor& raptor, Al
         case (AlgorithmType::TWAP):
             algo = new TWAPAlgorithm(cfg, raptor);
             break;
+        case (AlgorithmType::NONE):
+            throw std::runtime_error("Algorithm must be defined!");
     }
     return *algo;
 }

@@ -21,7 +21,7 @@ public:
               log(*(new Logger("Algorithm"))), cancel(false)
     {}
 
-    Algorithm(AlgoConfig& algoConfig, const Raptor &raptor)
+    Algorithm(AlgoConfig &algoConfig, const Raptor &raptor)
             : algoConfig(&algoConfig), raptor(raptor),
               log(*(new Logger("Algorithm"))), cancel(false)
     {}

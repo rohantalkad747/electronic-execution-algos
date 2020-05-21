@@ -2,7 +2,9 @@
 // Created by Rohan Talkad on 2020-05-20.
 //
 
+#include <numeric>
 #include "../include/Wave.h"
+#include "../include/AlgorithmFactory.h"
 
 template<typename A>
 std::vector<Order> Wave<A>::splitBySecurity(Basket *b)
@@ -13,7 +15,7 @@ std::vector<Order> Wave<A>::splitBySecurity(Basket *b)
         std::string symbol    = b->getSymbols()[i];
         OrderSide   side      = b->getSides()[i];
         int         quantity  = b->getQuantities()[i] * percentage;
-        OrderType   orderType = orderType;
+        OrderType   orderType = b->getOrderTypes()[i];
         double      price     = prices[i];
         auto        *order    = new Order(side, symbol, quantity, orderType, price, TimeInForce::DAY);
         orders.push_back(*order);
@@ -61,8 +63,8 @@ void Wave<A>::executeWave(Basket *b)
             {
                 AlgoConfig *cfg = getAlgorithmConfig();
                 cfg->setOrder(order);
-                Algorithm algorithm = *(this->templateAlgorithm); // Copy template algo
-                algorithm.setAlgoConfig(cfg);
+                Algorithm *algorithm = AlgorithmFactory::getInstance(this->algoType, raptor, cfg);
+                algorithm->executeAlgo();
             }
             else
             {
@@ -108,7 +110,13 @@ void Wave<A>::onExecution(Execution *execution)
 }
 
 template<typename A>
-Wave<A>::~Wave()
+std::vector<Order> Wave<A>::getOrders(OrderStatus orderStatus)
 {
-    delete algoConfig;
+    return std::copy_if(orders.begin(), orders.end(), [orderStatus](Order order)
+    {
+        return order.getOrderStatus() == orderStatus;
+    });
 }
+
+
+

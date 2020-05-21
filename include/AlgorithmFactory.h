@@ -11,7 +11,7 @@
 class AlgorithmFactory
 {
 public:
-    static Algorithm& getInstance(AlgorithmType& type, Raptor &raptor, AlgoConfig& cfg);
+    static Algorithm &getInstance(AlgorithmType &type, Raptor &raptor, AlgoConfig &cfg);
 };
 
 #endif //UNTITLED1_ALGORITHMFACTORY_H

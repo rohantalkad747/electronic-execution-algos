@@ -23,6 +23,8 @@
 #include "../include/ParticipateConfig.h"
 #include "../include/IcebergConfig.h"
 #include "../include/IcebergAlgorithm.h"
+#include "../include/Basket.h"
+#include "../include/BasketServer.h"
 
 
 VenueManager createVenueManager();
@@ -104,11 +106,11 @@ void testAlgos(const VenueManager &vm)
 void testIceberg(const VenueManager &manager, const SprayRouter &router)
 {
     Order         order(OrderSide::BUY, "GOOG", 150000, OrderType::LIMIT, 1200.99, TimeInForce::DAY);
-    long          curTime       = TimeUtils::getCurTimeEpoch();
-    RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    auto       *icebergConfig = new IcebergConfig(order, routingConfig, curTime, curTime + 30, 20000, 0.35);
-    AlgoConfig *algoConfig    = ((AlgoConfig *) icebergConfig);
-    auto       *algo          = new IcebergAlgorithm(algoConfig, manager);
+    long          curTime        = TimeUtils::getCurTimeEpoch();
+    RoutingConfig routingConfig  = RoutingConfig::getSOR(RoutingType::SPRAY);
+    auto          *icebergConfig = new IcebergConfig(order, routingConfig, curTime, curTime + 30, 20000, 0.35);
+    AlgoConfig    *algoConfig    = ((AlgoConfig *) icebergConfig);
+    auto          *algo          = new IcebergAlgorithm(algoConfig, manager);
     algo->executeAlgo();
     while (algo->algoActive())
     {
@@ -123,9 +125,9 @@ void testVWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double>
     Order         order(OrderSide::BUY, "GOOG", 100000, OrderType::MARKET, -1, TimeInForce::DAY);
     long          curTime       = TimeUtils::getCurTimeEpoch();
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    auto       *vwapConfig = new VWAPConfig(order, 0, curTime, curTime + 30, 5, routingConfig, histVol, histPrice);
-    AlgoConfig *algoConfig = ((AlgoConfig *) vwapConfig);
-    auto       *algo       = new VWAPAlgorithm(algoConfig, vm);
+    auto          *vwapConfig   = new VWAPConfig(order, 0, curTime, curTime + 30, 5, routingConfig, histVol, histPrice);
+    AlgoConfig    *algoConfig   = ((AlgoConfig *) vwapConfig);
+    auto          *algo         = new VWAPAlgorithm(algoConfig, vm);
     algo->executeAlgo();
 }
 
@@ -134,9 +136,9 @@ void testTWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double>
     Order         order(OrderSide::BUY, "JPM", 100000, OrderType::MARKET, -1, TimeInForce::DAY);
     long          curTime       = TimeUtils::getCurTimeEpoch();
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    auto       *twapCfg    = new TWAPConfig(order, 0, curTime, curTime + 30, 5, histPrice, routingConfig);
-    AlgoConfig *algoConfig = ((AlgoConfig *) twapCfg);
-    auto       *algo       = new TWAPAlgorithm(algoConfig, vm);
+    auto          *twapCfg      = new TWAPConfig(order, 0, curTime, curTime + 30, 5, histPrice, routingConfig);
+    AlgoConfig    *algoConfig   = ((AlgoConfig *) twapCfg);
+    auto          *algo         = new TWAPAlgorithm(algoConfig, vm);
     algo->executeAlgo();
 }
 
@@ -213,17 +215,17 @@ void testPOV(const VenueManager &manager, SprayRouter &sr, std::vector<int> hist
     Order         order(OrderSide::BUY, "GOOG", 1000, OrderType::LIMIT, 1282, TimeInForce::DAY);
     long          curTime       = TimeUtils::getCurTimeEpoch();
     RoutingConfig routingConfig = RoutingConfig::getSOR(RoutingType::SPRAY);
-    auto       *povCOnfig  = new ParticipateConfig(order, 0, curTime, curTime + 600000, 5, routingConfig, histVol,
-                                                   0.20);
-    AlgoConfig *algoConfig = ((AlgoConfig *) povCOnfig);
-    auto       *algo       = new ParticipateAlgorithm(algoConfig, manager);
+    auto          *povCOnfig    = new ParticipateConfig(order, 0, curTime, curTime + 600000, 5, routingConfig, histVol,
+                                                        0.20);
+    AlgoConfig    *algoConfig   = ((AlgoConfig *) povCOnfig);
+    auto          *algo         = new ParticipateAlgorithm(algoConfig, manager);
     algo->executeAlgo();
 }
 
 void testSplayTree()
 {
-    auto *rt = new Node<int>(0);
-    for (int i = 0; i < 10; i++)
+    auto      *rt = new Node<int>(0);
+    for (int  i   = 0; i < 10; i++)
     {
         rt = SplayTree::insert<int>(rt, ((i & 1) == 1) ? i - 1 : i + 1);
     }
@@ -232,3 +234,10 @@ void testSplayTree()
     Node<int> *zero = SplayTree::search<int>(fv, 0);
     assert (zero->key == 0);
 }
+
+void testBasket(VenueManager& vm)
+{
+    Raptor* raptor = new Raptor(vm);
+    BasketServer* basketServer = new BasketServer(raptor);
+}
+

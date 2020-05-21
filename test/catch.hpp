@@ -544,7 +544,7 @@ namespace Catch
 
         bool operator<(SourceLineInfo const &other) const noexcept;
 
-        char const *file;
+        char const  *file;
         std::size_t line;
     };
 
@@ -658,7 +658,7 @@ namespace Catch
         static constexpr char const *const s_empty = "";
 
         char const *m_start = s_empty;
-        size_type m_size = 0;
+        size_type  m_size   = 0;
 
     public: // construction
         constexpr StringRef() noexcept = default;
@@ -1543,7 +1543,7 @@ namespace Catch
 
     class ReusableStringStream : NonCopyable
     {
-        std::size_t m_index;
+        std::size_t  m_index;
         std::ostream *m_oss;
     public:
         ReusableStringStream();
@@ -2801,7 +2801,7 @@ namespace Catch
         friend class RunContext;
 
         ITransientExpression const *m_transientExpression = nullptr;
-        bool m_isNegated;
+        bool                       m_isNegated;
     public:
         LazyExpression(bool isNegated);
 
@@ -2825,7 +2825,7 @@ namespace Catch
         AssertionInfo     m_assertionInfo;
         AssertionReaction m_reaction;
         bool              m_completed = false;
-        IResultCapture &m_resultCapture;
+        IResultCapture    &m_resultCapture;
 
     public:
         AssertionHandler
@@ -2950,8 +2950,8 @@ namespace Catch
     class Capturer
     {
         std::vector<MessageInfo> m_messages;
-        IResultCapture &m_resultCapture = getResultCapture();
-        size_t m_captured = 0;
+        IResultCapture           &m_resultCapture = getResultCapture();
+        size_t                   m_captured       = 0;
     public:
         Capturer(StringRef macroName, SourceLineInfo const &lineInfo, ResultWas::OfType resultType, StringRef names);
 
@@ -4136,7 +4136,7 @@ namespace Catch
                         return false;
                     for (auto const &comparator : m_comparator)
                     {
-                        auto present = false;
+                        auto            present = false;
                         for (const auto &el : v)
                         {
                             if (el == comparator)
@@ -4234,7 +4234,7 @@ namespace Catch
                 }
 
                 std::vector<T, AllocComp> const &m_comparator;
-                mutable Catch::Detail::Approx approx = Catch::Detail::Approx::custom();
+                mutable Catch::Detail::Approx   approx = Catch::Detail::Approx::custom();
             };
 
             template<typename T, typename AllocComp, typename AllocMatch>
@@ -4310,8 +4310,8 @@ namespace Catch
     class MatchExpr : public ITransientExpression
     {
         ArgT const &m_arg;
-        MatcherT  m_matcher;
-        StringRef m_matcherString;
+        MatcherT   m_matcher;
+        StringRef  m_matcherString;
     public:
         MatchExpr(ArgT const &arg, MatcherT const &matcher, StringRef const &matcherString)
                 : ITransientExpression{true, matcher.match(arg)},
@@ -5339,7 +5339,7 @@ namespace Catch
         template<typename Float>
         class RandomFloatingGenerator final : public IGenerator<Float>
         {
-            Catch::SimplePcg32 &m_rng;
+            Catch::SimplePcg32                    &m_rng;
             std::uniform_real_distribution<Float> m_dist;
             Float                                 m_current_number;
         public:
@@ -5366,7 +5366,7 @@ namespace Catch
         template<typename Integer>
         class RandomIntegerGenerator final : public IGenerator<Integer>
         {
-            Catch::SimplePcg32 &m_rng;
+            Catch::SimplePcg32                     &m_rng;
             std::uniform_int_distribution<Integer> m_dist;
             Integer                                m_current_number;
         public:

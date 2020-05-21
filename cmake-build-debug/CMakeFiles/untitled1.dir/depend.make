@@ -31,6 +31,41 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../src/Algorithm.cpp
 
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/AlgoConfig.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Algorithm.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/AlgorithmFactory.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/AlgorithmType.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Execution.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/ExecutionService.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/IcebergAlgorithm.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Logger.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Node.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Order.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderRouter.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/ParticipateAlgorithm.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Raptor.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/RoutingConfig.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/RoutingType.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/SprayRouter.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/TWAPAlgorithm.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/TimeUtils.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/TimedAlgorithm.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/TimingContext.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VWAPAlgorithm.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Venue.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VenueManager.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VenueOrderManager.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VenueRank.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../src/AlgorithmFactory.cpp
+
 CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o: ../include/AntiGaming.h
 CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o: ../src/AntiGaming.cpp
 
@@ -84,9 +119,6 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/VenueManager.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../src/IcebergAlgorithm.cpp
-
-CMakeFiles/untitled1.dir/src/Node.cpp.o: ../include/Node.h
-CMakeFiles/untitled1.dir/src/Node.cpp.o: ../src/Node.cpp
 
 CMakeFiles/untitled1.dir/src/OrderBook.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/OrderBook.cpp.o: ../include/Node.h
@@ -322,6 +354,8 @@ CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../src/VenueOrderManager.c
 
 CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../include/Algorithm.h
+CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../include/AlgorithmFactory.h
+CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../include/AlgorithmType.h
 CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../include/Basket.h
 CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../include/ExecutionService.h

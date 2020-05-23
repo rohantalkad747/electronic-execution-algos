@@ -29,7 +29,8 @@ inline AbstractAlgorithmScheduler::AbstractAlgorithmScheduler() : mExit{false}, 
                                                                                                     {
                                                                                                         break;
                                                                                                     }
-                                                                                                } else if (!mTasks.empty())
+                                                                                                }
+                                                                                                else if (!mTasks.empty())
                                                                                                 {
                                                                                                     std::pop_heap(
                                                                                                             mTasks.begin(),

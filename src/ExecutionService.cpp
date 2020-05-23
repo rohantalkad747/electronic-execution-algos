@@ -53,14 +53,17 @@ double ExecutionService::resolvePx(const Order &ordOne, const Order &fromBook,
         if (fromBookType == OrderType::MARKET)
         {
             avPx = fillTable[ordOne.getSymbol()];
-        } else
+        }
+        else
         {
             avPx = fromBook.getPrice();
         }
-    } else if (fromBookType == OrderType::MARKET)
+    }
+    else if (fromBookType == OrderType::MARKET)
     {
         avPx = ordOne.getPrice();
-    } else
+    }
+    else
     {
         avPx = fromBook.getPrice();
     }
@@ -76,7 +79,8 @@ void ExecutionService::buildExec(const Order &ordOne, double &avPx)
     {
         execType  = ExecutionType::DONE;
         ordStatus = OrderStatus::FILLED;
-    } else
+    }
+    else
     {
         execType  = ExecutionType::TRADE;
         ordStatus = OrderStatus::PARTIAL;

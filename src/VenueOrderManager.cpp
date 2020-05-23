@@ -37,7 +37,8 @@ void VenueOrderManager::acceptOrder(Order &order)
                 (order.getCumulativeQuantity() < order.getMinQuantity()))
             {
                 executionService.cancel(order);
-            } else
+            }
+            else
             {
                 book.addOrder(order);
             }

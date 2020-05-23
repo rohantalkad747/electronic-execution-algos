@@ -12,13 +12,13 @@
 class BasketDB
 {
 private:
-    std::map<long, Basket*> baskets;
+    std::map<long, Basket *> baskets;
 public:
-    void addBasket(Basket* basket);
+    void addBasket(Basket *basket);
 
-    Basket* getBasket(long basketId);
+    Basket *getBasket(long basketId);
 
-    void deleteBasket(Basket* basket);
+    void deleteBasket(Basket *basket);
 
     void deleteBasket(long basketId);
 };

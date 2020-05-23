@@ -5,7 +5,8 @@
 #include <numeric>
 #include "../include/Basket.h"
 
-int Basket::leaves() const {
+int Basket::leaves() const
+{
     int toTrade = std::accumulate(quantities.begin(), quantities.end(), 0);
     return toTrade - totalTraded;
 }

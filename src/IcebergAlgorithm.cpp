@@ -48,7 +48,8 @@ int IcebergAlgorithm::getLeavesQuantity()
     if (icebergConfig->getDisplayVariance() > 0)
     {
         display = AntiGaming::randomize(this->lower, this->upper);
-    } else
+    }
+    else
     {
         display = rawDisplay;
     }

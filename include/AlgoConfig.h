@@ -16,7 +16,7 @@ public:
     virtual ~AlgoConfig()
     {}
 
-    const Order &getOrder() const
+    Order &getOrder()
     {
         return order;
     }
@@ -34,6 +34,16 @@ public:
                                                                                                                startTime),
                                                                                                        endTime(endTime)
     {}
+
+public:
+    AlgoConfig(const RoutingConfig &routingConfig, long startTime, long endTime) : routingConfig(
+            routingConfig),
+                                                                                   startTime(
+                                                                                           startTime),
+                                                                                   endTime(endTime)
+    {
+    }
+
 
 protected:
     Order         order;
@@ -67,7 +77,7 @@ public:
     }
 
 public:
-    const RoutingConfig &getRoutingConfig() const
+    RoutingConfig &getRoutingConfig()
     {
         return routingConfig;
     }

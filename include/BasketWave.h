@@ -10,32 +10,34 @@
 #include "Basket.h"
 #include "AlgorithmType.h"
 #include "LotSizing.h"
-#include "Round.h"
+#include "Rounding.h"
+#include "AlgorithmFactory.h"
 
 template<typename A>
 class BasketWave
 {
 private:
-    static const int    PENDING          = 1;
-    static const int    SENT             = 2;
-    static const int    EXECUTED         = 4;
-    static const int    PARTIAL_EX       = 8;
-    static const int    CANCELLED        = 16;
-    double              waveNumber;
-    double              percentage;
-    RoutingConfig       *routingConfig;
-    Raptor              *raptor;
-    A                   *algoConfig;
-    AlgorithmType       *algoType;
-    std::vector<double> prices;
-    std::vector<Order>  orders;
+    static const int       PENDING          = 1;
+    static const int       SENT             = 2;
+    static const int       EXECUTED         = 4;
+    static const int       PARTIAL_EX       = 8;
+    static const int       CANCELLED        = 16;
+    double                 waveNumber;
+    double                 percentage;
+    RoutingConfig          *routingConfig;
+    Raptor                 *raptor;
+    A                      *algoConfig;
+    AlgorithmType          *algoType;
+    std::vector<double>    prices;
+    std::vector<Order>     orders;
     std::vector<OrderType> orderTypes;
-    LotSizing           lotSizing;
-    Round               round;
-    unsigned int        waveSymbolStatus = 0;
-    std::atomic<int>    traded           = 0;
-    int                 total            = 0;
-    long                timestamp        = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    LotSizing              lotSizing;
+    Rounding               round;
+    unsigned int           waveSymbolStatus = 0;
+    std::atomic<int>       traded           = 0;
+    int                    total            = 0;
+    long                   timestamp        = std::chrono::duration_cast<std::chrono::milliseconds>(
+            std::chrono::system_clock::now().time_since_epoch()).count();
 
     std::vector<Order> splitBySecurity(Basket *b);
 
@@ -51,28 +53,36 @@ private:
 public:
 
     /**
+     *
      * @param waveNumber
      * @param percentage
      * @param algoConfig
+     * @param algorithmType
      * @param prices
      * @param orderTypes
      * @param raptor
+     * @param round
+     * @param lotSizing
      */
-    BasketWave(double waveNumber, double percentage,
+    BasketWave(double waveNumber,
+               double percentage,
                A *algoConfig,
+               AlgorithmType *algorithmType,
                const std::vector<double> &prices,
                const std::vector<OrderType> orderTypes,
-               Raptor* raptor,
-               Round round,
+               Raptor *raptor,
+               Rounding round,
                LotSizing lotSizing) :
-         waveNumber(waveNumber),
-         percentage(percentage),
-         algoConfig(algoConfig),
-         orderTypes(orderTypes),
-         prices(prices),
-         raptor(raptor),
-         round(round),
-         lotSizing(lotSizing)
+            waveNumber(waveNumber),
+            percentage(percentage),
+            algoConfig(algoConfig),
+            orderTypes(orderTypes),
+            algoType(algorithmType),
+            prices(prices),
+            raptor(raptor),
+            round(round),
+            lotSizing(lotSizing),
+            waveSymbolStatus(BasketWave::PENDING)
     {
     };
 

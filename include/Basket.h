@@ -13,13 +13,13 @@ class Basket
 private:
     std::vector<std::string> symbols;
     std::string              accountId;
-    int  basketId;
-    int currentWaveNumber;
-    bool waveInProgress    = false;
-    std::vector<int>    quantities;
-    std::vector<OrderSide> sides;
-    std::vector<OrderType> orderTypes;
-    std::atomic<int> totalTraded = 0;
+    int                      basketId;
+    int                      currentWaveNumber;
+    bool                     waveInProgress = false;
+    std::vector<int>         quantities;
+    std::vector<OrderSide>   sides;
+    std::vector<OrderType>   orderTypes;
+    std::atomic<int>         totalTraded    = 0;
 
 public:
 
@@ -33,16 +33,15 @@ public:
     * @param sides
     */
     Basket(const std::vector<std::string> &symbols,
-            const std::string &accountId,
-            int basketId,
+           const std::string &accountId,
+           int basketId,
            const std::vector<int> &quantities,
            const std::vector<OrderSide> &sides) : symbols(symbols),
-                                                                                      accountId(accountId),
-                                                                                      basketId(basketId),
-                                                                                      quantities(quantities),
-                                                                                      sides(sides)
+                                                  accountId(accountId),
+                                                  basketId(basketId),
+                                                  quantities(quantities),
+                                                  sides(sides)
     {}
-
 
 
     const std::vector<OrderType> &getOrderTypes() const

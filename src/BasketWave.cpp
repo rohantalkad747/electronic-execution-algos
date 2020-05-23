@@ -4,21 +4,22 @@
 
 #include <numeric>
 #include "../include/BasketWave.h"
+#include "../include/Algorithm.h"
 #include "../include/AlgorithmFactory.h"
 
 template<typename A>
 std::vector<Order> BasketWave<A>::splitBySecurity(Basket *b)
 {
     std::vector<Order> orders;
-    for (int           i = 0; i < orders.size(); i++)
+    for (int           i = 0; i < b->getSymbols().size(); i++)
     {
-        std::string symbol    = b->getSymbols()[i];
-        OrderSide   side      = b->getSides()[i];
-        int totalQuantity     = b->getQuantities()[i];
-        int withRoundLots     = getQuantityAfterLotAdjustment(b, totalQuantity);
-        OrderType   orderType = b->getOrderTypes()[i];
-        double      price     = prices[i];
-        auto        *order    = new Order(side, symbol, withRoundLots, orderType, price, TimeInForce::DAY);
+        std::string symbol        = b->getSymbols()[i];
+        OrderSide   side          = b->getSides()[i];
+        int         totalQuantity = b->getQuantities()[i];
+        int         withRoundLots = getQuantityAfterLotAdjustment(b, totalQuantity);
+        OrderType   orderType     = orderTypes[i];
+        double      price         = prices[i];
+        auto        *order        = new Order(side, symbol, withRoundLots, orderType, price, TimeInForce::DAY);
         orders.push_back(*order);
         total += withRoundLots;
     }
@@ -43,8 +44,8 @@ int BasketWave<A>::getQuantityAfterLotAdjustment(const Basket *b, int totalQuant
     {
         return quantity;
     }
-    int    withRoundLots = ((int) (quantity / 100)) * 100;
-    if (round == Round::UP)
+    int withRoundLots = ((int) (quantity / 100)) * 100;
+    if (round == Rounding::UP)
     {
         int remaining = b->leaves() - withRoundLots;
         withRoundLots += std::min(100, remaining);
@@ -85,18 +86,25 @@ void BasketWave<A>::executeWave(Basket *b)
     if (waveSymbolStatus & BasketWave::PENDING)
     {
         orders = splitBySecurity(b);
-        for (const auto &order : orders)
+        for (auto &order : orders)
         {
             if (algoConfig != nullptr)
             {
                 AlgoConfig *cfg = getAlgorithmConfig();
-                cfg->setOrder(order);
-                Algorithm *algorithm = AlgorithmFactory::getInstance(this->algoType, raptor, cfg);
-                algorithm->executeAlgo();
+                if (*algoType == AlgorithmType::NONE)
+                {
+                    raptor->send((cfg->getRoutingConfig()), order);
+                }
+                else
+                {
+                    cfg->setOrder(order);
+                    Algorithm *algorithm = &AlgorithmFactory::getInstance(*(this->algoType), *(raptor), *cfg);
+//                    algorithm->executeAlgo();
+                }
             }
             else
             {
-                raptor->send(this->routingConfig, order);
+                raptor->send(*(this->routingConfig), order);
             }
         }
         waveSymbolStatus = (waveSymbolStatus | BasketWave::SENT) & ~BasketWave::PENDING;
@@ -131,7 +139,8 @@ void BasketWave<A>::onExecution(Execution *execution)
     if (waveSymbolStatus & BasketWave::SENT)
     {
         waveSymbolStatus = (waveSymbolStatus | BasketWave::SENT) & ~BasketWave::PARTIAL_EX;
-    } else if (traded == total)
+    }
+    else if (traded == total)
     {
         waveSymbolStatus |= BasketWave::EXECUTED;
     }

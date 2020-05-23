@@ -17,8 +17,13 @@
 class Order
 {
 public:
-    explicit Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
-                   TimeInForce timeInForce) :
+    Order()
+    {
+
+    }
+
+    Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
+          TimeInForce timeInForce) :
             side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price),
             timeInForce(timeInForce)
     {
@@ -27,8 +32,8 @@ public:
         orderStatus        = OrderStatus::NEW;
     };
 
-    explicit Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
-                   TimeInForce timeInForce, LiquidityIndicator liquidityIndicator) :
+    Order(OrderSide side, std::string symbol, int quantity, OrderType orderType, double price,
+          TimeInForce timeInForce, LiquidityIndicator liquidityIndicator) :
             side(side), symbol(symbol), quantity(quantity), orderType(orderType), price(price),
             timeInForce(timeInForce), liquidityIndicator(liquidityIndicator)
     {

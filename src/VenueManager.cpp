@@ -50,7 +50,8 @@ void VenueManager::iterateAndRemove(const std::string &name)
         {
             Venues.erase(it);
             Log.info("Removed venue: ", name);
-        } else
+        }
+        else
         {
             it++;
         }

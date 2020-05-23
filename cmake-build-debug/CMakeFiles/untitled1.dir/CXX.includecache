@@ -22,6 +22,12 @@ SprayRouter.h
 Raptor.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Raptor.h
 
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmFactory.h
+Algorithm.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h
+AlgorithmType.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h
+
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/AvgLatency.h
@@ -37,6 +43,8 @@ Order.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketDB.h
+map
+-
 Basket.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
 
@@ -51,12 +59,26 @@ BasketServerStatus.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServerStatus.h
 Raptor.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Raptor.h
-Wave.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/Wave.h
+BasketWave.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
 vector
 -
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServerStatus.h
+
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
+Algorithm.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h
+Basket.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
+AlgorithmType.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h
+LotSizing.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/LotSizing.h
+Rounding.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/Rounding.h
+AlgorithmFactory.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmFactory.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Execution.h
 OrderSide.h
@@ -109,6 +131,8 @@ vector
 -
 sstream
 -
+
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/LotSizing.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
 
@@ -173,6 +197,8 @@ RoutingConfig.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingConfig.h
 SprayRouter.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/SprayRouter.h
+
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/Rounding.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingConfig.h
 RoutingType.h
@@ -282,13 +308,15 @@ OrderSide.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueRank.h
 
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/Wave.h
-Algorithm.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp
+numeric
+-
+../include/BasketWave.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
+../include/Algorithm.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h
-Basket.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
-AlgorithmType.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h
+../include/AlgorithmFactory.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmFactory.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/test/catch.hpp
 TargetConditionals.h
@@ -879,6 +907,8 @@ chrono
 -
 thread
 -
+../src/BasketWave.cpp
+/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp
 ../include/Order.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
 ../include/VenueManager.h
@@ -887,18 +917,12 @@ thread
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/SprayRouter.h
 ../include/AvgLatency.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/AvgLatency.h
-../include/Algorithm.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h
 ../include/TWAPAlgorithm.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/TWAPAlgorithm.h
 ../include/ParticipateAlgorithm.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/ParticipateAlgorithm.h
 ../include/TWAPConfig.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/TWAPConfig.h
-../include/TimeUtils.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/TimeUtils.h
-../include/Node.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
 ../include/SplayTree.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/SplayTree.h
 ../include/VWAPConfig.h
@@ -915,4 +939,6 @@ thread
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
 ../include/BasketServer.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h
+../include/BasketWave.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
 

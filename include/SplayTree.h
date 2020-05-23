@@ -91,7 +91,8 @@ public:
             new_root->right = root;
             new_root->left  = root->left;
             root->left      = nullptr;
-        } else
+        }
+        else
         {
             new_root->left  = root;
             new_root->right = root->right;
@@ -123,7 +124,8 @@ public:
             {
                 root->left->left = search<T>(root->left->left, key);
                 root = rightRotate<T>(root);
-            } else if (root->left->key < key)
+            }
+            else if (root->left->key < key)
             {
                 root->left->right = search<T>(root->left->right, key);
                 if (root->left->right != nullptr)
@@ -136,7 +138,8 @@ public:
                 return root;
             }
             return rightRotate<T>(root);
-        } else
+        }
+        else
         {
             if (root->right == nullptr)
             {
@@ -149,7 +152,8 @@ public:
                 {
                     root->right = rightRotate<T>(root->right);
                 }
-            } else if (root->right->key < key)
+            }
+            else if (root->right->key < key)
             {
                 root->right->right = search<T>(root->right->right, key);
                 root = leftRotate<T>(root);

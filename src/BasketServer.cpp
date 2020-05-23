@@ -14,25 +14,9 @@ BasketServer::createTradableBasket(std::string accountId, std::vector<std::strin
     return basket;
 }
 
-template<typename A>
-BasketWave<A> *
-BasketServer::acceptWaveOrderRequest(int basketId, double percentage, A *algoConfig, const std::vector<double> &prices,
-                                     const std::vector<OrderType> &orderTypes)
+Basket *BasketServer::getBasket_(long bsId)
 {
-    Basket *basket = getBasket_(basketId);
-    if (basket->getWaveStatus())
-    {
-        throw std::runtime_error("BasketWave order in progress!");
-    }
-    auto *wave = new BasketWave<A>(basket->getCurrentWave() + 1, percentage, algoConfig, prices, orderTypes, raptor);
-    basket->setNewWaveStatus();
-    wave->executeWave(basket);
-    return wave;
-}
-
-Basket * BasketServer::getBasket_(long basketId)
-{
-    Basket *basket = this->basketDb.getBasket(basketId);
+    Basket *basket = this->basketDb.getBasket(bsId);
     if (basket == nullptr)
     {
         throw std::runtime_error("Could not find basket!");
@@ -40,10 +24,10 @@ Basket * BasketServer::getBasket_(long basketId)
     return basket;
 }
 
-template <typename A>
-void BasketServer::cancelBasketWave(long basketId)
+template<typename A>
+void BasketServer::cancelBasketWave(long bsId)
 {
-    Basket *basket = getBasket_(basketId);
+    Basket *basket = getBasket_(bsId);
     if (!basket->getWaveStatus())
     {
         throw std::runtime_error("BasketWave not in progress!");

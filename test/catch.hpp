@@ -1971,7 +1971,8 @@ namespace Catch
             if (p)
             {
                 return ::Catch::Detail::rawMemoryToString(p);
-            } else
+            }
+            else
             {
                 return "nullptr";
             }
@@ -1986,7 +1987,8 @@ namespace Catch
             if (p)
             {
                 return ::Catch::Detail::rawMemoryToString(p);
-            } else
+            }
+            else
             {
                 return "nullptr";
             }

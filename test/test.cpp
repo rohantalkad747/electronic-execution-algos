@@ -7,16 +7,14 @@
 #include <vector>
 #include <chrono>
 #include <thread>
+#include "../src/BasketWave.cpp"
 #include "../include/Order.h"
 #include "../include/VenueManager.h"
 #include "../include/SprayRouter.h"
 #include "../include/AvgLatency.h"
-#include "../include/Algorithm.h"
 #include "../include/TWAPAlgorithm.h"
 #include "../include/ParticipateAlgorithm.h"
 #include "../include/TWAPConfig.h"
-#include "../include/TimeUtils.h"
-#include "../include/Node.h"
 #include "../include/SplayTree.h"
 #include "../include/VWAPConfig.h"
 #include "../include/VWAPAlgorithm.h"
@@ -25,6 +23,7 @@
 #include "../include/IcebergAlgorithm.h"
 #include "../include/Basket.h"
 #include "../include/BasketServer.h"
+#include "../include/BasketWave.h"
 
 
 VenueManager createVenueManager();
@@ -37,7 +36,10 @@ void testVWAP(const VenueManager &vm, const SprayRouter &sr, std::vector<double>
 
 void testPOV(const VenueManager &vm, SprayRouter &sr, std::vector<int> histVol);
 
+
 void testSplayTree();
+
+void testBasket(const VenueManager &vm);
 
 template<class T>
 std::vector<T> seedVector(int a, int b, int amt);
@@ -66,10 +68,10 @@ std::vector<T> seedVector(int a, int b, int amt)
 int main()
 {
     VenueManager vm = createVenueManager();
-//    testAlgos(vm);
+    testAlgos(vm);
 //    testSprayRouter(vm);
 //    testSplayTree();
-    testOrderBook(vm);
+//    testOrderBook(vm);
 }
 
 void testOrderBook(VenueManager vm)
@@ -99,8 +101,9 @@ void testAlgos(const VenueManager &vm)
     std::vector<int>    histVol   = seedVector<int>(20, 40, 86400);
 //    testTWAP(vm, sr, histPrice);
 //    testVWAP(vm, sr, histPrice, histVol);
-    testPOV(vm, sr, histVol);
+//    testPOV(vm, sr, histVol);
 //    testIceberg(vm, sr);
+    testBasket(vm);
 }
 
 void testIceberg(const VenueManager &manager, const SprayRouter &router)
@@ -235,8 +238,34 @@ void testSplayTree()
     assert (zero->key == 0);
 }
 
-//void testBasket(VenueManager& vm)
-//{
-//    Raptor* raptor = new Raptor(vm);
-//}
-//
+void testBasket(const VenueManager &vm)
+{
+    Raptor                 raptor(vm);
+    BasketDB               basketDb;
+    BasketServer           bs(raptor, basketDb, BasketServerStatus::ACTIVE);
+    Basket                 *basket       = bs.createTradableBasket(
+            "QRA90A901J",
+            {"IBM", "GOOG"},
+            {250000, 700000},
+            {OrderSide::BUY, OrderSide::BUY}
+    );
+    long                   curTime       = TimeUtils::getCurTimeEpoch() * 1000;
+    std::vector<double>    prices        = {315.23, 1400.50};
+    std::vector<OrderType> orderTypes    = {OrderType::LIMIT, OrderType::LIMIT};
+    AlgorithmType          algorithmType = AlgorithmType::NONE;
+    bs.createWave(
+            basket->getBasketId(),
+            0.15,
+            new AlgoConfig(
+                    RoutingConfig::getSOR(RoutingType::SPRAY),
+                    curTime,
+                    curTime + 86400
+            ),
+            &algorithmType,
+            prices,
+            orderTypes,
+            LotSizing::ROUND,
+            Rounding::UP
+    );
+}
+

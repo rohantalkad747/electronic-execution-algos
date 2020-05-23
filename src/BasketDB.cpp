@@ -9,7 +9,7 @@ void BasketDB::addBasket(Basket *basket)
     this->baskets[basket->getBasketId()] = basket;
 }
 
-Basket * BasketDB::getBasket(long basketId)
+Basket *BasketDB::getBasket(long basketId)
 {
     return this->baskets[basketId];
 }

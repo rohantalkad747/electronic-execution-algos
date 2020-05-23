@@ -6,10 +6,13 @@
 #define UNTITLED1_BASKETDB_H
 
 
+#include <map>
 #include "Basket.h"
 
 class BasketDB
 {
+private:
+    std::map<long, Basket*> baskets;
 public:
     void addBasket(Basket* basket);
 

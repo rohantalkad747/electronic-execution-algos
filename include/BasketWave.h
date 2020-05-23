@@ -2,16 +2,18 @@
 // Created by Rohan Talkad on 2020-05-21.
 //
 
-#ifndef UNTITLED1_WAVE_H
-#define UNTITLED1_WAVE_H
+#ifndef UNTITLED1_BASKETWAVE_H
+#define UNTITLED1_BASKETWAVE_H
 
 
 #include "Algorithm.h"
 #include "Basket.h"
 #include "AlgorithmType.h"
+#include "LotSizing.h"
+#include "Round.h"
 
 template<typename A>
-class Wave
+class BasketWave
 {
 private:
     static const int    PENDING          = 1;
@@ -27,6 +29,9 @@ private:
     AlgorithmType       *algoType;
     std::vector<double> prices;
     std::vector<Order>  orders;
+    std::vector<OrderType> orderTypes;
+    LotSizing           lotSizing;
+    Round               round;
     unsigned int        waveSymbolStatus = 0;
     std::atomic<int>    traded           = 0;
     int                 total            = 0;
@@ -53,9 +58,21 @@ public:
      * @param orderTypes
      * @param raptor
      */
-    Wave(double waveNumber, double percentage, A *algoConfig,
-         const std::vector<double> &prices, const std::vector<OrderType> orderTypes, Raptor raptor) : waveNumber(waveNumber), percentage(percentage), algoConfig(algoConfig),
-                                              orderType(orderType), prices(prices), Raptor(raptor)
+    BasketWave(double waveNumber, double percentage,
+               A *algoConfig,
+               const std::vector<double> &prices,
+               const std::vector<OrderType> orderTypes,
+               Raptor* raptor,
+               Round round,
+               LotSizing lotSizing) :
+         waveNumber(waveNumber),
+         percentage(percentage),
+         algoConfig(algoConfig),
+         orderTypes(orderTypes),
+         prices(prices),
+         raptor(raptor),
+         round(round),
+         lotSizing(lotSizing)
     {
     };
 
@@ -73,9 +90,11 @@ public:
     {
         return this->orders;
     }
+
+    int getQuantityAfterLotAdjustment(const Basket *b, int totalQuantity);
 };
 
 
-#endif //UNTITLED1_WAVE_H
+#endif //UNTITLED1_BASKETWAVE_H
 
 

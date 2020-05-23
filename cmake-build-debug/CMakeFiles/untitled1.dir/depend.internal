@@ -72,6 +72,39 @@ CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/AvgLatency.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgoConfig.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketDB.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServerStatus.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Execution.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/ExecutionService.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/ExecutionType.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/LiquidityIndicator.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Logger.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderType.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/PricePoint.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Raptor.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingConfig.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingType.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/SprayRouter.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/TimeInForce.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/TimeUtils.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Venue.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueManager.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueOrderManager.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueRank.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Wave.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp
 CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/BlockingQueue.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/src/BlockingQueue.cpp
@@ -386,7 +419,12 @@ CMakeFiles/untitled1.dir/src/Wave.cpp.o
 CMakeFiles/untitled1.dir/test/test.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgoConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/AvgLatency.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketDB.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServerStatus.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Execution.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/ExecutionService.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/ExecutionType.h
@@ -421,5 +459,6 @@ CMakeFiles/untitled1.dir/test/test.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueManager.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueOrderManager.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueRank.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/Wave.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/test/catch.hpp
  /Users/s2387022/CLionProjects/electronic-execution-algos/test/test.cpp

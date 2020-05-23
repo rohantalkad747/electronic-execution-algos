@@ -317,18 +317,18 @@ CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/s2387022/CLionProjects/electronic-execution-algos/src/AbstractAlgorithmScheduler.cpp -o CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.s
 
-CMakeFiles/untitled1.dir/src/Wave.cpp.o: CMakeFiles/untitled1.dir/flags.make
-CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../src/Wave.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/untitled1.dir/src/Wave.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled1.dir/src/Wave.cpp.o -c /Users/s2387022/CLionProjects/electronic-execution-algos/src/Wave.cpp
+CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../src/BasketWave.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/untitled1.dir/src/BasketWave.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled1.dir/src/BasketWave.cpp.o -c /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp
 
-CMakeFiles/untitled1.dir/src/Wave.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/Wave.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/s2387022/CLionProjects/electronic-execution-algos/src/Wave.cpp > CMakeFiles/untitled1.dir/src/Wave.cpp.i
+CMakeFiles/untitled1.dir/src/BasketWave.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/BasketWave.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp > CMakeFiles/untitled1.dir/src/BasketWave.cpp.i
 
-CMakeFiles/untitled1.dir/src/Wave.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/Wave.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/s2387022/CLionProjects/electronic-execution-algos/src/Wave.cpp -o CMakeFiles/untitled1.dir/src/Wave.cpp.s
+CMakeFiles/untitled1.dir/src/BasketWave.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/BasketWave.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp -o CMakeFiles/untitled1.dir/src/BasketWave.cpp.s
 
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: CMakeFiles/untitled1.dir/flags.make
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../src/Raptor.cpp
@@ -369,6 +369,32 @@ CMakeFiles/untitled1.dir/src/BasketServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/BasketServer.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp -o CMakeFiles/untitled1.dir/src/BasketServer.cpp.s
 
+CMakeFiles/untitled1.dir/src/Basket.cpp.o: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../src/Basket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/untitled1.dir/src/Basket.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled1.dir/src/Basket.cpp.o -c /Users/s2387022/CLionProjects/electronic-execution-algos/src/Basket.cpp
+
+CMakeFiles/untitled1.dir/src/Basket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/Basket.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/s2387022/CLionProjects/electronic-execution-algos/src/Basket.cpp > CMakeFiles/untitled1.dir/src/Basket.cpp.i
+
+CMakeFiles/untitled1.dir/src/Basket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/Basket.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/s2387022/CLionProjects/electronic-execution-algos/src/Basket.cpp -o CMakeFiles/untitled1.dir/src/Basket.cpp.s
+
+CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: CMakeFiles/untitled1.dir/flags.make
+CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../src/BasketDB.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/untitled1.dir/src/BasketDB.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled1.dir/src/BasketDB.cpp.o -c /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketDB.cpp
+
+CMakeFiles/untitled1.dir/src/BasketDB.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled1.dir/src/BasketDB.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketDB.cpp > CMakeFiles/untitled1.dir/src/BasketDB.cpp.i
+
+CMakeFiles/untitled1.dir/src/BasketDB.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled1.dir/src/BasketDB.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketDB.cpp -o CMakeFiles/untitled1.dir/src/BasketDB.cpp.s
+
 # Object files for target untitled1
 untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/src/VenueManager.cpp.o" \
@@ -391,10 +417,12 @@ untitled1_OBJECTS = \
 "CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o" \
 "CMakeFiles/untitled1.dir/src/ExecutionService.cpp.o" \
 "CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.o" \
-"CMakeFiles/untitled1.dir/src/Wave.cpp.o" \
+"CMakeFiles/untitled1.dir/src/BasketWave.cpp.o" \
 "CMakeFiles/untitled1.dir/src/Raptor.cpp.o" \
 "CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o" \
-"CMakeFiles/untitled1.dir/src/BasketServer.cpp.o"
+"CMakeFiles/untitled1.dir/src/BasketServer.cpp.o" \
+"CMakeFiles/untitled1.dir/src/Basket.cpp.o" \
+"CMakeFiles/untitled1.dir/src/BasketDB.cpp.o"
 
 # External object files for target untitled1
 untitled1_EXTERNAL_OBJECTS =
@@ -419,13 +447,15 @@ untitled1: CMakeFiles/untitled1.dir/src/PricePoint.cpp.o
 untitled1: CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o
 untitled1: CMakeFiles/untitled1.dir/src/ExecutionService.cpp.o
 untitled1: CMakeFiles/untitled1.dir/src/AbstractAlgorithmScheduler.cpp.o
-untitled1: CMakeFiles/untitled1.dir/src/Wave.cpp.o
+untitled1: CMakeFiles/untitled1.dir/src/BasketWave.cpp.o
 untitled1: CMakeFiles/untitled1.dir/src/Raptor.cpp.o
 untitled1: CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o
 untitled1: CMakeFiles/untitled1.dir/src/BasketServer.cpp.o
+untitled1: CMakeFiles/untitled1.dir/src/Basket.cpp.o
+untitled1: CMakeFiles/untitled1.dir/src/BasketDB.cpp.o
 untitled1: CMakeFiles/untitled1.dir/build.make
 untitled1: CMakeFiles/untitled1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable untitled1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking CXX executable untitled1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -9,6 +9,8 @@
 #include "OrderType.h"
 #include "BasketDB.h"
 #include "BasketServerStatus.h"
+#include "Raptor.h"
+#include "BasketWave.h"
 #include <vector>
 
 class BasketServer
@@ -18,6 +20,9 @@ private:
     BasketDB basketDb;
     std::atomic<int> basketId = 0;
     Raptor raptor;
+
+    Basket * getBasket_(long basketId);
+
 public:
 
     BasketServer(Raptor raptor, BasketDB basketDb, BasketServerStatus bss) : raptor(raptor), basketDb(basketDb), bss(bss)
@@ -44,12 +49,13 @@ public:
     );
 
     template<typename A>
-    Wave<A>* acceptWaveOrderRequest(int basketId,
-            double percentage,
-            A *algoConfig,
-            const std::vector<double> &prices,
-            const std::vector<OrderType> &orderTypes);
+    BasketWave<A>* acceptWaveOrderRequest(int basketId,
+                                          double percentage,
+                                          A *algoConfig,
+                                          const std::vector<double> &prices,
+                                          const std::vector<OrderType> &orderTypes);
 
+    template<typename A>
     void cancelBasketWave(long basketId);
 };
 

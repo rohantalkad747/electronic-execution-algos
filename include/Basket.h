@@ -6,23 +6,24 @@
 #define UNTITLED1_BASKET_H
 
 #include <vector>
-#include "Wave.h"
 #include "Order.h"
-
 
 class Basket
 {
 private:
     std::vector<std::string> symbols;
     std::string              accountId;
-    int                      basketId;
-    int                      currentWave = 0;
-    bool                     waveInProgress = false;
-    std::vector<double>    quantities;
+    int  basketId;
+    int currentWaveNumber;
+    bool waveInProgress    = false;
+    std::vector<int>    quantities;
     std::vector<OrderSide> sides;
     std::vector<OrderType> orderTypes;
+    std::atomic<int> totalTraded = 0;
 
 public:
+
+    int leaves() const;
 
     /**
     * @param symbols
@@ -31,13 +32,18 @@ public:
     * @param quantities
     * @param sides
     */
-    Basket(const std::vector<std::string> &symbols, const std::string &accountId, int basketId,
-           const std::vector<int> &quantities, const std::vector<OrderSide> &sides) : symbols(symbols),
+    Basket(const std::vector<std::string> &symbols,
+            const std::string &accountId,
+            int basketId,
+           const std::vector<int> &quantities,
+           const std::vector<OrderSide> &sides) : symbols(symbols),
                                                                                       accountId(accountId),
                                                                                       basketId(basketId),
                                                                                       quantities(quantities),
                                                                                       sides(sides)
     {}
+
+
 
     const std::vector<OrderType> &getOrderTypes() const
     {
@@ -47,6 +53,11 @@ public:
     void setOrderTypes(const std::vector<OrderType> &orderTypes)
     {
         Basket::orderTypes = orderTypes;
+    }
+
+    int getCurrentWave()
+    {
+        return this->currentWaveNumber;
     }
 
     int getBasketId() const
@@ -59,10 +70,6 @@ public:
         Basket::basketId = basketId;
     }
 
-    int getCurrentWave() const
-    {
-        return currentWave;
-    }
 
     const std::vector<std::string> &getSymbols() const
     {
@@ -71,7 +78,7 @@ public:
 
     void setNewWaveStatus()
     {
-        currentWave++;
+        currentWaveNumber++;
         waveInProgress = true;
     }
 
@@ -80,7 +87,7 @@ public:
         waveInProgress = false;
     }
 
-    getWaveStatus()
+    bool getWaveStatus()
     {
         return waveInProgress;
     }
@@ -90,14 +97,19 @@ public:
         Basket::symbols = symbols;
     }
 
-    const std::vector<double> &getQuantities() const
+    const std::vector<int> &getQuantities() const
     {
         return quantities;
     }
 
-    void setQuantities(const std::vector<double> &quantities)
+    void setQuantities(const std::vector<int> &quantities)
     {
         Basket::quantities = quantities;
+    }
+
+    void newExecution(int shares)
+    {
+        totalTraded += shares;
     }
 
     const std::vector<OrderSide> &getSides() const

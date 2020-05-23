@@ -113,6 +113,9 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServerStatus.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BlockingQueue.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -138,6 +141,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Logger.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/LotSizing.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h">
@@ -174,6 +180,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/RingBuffer.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Round.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingConfig.h">
@@ -224,9 +233,6 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/VenueRank.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Wave.h">
-			<Option target="untitled1"/>
-		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AbstractAlgorithmScheduler.cpp">
 			<Option target="untitled1"/>
 		</Unit>
@@ -242,7 +248,16 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Basket.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketDB.cpp">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BlockingQueue.cpp">
@@ -291,9 +306,6 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/VenueOrderManager.cpp">
-			<Option target="untitled1"/>
-		</Unit>
-		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Wave.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/test/test.cpp">

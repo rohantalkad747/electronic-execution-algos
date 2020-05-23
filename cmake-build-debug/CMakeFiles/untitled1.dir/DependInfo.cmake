@@ -9,7 +9,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/AlgorithmFactory.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/AntiGaming.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/Basket.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/Basket.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketDB.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/BasketDB.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/BasketServer.cpp.o"
+  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/BasketWave.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/BlockingQueue.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/CountDownLatch.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/CountDownLatch.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/ExecutionService.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/ExecutionService.cpp.o"
@@ -26,7 +29,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/VWAPAlgorithm.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/VenueManager.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueManager.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/src/VenueOrderManager.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o"
-  "/Users/s2387022/CLionProjects/electronic-execution-algos/src/Wave.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/src/Wave.cpp.o"
   "/Users/s2387022/CLionProjects/electronic-execution-algos/test/test.cpp" "/Users/s2387022/CLionProjects/electronic-execution-algos/cmake-build-debug/CMakeFiles/untitled1.dir/test/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

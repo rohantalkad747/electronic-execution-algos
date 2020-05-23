@@ -72,6 +72,39 @@ CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o: ../src/AntiGaming.cpp
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o: ../include/AvgLatency.h
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o: ../src/AvgLatency.cpp
 
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/AlgoConfig.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Algorithm.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/AlgorithmType.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Basket.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/BasketDB.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/BasketServer.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/BasketServerStatus.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Execution.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/ExecutionService.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Logger.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Node.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Order.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderRouter.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Raptor.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/RoutingConfig.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/RoutingType.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/SprayRouter.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/TimeUtils.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Venue.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/VenueManager.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/VenueOrderManager.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/VenueRank.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Wave.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../src/BasketServer.cpp
+
 CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.o: ../include/BlockingQueue.h
 CMakeFiles/untitled1.dir/src/BlockingQueue.cpp.o: ../src/BlockingQueue.cpp
 
@@ -385,7 +418,12 @@ CMakeFiles/untitled1.dir/src/Wave.cpp.o: ../src/Wave.cpp
 
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Algorithm.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/AlgorithmType.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/AvgLatency.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Basket.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/BasketDB.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/BasketServer.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/BasketServerStatus.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/ExecutionType.h
@@ -420,6 +458,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VenueManager.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VenueRank.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Wave.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../test/catch.hpp
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../test/test.cpp
 

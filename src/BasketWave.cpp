@@ -3,48 +3,76 @@
 //
 
 #include <numeric>
-#include "../include/Wave.h"
+#include "../include/BasketWave.h"
 #include "../include/AlgorithmFactory.h"
 
 template<typename A>
-std::vector<Order> Wave<A>::splitBySecurity(Basket *b)
+std::vector<Order> BasketWave<A>::splitBySecurity(Basket *b)
 {
     std::vector<Order> orders;
     for (int           i = 0; i < orders.size(); i++)
     {
         std::string symbol    = b->getSymbols()[i];
         OrderSide   side      = b->getSides()[i];
-        int         quantity  = b->getQuantities()[i] * percentage;
+        int totalQuantity     = b->getQuantities()[i];
+        int withRoundLots     = getQuantityAfterLotAdjustment(b, totalQuantity);
         OrderType   orderType = b->getOrderTypes()[i];
         double      price     = prices[i];
-        auto        *order    = new Order(side, symbol, quantity, orderType, price, TimeInForce::DAY);
+        auto        *order    = new Order(side, symbol, withRoundLots, orderType, price, TimeInForce::DAY);
         orders.push_back(*order);
-        total += quantity;
+        total += withRoundLots;
     }
     return orders;
 }
 
+// ROUND
+
+// UP: 473 -> 500
+// DOWN: 473 -> 400
+
+// LOT SIZING
+// ROUND: ABLE TO ROUND
+// ODD: NO ROUNDING
+
+
 template<typename A>
-std::string Wave<A>::getStatus()
+int BasketWave<A>::getQuantityAfterLotAdjustment(const Basket *b, int totalQuantity)
 {
-    if (waveSymbolStatus & Wave::SENT)
+    double quantity = totalQuantity * percentage;
+    if (lotSizing == LotSizing::ODD)
+    {
+        return quantity;
+    }
+    int    withRoundLots = ((int) (quantity / 100)) * 100;
+    if (round == Round::UP)
+    {
+        int remaining = b->leaves() - withRoundLots;
+        withRoundLots += std::min(100, remaining);
+    }
+    return withRoundLots;
+}
+
+template<typename A>
+std::string BasketWave<A>::getStatus()
+{
+    if (waveSymbolStatus & BasketWave::SENT)
     {
         return "Sent";
     }
-    if (waveSymbolStatus & Wave::CANCELLED)
+    if (waveSymbolStatus & BasketWave::CANCELLED)
     {
         std::string wss = "Cancelled";
-        if (waveSymbolStatus & Wave::PARTIAL_EX)
+        if (waveSymbolStatus & BasketWave::PARTIAL_EX)
         {
             wss += "- Partial Execution";
         }
         return wss;
     }
-    if (waveSymbolStatus & Wave::EXECUTED)
+    if (waveSymbolStatus & BasketWave::EXECUTED)
     {
         return "Executed";
     }
-    if (waveSymbolStatus & Wave::PENDING)
+    if (waveSymbolStatus & BasketWave::PENDING)
     {
         return "Pending";
     }
@@ -52,9 +80,9 @@ std::string Wave<A>::getStatus()
 }
 
 template<typename A>
-void Wave<A>::executeWave(Basket *b)
+void BasketWave<A>::executeWave(Basket *b)
 {
-    if (waveSymbolStatus & Wave::PENDING)
+    if (waveSymbolStatus & BasketWave::PENDING)
     {
         orders = splitBySecurity(b);
         for (const auto &order : orders)
@@ -71,21 +99,21 @@ void Wave<A>::executeWave(Basket *b)
                 raptor->send(this->routingConfig, order);
             }
         }
-        waveSymbolStatus = (waveSymbolStatus | Wave::SENT) & ~Wave::PENDING;
+        waveSymbolStatus = (waveSymbolStatus | BasketWave::SENT) & ~BasketWave::PENDING;
 
     }
 }
 
 template<typename A>
-void Wave<A>::cancelWave()
+void BasketWave<A>::cancelWave()
 {
     Algorithm *algo = this->getAlgorithm();
-    waveSymbolStatus |= Wave::CANCELLED;
+    waveSymbolStatus |= BasketWave::CANCELLED;
     algo->cancelAlgo();
 }
 
 template<typename A>
-Order *Wave<A>::findOrder(const std::string &orderId)
+Order *BasketWave<A>::findOrder(const std::string &orderId)
 {
     Order *order;
     int   i = 0;
@@ -94,23 +122,23 @@ Order *Wave<A>::findOrder(const std::string &orderId)
 }
 
 template<typename A>
-void Wave<A>::onExecution(Execution *execution)
+void BasketWave<A>::onExecution(Execution *execution)
 {
     Order &order   = findOrder(execution->order_id());
     int   executed = order.getQuantity() - execution->leavesQty();
     this->traded += executed;
     std::unique_lock lk(mtx_);
-    if (waveSymbolStatus & Wave::SENT)
+    if (waveSymbolStatus & BasketWave::SENT)
     {
-        waveSymbolStatus = (waveSymbolStatus | Wave::SENT) & ~Wave::PARTIAL_EX;
+        waveSymbolStatus = (waveSymbolStatus | BasketWave::SENT) & ~BasketWave::PARTIAL_EX;
     } else if (traded == total)
     {
-        waveSymbolStatus |= Wave::EXECUTED;
+        waveSymbolStatus |= BasketWave::EXECUTED;
     }
 }
 
 template<typename A>
-std::vector<Order> Wave<A>::getOrders(OrderStatus orderStatus)
+std::vector<Order> BasketWave<A>::getOrders(OrderStatus orderStatus)
 {
     return std::copy_if(orders.begin(), orders.end(), [orderStatus](Order order)
     {

@@ -155,6 +155,9 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -246,9 +249,6 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp">
-			<Option target="untitled1"/>
-		</Unit>
-		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/Basket.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketDB.cpp">

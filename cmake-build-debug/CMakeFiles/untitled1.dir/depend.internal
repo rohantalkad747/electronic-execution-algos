@@ -15,6 +15,7 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -45,6 +46,7 @@ CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -72,15 +74,6 @@ CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/AvgLatency.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp
-CMakeFiles/untitled1.dir/src/Basket.cpp.o
- /Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
- /Users/s2387022/CLionProjects/electronic-execution-algos/include/LiquidityIndicator.h
- /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
- /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
- /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
- /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderType.h
- /Users/s2387022/CLionProjects/electronic-execution-algos/include/TimeInForce.h
- /Users/s2387022/CLionProjects/electronic-execution-algos/src/Basket.cpp
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketDB.h
@@ -110,6 +103,7 @@ CMakeFiles/untitled1.dir/src/BasketServer.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -143,6 +137,7 @@ CMakeFiles/untitled1.dir/src/BasketWave.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -192,6 +187,7 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -231,6 +227,7 @@ CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -322,6 +319,7 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -357,6 +355,7 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -386,6 +385,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h
@@ -462,6 +462,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.o
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Node.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderBook.h
+ /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderConfig.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderRouter.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderSide.h
  /Users/s2387022/CLionProjects/electronic-execution-algos/include/OrderStatus.h

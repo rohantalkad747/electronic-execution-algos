@@ -6,6 +6,7 @@
 #define UNTITLED1_BASKET_H
 
 #include <vector>
+#include <numeric>
 #include "Order.h"
 
 class Basket
@@ -15,15 +16,17 @@ private:
     std::string              accountId;
     int                      basketId;
     int                      currentWaveNumber;
-    bool                     waveInProgress = false;
     std::vector<int>         quantities;
     std::vector<OrderSide>   sides;
     std::vector<OrderType>   orderTypes;
     std::atomic<int>         totalTraded    = 0;
 
 public:
-
-    int leaves() const;
+    int leaves() const
+    {
+        int toTrade = std::accumulate(quantities.begin(), quantities.end(), 0);
+        return toTrade - totalTraded;
+    }
 
     /**
     * @param symbols
@@ -69,7 +72,6 @@ public:
         Basket::basketId = basketId;
     }
 
-
     const std::vector<std::string> &getSymbols() const
     {
         return symbols;
@@ -78,17 +80,6 @@ public:
     void setNewWaveStatus()
     {
         currentWaveNumber++;
-        waveInProgress = true;
-    }
-
-    void waveExecuted()
-    {
-        waveInProgress = false;
-    }
-
-    bool getWaveStatus()
-    {
-        return waveInProgress;
     }
 
     void setSymbols(const std::vector<std::string> &symbols)

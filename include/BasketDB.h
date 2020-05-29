@@ -16,11 +16,15 @@ private:
 public:
     void addBasket(Basket *basket);
 
-    Basket *getBasket(long basketId);
+    void appendOrders(long &basketId, std::vector<Order>& orders);
+
+    std::vector<Order>& getOrders(long &basketId);
+
+    Basket *getBasket(long &basketId);
 
     void deleteBasket(Basket *basket);
 
-    void deleteBasket(long basketId);
+    void deleteBasket(long &basketId);
 };
 
 

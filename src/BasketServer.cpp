@@ -9,7 +9,7 @@ Basket *
 BasketServer::createTradableBasket(std::string accountId, std::vector<std::string> symbols, std::vector<int> quantities,
                                    std::vector<OrderSide> sides)
 {
-    auto *basket = new Basket(symbols, accountId, basketId++, quantities, sides);
+    auto *basket = new Basket(symbols, accountId, curBasketId++, quantities, sides);
     basketDb.addBasket(basket);
     return basket;
 }
@@ -24,13 +24,29 @@ Basket *BasketServer::getBasket_(long bsId)
     return basket;
 }
 
-template<typename A>
-void BasketServer::cancelBasketWave(long bsId)
+BasketWave * BasketServer::createWave(int basketId, double percentage, OrderConfig *orderConfig, AlgorithmType *algorithmType, std::vector<double> &prices, std::vector<OrderType> &orderTypes, LotSizing lotSizing, Rounding rounding)
 {
-    Basket *basket = getBasket_(bsId);
-    if (!basket->getWaveStatus())
+    Basket *basket = getBasket_(basketId);
+    auto *wave = new BasketWave(basket->getCurrentWave() + 1,
+                                percentage,
+                                orderConfig,
+                                algorithmType,
+                                prices,
+                                orderTypes,
+                                &raptor,
+                                rounding,
+                                lotSizing);
+    basket->setNewWaveStatus();
+    wave->executeWave(basket);
+    return wave;
+}
+
+void BasketServer::cancelOutstandingOrders(long bsId)
+{
+
+    std::vector<Order>& orders = basketDb.getOrders(bsId);
+    std::copy_if(orders, (Order& o)
     {
-        throw std::runtime_error("BasketWave not in progress!");
-    }
-    basket->getCurrentWave();
+
+    });
 }

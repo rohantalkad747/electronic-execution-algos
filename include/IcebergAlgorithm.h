@@ -12,7 +12,7 @@ class IcebergAlgorithm : public Algorithm
 public:
     using Algorithm::Algorithm;
 
-    void executeAlgo();
+    virtual void executeAlgo();
 
     void triggerNextDisplay();
 

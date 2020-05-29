@@ -10,7 +10,7 @@ std::vector<long> getLatencyAdjustments(const std::vector<Venue> &venues);
 
 int SprayRouter::route(const Order &order)
 {
-    Log.debug("-------------- BEGIN SOR ------------------- ");
+    Log.debug("-------------- BEGIN ROUTING ------------------- ");
     const std::string &symbol = order.getSymbol();
     if (order.isTerminal())
     {

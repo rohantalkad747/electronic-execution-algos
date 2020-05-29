@@ -29,7 +29,7 @@ public:
     Algorithm(Algorithm &algo) : raptor(algo.raptor), log(algo.log), cancel(algo.cancel)
     {}
 
-    void executeAlgo();
+    virtual void executeAlgo() = 0;
 
     void cancelAlgo();
 

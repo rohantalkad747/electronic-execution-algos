@@ -17,9 +17,9 @@ class BasketServer
 {
 private:
     BasketServerStatus bss;
-    BasketDB           basketDb;
-    std::atomic<int>   basketId = 0;
-    Raptor             raptor;
+    BasketDB         basketDb;
+    std::atomic<int> curBasketId = 0;
+    Raptor           raptor;
 
     Basket *getBasket_(long basketId);
 
@@ -48,7 +48,7 @@ public:
      * @param symbols
      * @param quantities
      * @param sides
-     * @return
+     * @return a pointer to the tradable basket
      */
     Basket *createTradableBasket(
             std::string accountId,
@@ -62,42 +62,21 @@ public:
      * @tparam A
      * @param basketId
      * @param percentage
-     * @param algoConfig
+     * @param orderConfig
      * @param prices
      * @param orderTypes
      * @return
      */
-    template<typename A>
-    inline BasketWave<A> *createWave(int basketId,
+    BasketWave *createWave(int basketId,
                                      double percentage,
-                                     A *algoConfig,
+                                     OrderConfig *orderConfig,
                                      AlgorithmType *algorithmType,
                                      std::vector<double> &prices,
                                      std::vector<OrderType> &orderTypes,
                                      LotSizing lotSizing,
-                                     Rounding rounding)
-    {
-        Basket *basket = getBasket_(basketId);
-        if (basket->getWaveStatus())
-        {
-            throw std::runtime_error("BasketWave order in progress!");
-        }
-        auto *wave = new BasketWave<A>(basket->getCurrentWave() + 1,
-                                       percentage,
-                                       algoConfig,
-                                       algorithmType,
-                                       prices,
-                                       orderTypes,
-                                       &raptor,
-                                       rounding,
-                                       lotSizing);
-        basket->setNewWaveStatus();
-        wave->executeWave(basket);
-        return wave;
-    }
+                                     Rounding rounding);
 
-    template<typename A>
-    void cancelBasketWave(long basketId);
+    void cancelOutstandingOrders(long basketId);
 };
 
 

@@ -14,6 +14,7 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/OrderStatus.h
@@ -44,6 +45,7 @@ CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/OrderStatus.h
@@ -71,15 +73,6 @@ CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o: ../src/AntiGaming.cpp
 
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o: ../include/AvgLatency.h
 CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o: ../src/AvgLatency.cpp
-
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../include/Basket.h
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../include/LiquidityIndicator.h
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../include/Order.h
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../include/OrderSide.h
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../include/OrderStatus.h
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../include/OrderType.h
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../include/TimeInForce.h
-CMakeFiles/untitled1.dir/src/Basket.cpp.o: ../src/Basket.cpp
 
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/Basket.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/BasketDB.h
@@ -109,6 +102,7 @@ CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/LotSizing.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/OrderStatus.h
@@ -142,6 +136,7 @@ CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/LotSizing.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/OrderStatus.h
@@ -191,6 +186,7 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/OrderStatus.h
@@ -230,6 +226,7 @@ CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/OrderStatus.h
@@ -321,6 +318,7 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/OrderStatus.h
@@ -356,6 +354,7 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/OrderStatus.h
@@ -385,6 +384,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/OrderStatus.h
@@ -461,6 +461,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/LotSizing.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Node.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Order.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/OrderConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/OrderRouter.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/OrderSide.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/OrderStatus.h

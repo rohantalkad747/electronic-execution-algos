@@ -3,12 +3,12 @@
 //
 
 #include <numeric>
+#include "../include/Basket.h"
 #include "../include/BasketWave.h"
 #include "../include/Algorithm.h"
 #include "../include/AlgorithmFactory.h"
 
-template<typename A>
-std::vector<Order> BasketWave<A>::splitBySecurity(Basket *b)
+std::vector<Order> BasketWave::splitBySecurity(Basket *b)
 {
     std::vector<Order> orders;
     for (int           i = 0; i < b->getSymbols().size(); i++)
@@ -36,8 +36,8 @@ std::vector<Order> BasketWave<A>::splitBySecurity(Basket *b)
 // ODD: NO ROUNDING
 
 
-template<typename A>
-int BasketWave<A>::getQuantityAfterLotAdjustment(const Basket *b, int totalQuantity)
+
+int BasketWave::getQuantityAfterLotAdjustment(const Basket *b, int totalQuantity)
 {
     double quantity = totalQuantity * percentage;
     if (lotSizing == LotSizing::ODD)
@@ -53,8 +53,7 @@ int BasketWave<A>::getQuantityAfterLotAdjustment(const Basket *b, int totalQuant
     return withRoundLots;
 }
 
-template<typename A>
-std::string BasketWave<A>::getStatus()
+std::string BasketWave::getStatus()
 {
     if (waveSymbolStatus & BasketWave::SENT)
     {
@@ -80,26 +79,29 @@ std::string BasketWave<A>::getStatus()
     return "N/A";
 }
 
-template<typename A>
-void BasketWave<A>::executeWave(Basket *b)
+void BasketWave::executeWave(Basket *b)
 {
     if (waveSymbolStatus & BasketWave::PENDING)
     {
         orders = splitBySecurity(b);
         for (auto &order : orders)
         {
-            if (algoConfig != nullptr)
+            if (orderCfg != nullptr)
             {
-                AlgoConfig *cfg = getAlgorithmConfig();
+                auto *cfg = dynamic_cast<OrderConfig *>(orderCfg);
+                cfg->setOrder(order);
                 if (*algoType == AlgorithmType::NONE)
                 {
-                    raptor->send((cfg->getRoutingConfig()), order);
+                    auto *cfg = dynamic_cast<OrderConfig *>(orderCfg);
+                    cfg->setOrder(order);
+                    raptor->send(cfg->getRoutingConfig(), order);
                 }
                 else
                 {
+                    auto* cfg = dynamic_cast<AlgoConfig *>(orderCfg);
                     cfg->setOrder(order);
-                    Algorithm *algorithm = &AlgorithmFactory::getInstance(*(this->algoType), *(raptor), *cfg);
-//                    algorithm->executeAlgo();
+                    algorithm = &(AlgorithmFactory::getInstance(*(this->algoType), *(raptor), *cfg));
+                    algorithm->executeAlgo();
                 }
             }
             else
@@ -108,20 +110,32 @@ void BasketWave<A>::executeWave(Basket *b)
             }
         }
         waveSymbolStatus = (waveSymbolStatus | BasketWave::SENT) & ~BasketWave::PENDING;
-
     }
 }
 
-template<typename A>
-void BasketWave<A>::cancelWave()
+void BasketWave::cancelWave()
 {
-    Algorithm *algo = this->getAlgorithm();
+    if ( *(this->algoType) == AlgorithmType::NONE)
+    {
+        std::vector<Order> cancellable;
+        std::copy_if(orders.begin(), orders.end(), back_inserter(cancellable), [](const Order& o)
+        {
+            OrderStatus os =  o.getOrderStatus();
+            return os == OrderStatus::NEW || os == OrderStatus::PARTIAL;
+        });
+        for (auto& o : cancellable)
+        {
+            o.setOrderStatus(OrderStatus::CANCELLED);
+        }
+    }
+    else
+    {
+        this->algorithm->cancelAlgo();
+    }
     waveSymbolStatus |= BasketWave::CANCELLED;
-    algo->cancelAlgo();
 }
 
-template<typename A>
-Order *BasketWave<A>::findOrder(const std::string &orderId)
+Order *BasketWave::findOrder(const std::string &orderId)
 {
     Order *order;
     int   i = 0;
@@ -129,11 +143,10 @@ Order *BasketWave<A>::findOrder(const std::string &orderId)
     return order;
 }
 
-template<typename A>
-void BasketWave<A>::onExecution(Execution *execution)
+void BasketWave::onExecution(Execution *execution)
 {
-    Order &order   = findOrder(execution->order_id());
-    int   executed = order.getQuantity() - execution->leavesQty();
+    Order* order   = findOrder(execution->order_id());
+    int   executed = order->getQuantity() - execution->leavesQty();
     this->traded += executed;
     std::unique_lock lk(mtx_);
     if (waveSymbolStatus & BasketWave::SENT)
@@ -146,13 +159,12 @@ void BasketWave<A>::onExecution(Execution *execution)
     }
 }
 
-template<typename A>
-std::vector<Order> BasketWave<A>::getOrders(OrderStatus orderStatus)
+std::vector<Order>& BasketWave::getOrders(OrderStatus orderStatus)
 {
-    return std::copy_if(orders.begin(), orders.end(), [orderStatus](Order order)
-    {
-        return order.getOrderStatus() == orderStatus;
-    });
+    std::vector<Order> arr = this->orders;
+    std::vector<Order> res = *(new std::vector<Order>());
+    std::copy_if(arr.begin(), arr.end(), back_inserter(res),[&orderStatus](const Order& o) { return o.getOrderStatus() == orderStatus; });
+    return res;
 }
 
 

@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o"
   "CMakeFiles/untitled1.dir/src/AntiGaming.cpp.o"
   "CMakeFiles/untitled1.dir/src/AvgLatency.cpp.o"
-  "CMakeFiles/untitled1.dir/src/Basket.cpp.o"
   "CMakeFiles/untitled1.dir/src/BasketDB.cpp.o"
   "CMakeFiles/untitled1.dir/src/BasketServer.cpp.o"
   "CMakeFiles/untitled1.dir/src/BasketWave.cpp.o"

@@ -13,7 +13,6 @@
 #include "Rounding.h"
 #include "AlgorithmFactory.h"
 
-template<typename A>
 class BasketWave
 {
 private:
@@ -26,14 +25,15 @@ private:
     double                 percentage;
     RoutingConfig          *routingConfig;
     Raptor                 *raptor;
-    A                      *algoConfig;
+    OrderConfig                      *orderCfg;
+    Algorithm *algorithm;
     AlgorithmType          *algoType;
     std::vector<double>    prices;
     std::vector<Order>     orders;
     std::vector<OrderType> orderTypes;
     LotSizing              lotSizing;
     Rounding               round;
-    unsigned int           waveSymbolStatus = 0;
+    unsigned char           waveSymbolStatus = 0;
     std::atomic<int>       traded           = 0;
     int                    total            = 0;
     long                   timestamp        = std::chrono::duration_cast<std::chrono::milliseconds>(
@@ -43,11 +43,6 @@ private:
 
     std::mutex mtx_;
 
-    AlgoConfig *getAlgorithmConfig()
-    {
-        return dynamic_cast<AlgoConfig *>(algoConfig);
-    }
-
     Order *findOrder(const std::string &orderId);
 
 public:
@@ -56,7 +51,7 @@ public:
      *
      * @param waveNumber
      * @param percentage
-     * @param algoConfig
+     * @param orderConfig
      * @param algorithmType
      * @param prices
      * @param orderTypes
@@ -66,7 +61,7 @@ public:
      */
     BasketWave(double waveNumber,
                double percentage,
-               A *algoConfig,
+               OrderConfig *orderConfig,
                AlgorithmType *algorithmType,
                const std::vector<double> &prices,
                const std::vector<OrderType> orderTypes,
@@ -75,7 +70,7 @@ public:
                LotSizing lotSizing) :
             waveNumber(waveNumber),
             percentage(percentage),
-            algoConfig(algoConfig),
+            orderCfg(orderConfig),
             orderTypes(orderTypes),
             algoType(algorithmType),
             prices(prices),
@@ -94,7 +89,7 @@ public:
 
     void executeWave(Basket *b);
 
-    std::vector<Order> getOrders(OrderStatus orderStatus);
+    std::vector<Order>& getOrders(OrderStatus orderStatus);
 
     std::vector<Order> getOrders()
     {

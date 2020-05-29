@@ -258,33 +258,6 @@ src/AvgLatency.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/AvgLatency.cpp.s
 .PHONY : src/AvgLatency.cpp.s
 
-src/Basket.o: src/Basket.cpp.o
-
-.PHONY : src/Basket.o
-
-# target to build an object file
-src/Basket.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/Basket.cpp.o
-.PHONY : src/Basket.cpp.o
-
-src/Basket.i: src/Basket.cpp.i
-
-.PHONY : src/Basket.i
-
-# target to preprocess a source file
-src/Basket.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/Basket.cpp.i
-.PHONY : src/Basket.cpp.i
-
-src/Basket.s: src/Basket.cpp.s
-
-.PHONY : src/Basket.s
-
-# target to generate assembly for a file
-src/Basket.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/Basket.cpp.s
-.PHONY : src/Basket.cpp.s
-
 src/BasketDB.o: src/BasketDB.cpp.o
 
 .PHONY : src/BasketDB.o
@@ -849,9 +822,6 @@ help:
 	@echo "... src/AvgLatency.o"
 	@echo "... src/AvgLatency.i"
 	@echo "... src/AvgLatency.s"
-	@echo "... src/Basket.o"
-	@echo "... src/Basket.i"
-	@echo "... src/Basket.s"
 	@echo "... src/BasketDB.o"
 	@echo "... src/BasketDB.i"
 	@echo "... src/BasketDB.s"

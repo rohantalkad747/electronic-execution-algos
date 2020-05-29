@@ -245,22 +245,30 @@ void testBasket(const VenueManager &vm)
     BasketServer           bs(raptor, basketDb, BasketServerStatus::ACTIVE);
     Basket                 *basket       = bs.createTradableBasket(
             "QRA90A901J",
-            {"IBM", "GOOG"},
-            {250000, 700000},
-            {OrderSide::BUY, OrderSide::BUY}
+            {"IBM", "JPM", "GOOG"},
+            {250000, 700000, 31250},
+            {OrderSide::BUY, OrderSide::BUY, OrderSide::SELL}
     );
-    long                   curTime       = TimeUtils::getCurTimeEpoch() * 1000;
-    std::vector<double>    prices        = {315.23, 1400.50};
+    std::vector<double>    prices        = {315.23, 90.50, 1400.50};
     std::vector<OrderType> orderTypes    = {OrderType::LIMIT, OrderType::LIMIT};
     AlgorithmType          algorithmType = AlgorithmType::NONE;
+    auto* logger = new Logger("Test");
+    logger->info("WAVE 1: 50% OF THE BASKET");
     bs.createWave(
             basket->getBasketId(),
-            0.15,
-            new AlgoConfig(
-                    RoutingConfig::getSOR(RoutingType::SPRAY),
-                    curTime,
-                    curTime + 86400
-            ),
+            0.50,
+            new OrderConfig(RoutingConfig::getSOR(RoutingType::SPRAY)),
+            &algorithmType,
+            prices,
+            orderTypes,
+            LotSizing::ROUND,
+            Rounding::UP
+    );
+    logger->info("WAVE 2: 25% OF THE BASKET");
+    bs.createWave(
+            basket->getBasketId(),
+            0.25,
+            new OrderConfig(RoutingConfig::getSOR(RoutingType::SPRAY)),
             &algorithmType,
             prices,
             orderTypes,

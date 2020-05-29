@@ -9,34 +9,20 @@
 #include "OrderSide.h"
 #include "Order.h"
 #include "RoutingConfig.h"
+#include "OrderConfig.h"
 
-class AlgoConfig
+class AlgoConfig : public OrderConfig
 {
-public:
-    virtual ~AlgoConfig()
-    {}
-
-    Order &getOrder()
-    {
-        return order;
-    }
-
-    void setOrder(const Order &order)
-    {
-        this->order = order;
-    }
 
 public:
-    AlgoConfig(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime) : order(order),
-                                                                                                       routingConfig(
-                                                                                                               routingConfig),
+    AlgoConfig(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime) : OrderConfig(order, routingConfig),
                                                                                                        startTime(
                                                                                                                startTime),
                                                                                                        endTime(endTime)
     {}
 
 public:
-    AlgoConfig(const RoutingConfig &routingConfig, long startTime, long endTime) : routingConfig(
+    AlgoConfig(const RoutingConfig &routingConfig, long startTime, long endTime) : OrderConfig(
             routingConfig),
                                                                                    startTime(
                                                                                            startTime),
@@ -46,15 +32,9 @@ public:
 
 
 protected:
-    Order         order;
-    RoutingConfig routingConfig;
     long          startTime;
     long          endTime;
 public:
-    void setRoutingConfig(const RoutingConfig &routingConfig)
-    {
-        AlgoConfig::routingConfig = routingConfig;
-    }
 
     long getStartTime() const
     {
@@ -76,11 +56,6 @@ public:
         AlgoConfig::endTime = endTime;
     }
 
-public:
-    RoutingConfig &getRoutingConfig()
-    {
-        return routingConfig;
-    }
 };
 
 

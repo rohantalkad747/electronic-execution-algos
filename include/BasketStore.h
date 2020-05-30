@@ -2,25 +2,25 @@
 // Created by Rohan Talkad on 2020-05-21.
 //
 
-#ifndef UNTITLED1_BASKETDB_H
-#define UNTITLED1_BASKETDB_H
+#ifndef UNTITLED1_BASKETSTORE_H
+#define UNTITLED1_BASKETSTORE_H
 
 
 #include <map>
 #include "Basket.h"
 #include "BasketWave.h"
 
-class BasketDB
+class BasketStore
 {
 private:
-    std::map<long, Basket *> baskets;
+    std::map<long, Basket *>                  baskets;
     std::map<long, std::vector<BasketWave *>> waves;
 public:
     void addBasket(Basket *basket);
 
-    void addWave(long &basketId, BasketWave* wave);
+    void addWave(long &basketId, BasketWave *wave);
 
-    std::vector<BasketWave*>& getWaves(long &basketId);
+    std::vector<BasketWave *> &getWaves(long &basketId);
 
     Basket *getBasket(long &basketId);
 
@@ -30,4 +30,4 @@ public:
 };
 
 
-#endif //UNTITLED1_BASKETDB_H
+#endif //UNTITLED1_BASKETSTORE_H

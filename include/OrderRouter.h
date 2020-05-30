@@ -16,7 +16,7 @@ public:
     /**
      * @return the number of shares routed.
      */
-    virtual int route(const Order &order) = 0;
+    virtual int route(Order &order) = 0;
 
     void cancel()
     {

@@ -104,13 +104,13 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketDB.h">
-			<Option target="untitled1"/>
-		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServerStatus.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketStore.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h">
@@ -135,6 +135,9 @@
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/IcebergConfig.h">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/LiquidityAggregator.h">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/LiquidityIndicator.h">
@@ -194,6 +197,9 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/RoutingType.h">
 			<Option target="untitled1"/>
 		</Unit>
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/ScrapingRouter.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/include/SplayTree.h">
 			<Option target="untitled1"/>
 		</Unit>
@@ -251,10 +257,10 @@
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/AvgLatency.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketDB.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp">
 			<Option target="untitled1"/>
 		</Unit>
-		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp">
+		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketStore.cpp">
 			<Option target="untitled1"/>
 		</Unit>
 		<Unit filename="/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp">

@@ -15,7 +15,8 @@ class AlgoConfig : public OrderConfig
 {
 
 public:
-    AlgoConfig(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime) : OrderConfig(order, routingConfig),
+    AlgoConfig(const Order &order, const RoutingConfig &routingConfig, long startTime, long endTime) : OrderConfig(
+            order, routingConfig),
                                                                                                        startTime(
                                                                                                                startTime),
                                                                                                        endTime(endTime)
@@ -32,8 +33,8 @@ public:
 
 
 protected:
-    long          startTime;
-    long          endTime;
+    long startTime;
+    long endTime;
 public:
 
     long getStartTime() const

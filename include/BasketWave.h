@@ -20,15 +20,15 @@ private:
     double                 percentage;
     RoutingConfig          *routingConfig;
     Raptor                 *raptor;
-    OrderConfig                      *orderCfg;
-    Algorithm *algorithm;
+    OrderConfig            *orderCfg;
+    Algorithm              *algorithm;
     AlgorithmType          *algoType;
     std::vector<double>    prices;
     std::vector<Order>     orders;
     std::vector<OrderType> orderTypes;
     LotSizing              lotSizing;
     Rounding               round;
-    unsigned char           waveSymbolStatus = 0;
+    unsigned char          waveSymbolStatus = 0;
     std::atomic<int>       traded           = 0;
     int                    total            = 0;
     long                   timestamp        = std::chrono::duration_cast<std::chrono::milliseconds>(
@@ -41,11 +41,11 @@ private:
     Order *findOrder(const std::string &orderId);
 
 public:
-    static const int       PENDING          = 1;
-    static const int       SENT             = 2;
-    static const int       EXECUTED         = 4;
-    static const int       PARTIAL_EX       = 8;
-    static const int       CANCELLED        = 16;
+    static const int PENDING    = 1;
+    static const int SENT       = 2;
+    static const int EXECUTED   = 4;
+    static const int PARTIAL_EX = 8;
+    static const int CANCELLED  = 16;
 
     unsigned char getWaveSymbolStatus()
     {

@@ -6,45 +6,38 @@
 
 inline AbstractAlgorithmScheduler::AbstractAlgorithmScheduler() : mExit{false}, mThread{[&]
                                                                                         {
-                                                                                            std::unique_lock<std::mutex> lock{
-                                                                                                    mMutex};
+        std::unique_lock<std::mutex> lock{mMutex};
+        for (;;)
+        {
+            auto time = mTasks.empty()
+                        ? std::chrono::steady_clock::time_point::max()
+                        : mTasks.front().time;
 
-                                                                                            for (;;)
-                                                                                            {
-                                                                                                auto time = mTasks.empty()
-                                                                                                            ? std::chrono::steady_clock::time_point::max()
-                                                                                                            : mTasks.front().time;
-
-                                                                                                if (mCv.wait_until(lock,
-                                                                                                                   time,
-                                                                                                                   [&]
-                                                                                                                   {
-                                                                                                                       return mExit ||
-                                                                                                                              (!mTasks.empty() &&
-                                                                                                                               mTasks.front().time !=
-                                                                                                                               time);
-                                                                                                                   }))
-                                                                                                {
-                                                                                                    if (mExit)
-                                                                                                    {
-                                                                                                        break;
-                                                                                                    }
-                                                                                                }
-                                                                                                else if (!mTasks.empty())
-                                                                                                {
-                                                                                                    std::pop_heap(
-                                                                                                            mTasks.begin(),
-                                                                                                            mTasks.end(),
-                                                                                                            TaskComparer{});
-                                                                                                    auto task = std::move(
-                                                                                                            mTasks.back());
-                                                                                                    mTasks.pop_back();
-                                                                                                    lock.unlock();
-                                                                                                    task.func();
-                                                                                                    lock.lock();
-                                                                                                }
-                                                                                            }
-                                                                                        }}
+            if (mCv.wait_until(lock,
+                               time,
+                               [&]()
+                               {
+                                   return mExit ||
+                                          (!mTasks.empty() &&
+                                           mTasks.front().time !=
+                                           time);
+                               }))
+            {
+                if (mExit)
+                {
+                    break;
+                }
+            }
+            else if (!mTasks.empty())
+            {
+                std::pop_heap(mTasks.begin(),mTasks.end(),TaskComparer{});
+                auto task = std::move(mTasks.back());mTasks.pop_back();
+                lock.unlock();
+                task.func();
+                lock.lock();
+            }
+        }
+    }}
 {}
 
 inline AbstractAlgorithmScheduler::~AbstractAlgorithmScheduler()

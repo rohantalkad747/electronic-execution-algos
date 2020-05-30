@@ -46,7 +46,7 @@ on past and present participation and other liquidity indicators.
 ## Notes on Venue Simulation
 
 The simulation of a continuous crossing auction was interesting. There are multiple data structures to represent an order book. 
-Ultimately, I went with an AVL tree. Although it has good algorithmic performance, the performance is clearly not optimal
+Ultimately, I went with an Splay Tree. Although it has good algorithmic performance, the performance is clearly not optimal
 as I need to lock the tree every time an order triggers a tree modification. 
 
 Research Notes:

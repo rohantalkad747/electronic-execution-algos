@@ -9,6 +9,7 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Node.h
@@ -28,7 +29,6 @@ CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/Algorithm.cpp.o: ../src/Algorithm.cpp
 
@@ -40,6 +40,7 @@ CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/ExecutionType.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/IcebergAlgorithm.h
+CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Node.h
@@ -64,7 +65,6 @@ CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/TimingContext.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VWAPAlgorithm.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/AlgorithmFactory.cpp.o: ../src/AlgorithmFactory.cpp
 
@@ -84,6 +84,7 @@ CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/BasketWave.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/LotSizing.h
@@ -105,7 +106,6 @@ CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/BasketDB.cpp.o: ../src/BasketDB.cpp
 
@@ -121,6 +121,7 @@ CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/BasketWave.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/LotSizing.h
@@ -142,7 +143,6 @@ CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/BasketServer.cpp.o: ../src/BasketServer.cpp
 
@@ -155,6 +155,7 @@ CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/BasketWave.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/LotSizing.h
@@ -176,7 +177,6 @@ CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/BasketWave.cpp.o: ../src/BasketWave.cpp
 
@@ -206,6 +206,7 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/ExecutionService
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/ExecutionType.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/IcebergAlgorithm.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/IcebergConfig.h
+CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/Node.h
@@ -225,9 +226,22 @@ CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/IcebergAlgorithm.cpp.o: ../src/IcebergAlgorithm.cpp
+
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/ExecutionService.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/LiquidityAggregator.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/Logger.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/Node.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/Order.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/LiquidityAggregator.cpp.o: ../src/LiquidityAggregator.cpp
 
 CMakeFiles/untitled1.dir/src/OrderBook.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/OrderBook.cpp.o: ../include/Node.h
@@ -246,6 +260,7 @@ CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Node.h
@@ -269,7 +284,6 @@ CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/TimedAlgorit
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/TimingContext.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/ParticipateAlgorithm.cpp.o: ../src/ParticipateAlgorithm.cpp
 
@@ -285,6 +299,7 @@ CMakeFiles/untitled1.dir/src/PricePoint.cpp.o: ../src/PricePoint.cpp
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/Node.h
@@ -303,17 +318,39 @@ CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/Raptor.cpp.o: ../src/Raptor.cpp
 
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.o: ../include/RingBuffer.h
 CMakeFiles/untitled1.dir/src/RingBuffer.cpp.o: ../src/RingBuffer.cpp
 
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/Execution.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/ExecutionService.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/LiquidityAggregator.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/LiquidityIndicator.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/Logger.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/Node.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/Order.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/OrderBook.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/OrderRouter.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/OrderSide.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/OrderStatus.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/OrderType.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/PricePoint.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/ScrapingRouter.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/TimeInForce.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/TimeUtils.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/Venue.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/VenueManager.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../include/VenueRank.h
+CMakeFiles/untitled1.dir/src/ScrapingRouter.cpp.o: ../src/ScrapingRouter.cpp
+
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/CountDownLatch.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/Node.h
@@ -329,7 +366,6 @@ CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/SprayRouter.cpp.o: ../src/SprayRouter.cpp
 
@@ -338,6 +374,7 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Node.h
@@ -361,7 +398,6 @@ CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/TimedAlgorithm.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/TimingContext.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/TWAPAlgorithm.cpp.o: ../src/TWAPAlgorithm.cpp
 
@@ -374,6 +410,7 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/AntiGaming.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/Node.h
@@ -395,7 +432,6 @@ CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/TimedAlgorithm.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/TimingContext.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/TimedAlgorithm.cpp.o: ../src/TimedAlgorithm.cpp
 
@@ -404,6 +440,7 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Algorithm.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Node.h
@@ -427,13 +464,13 @@ CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/VWAPAlgorithm.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/VWAPConfig.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/VWAPAlgorithm.cpp.o: ../src/VWAPAlgorithm.cpp
 
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/Execution.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/ExecutionType.h
+CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/Node.h
@@ -447,23 +484,8 @@ CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/TimeInForce.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/TimeUtils.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/src/VenueManager.cpp.o: ../src/VenueManager.cpp
-
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/ExecutionService.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/LiquidityIndicator.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/Logger.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/Node.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/Order.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/OrderBook.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/OrderSide.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/OrderStatus.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/OrderType.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/PricePoint.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/TimeInForce.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../include/VenueOrderManager.h
-CMakeFiles/untitled1.dir/src/VenueOrderManager.cpp.o: ../src/VenueOrderManager.cpp
 
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/AlgoConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Algorithm.h
@@ -480,6 +502,7 @@ CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/ExecutionService.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/ExecutionType.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/IcebergAlgorithm.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/IcebergConfig.h
+CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/LiquidityAggregator.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/LiquidityIndicator.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Logger.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/LotSizing.h
@@ -510,7 +533,6 @@ CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VWAPAlgorithm.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VWAPConfig.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/Venue.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VenueManager.h
-CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VenueOrderManager.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../include/VenueRank.h
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../test/catch.hpp
 CMakeFiles/untitled1.dir/test/test.cpp.o: ../test/test.cpp

@@ -7,7 +7,7 @@
 
 #include "Basket.h"
 #include "OrderType.h"
-#include "BasketDB.h"
+#include "BasketStore.h"
 #include "BasketServerStatus.h"
 #include "Raptor.h"
 #include "BasketWave.h"
@@ -17,16 +17,16 @@ class BasketServer
 {
 private:
     BasketServerStatus bss;
-    BasketDB         basketDb;
-    std::atomic<int> curBasketId = 0;
-    Raptor           raptor;
+    BasketStore        basketDb;
+    std::atomic<int>   curBasketId = 0;
+    Raptor             raptor;
 
     Basket *getBasket_(long basketId);
 
 public:
 
-    BasketServer(Raptor raptor, BasketDB basketDb, BasketServerStatus bss) : raptor(raptor), basketDb(basketDb),
-                                                                             bss(bss)
+    BasketServer(Raptor raptor, BasketStore basketDb, BasketServerStatus bss) : raptor(raptor), basketDb(basketDb),
+                                                                                bss(bss)
     {
 
     }
@@ -68,13 +68,13 @@ public:
      * @return
      */
     BasketWave *createWave(int basketId,
-                                     double percentage,
-                                     OrderConfig *orderConfig,
-                                     AlgorithmType *algorithmType,
-                                     std::vector<double> &prices,
-                                     std::vector<OrderType> &orderTypes,
-                                     LotSizing lotSizing,
-                                     Rounding rounding);
+                           double percentage,
+                           OrderConfig *orderConfig,
+                           AlgorithmType *algorithmType,
+                           std::vector<double> &prices,
+                           std::vector<OrderType> &orderTypes,
+                           LotSizing lotSizing,
+                           Rounding rounding);
 
     void cancelOutstandingOrders(long &basketId);
 };

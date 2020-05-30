@@ -83,7 +83,7 @@ void BasketWave::executeWave(Basket *b)
 {
     if (waveSymbolStatus & BasketWave::PENDING)
     {
-        orders = splitBySecurity(b);
+        orders           = splitBySecurity(b);
         for (auto &order : orders)
         {
             if (orderCfg != nullptr)
@@ -98,7 +98,7 @@ void BasketWave::executeWave(Basket *b)
                 }
                 else
                 {
-                    auto* cfg = dynamic_cast<AlgoConfig *>(orderCfg);
+                    auto *cfg = dynamic_cast<AlgoConfig *>(orderCfg);
                     cfg->setOrder(order);
                     algorithm = &(AlgorithmFactory::getInstance(*(this->algoType), *(raptor), *cfg));
                     algorithm->executeAlgo();
@@ -115,15 +115,15 @@ void BasketWave::executeWave(Basket *b)
 
 void BasketWave::cancelWave()
 {
-    if ( *(this->algoType) == AlgorithmType::NONE)
+    if (*(this->algoType) == AlgorithmType::NONE)
     {
         std::vector<Order> cancellable;
-        std::copy_if(orders.begin(), orders.end(), back_inserter(cancellable), [](const Order& o)
+        std::copy_if(orders.begin(), orders.end(), back_inserter(cancellable), [](const Order &o)
         {
-            OrderStatus os =  o.getOrderStatus();
+            OrderStatus os = o.getOrderStatus();
             return os == OrderStatus::NEW || os == OrderStatus::PARTIAL;
         });
-        for (auto& o : cancellable)
+        for (auto &o : cancellable)
         {
             o.setOrderStatus(OrderStatus::CANCELLED);
         }
@@ -145,8 +145,8 @@ Order *BasketWave::findOrder(const std::string &orderId)
 
 void BasketWave::onExecution(Execution *execution)
 {
-    Order* order   = findOrder(execution->order_id());
-    int   executed = order->getQuantity() - execution->leavesQty();
+    Order *order = findOrder(execution->order_id());
+    int executed = order->getQuantity() - execution->leavesQty();
     this->traded += executed;
     std::unique_lock lk(mtx_);
     if (waveSymbolStatus & BasketWave::SENT)
@@ -163,7 +163,8 @@ std::vector<Order> BasketWave::getOrders(OrderStatus orderStatus)
 {
     std::vector<Order> arr = this->orders;
     std::vector<Order> res = *(new std::vector<Order>());
-    std::copy_if(arr.begin(), arr.end(), back_inserter(res),[&orderStatus](const Order& o) { return o.getOrderStatus() == orderStatus; });
+    std::copy_if(arr.begin(), arr.end(), back_inserter(res), [&orderStatus](const Order &o)
+    { return o.getOrderStatus() == orderStatus; });
     return res;
 }
 

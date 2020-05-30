@@ -15,7 +15,8 @@ class OrderConfig
 protected:
 public:
 
-    virtual ~OrderConfig() {} // Make polymorphic
+    virtual ~OrderConfig()
+    {} // Make polymorphic
 
     Order &getOrder()
     {

@@ -258,33 +258,6 @@ src/AvgLatency.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/AvgLatency.cpp.s
 .PHONY : src/AvgLatency.cpp.s
 
-src/BasketDB.o: src/BasketDB.cpp.o
-
-.PHONY : src/BasketDB.o
-
-# target to build an object file
-src/BasketDB.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/BasketDB.cpp.o
-.PHONY : src/BasketDB.cpp.o
-
-src/BasketDB.i: src/BasketDB.cpp.i
-
-.PHONY : src/BasketDB.i
-
-# target to preprocess a source file
-src/BasketDB.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/BasketDB.cpp.i
-.PHONY : src/BasketDB.cpp.i
-
-src/BasketDB.s: src/BasketDB.cpp.s
-
-.PHONY : src/BasketDB.s
-
-# target to generate assembly for a file
-src/BasketDB.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/BasketDB.cpp.s
-.PHONY : src/BasketDB.cpp.s
-
 src/BasketServer.o: src/BasketServer.cpp.o
 
 .PHONY : src/BasketServer.o
@@ -311,6 +284,33 @@ src/BasketServer.s: src/BasketServer.cpp.s
 src/BasketServer.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/BasketServer.cpp.s
 .PHONY : src/BasketServer.cpp.s
+
+src/BasketStore.o: src/BasketStore.cpp.o
+
+.PHONY : src/BasketStore.o
+
+# target to build an object file
+src/BasketStore.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/BasketStore.cpp.o
+.PHONY : src/BasketStore.cpp.o
+
+src/BasketStore.i: src/BasketStore.cpp.i
+
+.PHONY : src/BasketStore.i
+
+# target to preprocess a source file
+src/BasketStore.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/BasketStore.cpp.i
+.PHONY : src/BasketStore.cpp.i
+
+src/BasketStore.s: src/BasketStore.cpp.s
+
+.PHONY : src/BasketStore.s
+
+# target to generate assembly for a file
+src/BasketStore.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/src/BasketStore.cpp.s
+.PHONY : src/BasketStore.cpp.s
 
 src/BasketWave.o: src/BasketWave.cpp.o
 
@@ -822,12 +822,12 @@ help:
 	@echo "... src/AvgLatency.o"
 	@echo "... src/AvgLatency.i"
 	@echo "... src/AvgLatency.s"
-	@echo "... src/BasketDB.o"
-	@echo "... src/BasketDB.i"
-	@echo "... src/BasketDB.s"
 	@echo "... src/BasketServer.o"
 	@echo "... src/BasketServer.i"
 	@echo "... src/BasketServer.s"
+	@echo "... src/BasketStore.o"
+	@echo "... src/BasketStore.i"
+	@echo "... src/BasketStore.s"
 	@echo "... src/BasketWave.o"
 	@echo "... src/BasketWave.i"
 	@echo "... src/BasketWave.s"

@@ -237,9 +237,9 @@ void testSplayTree()
 
 void testBasket(const VenueManager &vm)
 {
-    Raptor                 raptor(vm);
-    BasketDB               basketDb;
-    BasketServer           bs(raptor, basketDb, BasketServerStatus::ACTIVE);
+    Raptor       raptor(vm);
+    BasketStore  basketDb;
+    BasketServer bs(raptor, basketDb, BasketServerStatus::ACTIVE);
     Basket                 *basket       = bs.createTradableBasket(
             "QRA90A901J",
             {"IBM", "JPM", "GOOG"},
@@ -249,7 +249,7 @@ void testBasket(const VenueManager &vm)
     std::vector<double>    prices        = {315.23, 90.50, 1400.50};
     std::vector<OrderType> orderTypes    = {OrderType::LIMIT, OrderType::LIMIT};
     AlgorithmType          algorithmType = AlgorithmType::NONE;
-    auto* logger = new Logger("Test");
+    auto *logger = new Logger("Test");
     logger->info("WAVE 1: 50% OF THE BASKET");
     bs.createWave(
             basket->getBasketId(),

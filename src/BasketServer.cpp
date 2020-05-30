@@ -23,18 +23,21 @@ Basket *BasketServer::getBasket_(long bsId)
     return basket;
 }
 
-BasketWave * BasketServer::createWave(int basketId, double percentage, OrderConfig *orderConfig, AlgorithmType *algorithmType, std::vector<double> &prices, std::vector<OrderType> &orderTypes, LotSizing lotSizing, Rounding rounding)
+BasketWave *
+BasketServer::createWave(int basketId, double percentage, OrderConfig *orderConfig, AlgorithmType *algorithmType,
+                         std::vector<double> &prices, std::vector<OrderType> &orderTypes, LotSizing lotSizing,
+                         Rounding rounding)
 {
     Basket *basket = getBasket_(basketId);
-    auto *wave = new BasketWave(basket->getCurrentWave() + 1,
-                                percentage,
-                                orderConfig,
-                                algorithmType,
-                                prices,
-                                orderTypes,
-                                &raptor,
-                                rounding,
-                                lotSizing);
+    auto   *wave   = new BasketWave(basket->getCurrentWave() + 1,
+                                    percentage,
+                                    orderConfig,
+                                    algorithmType,
+                                    prices,
+                                    orderTypes,
+                                    &raptor,
+                                    rounding,
+                                    lotSizing);
     basket->setNewWaveStatus();
     wave->executeWave(basket);
     return wave;
@@ -43,12 +46,12 @@ BasketWave * BasketServer::createWave(int basketId, double percentage, OrderConf
 void BasketServer::cancelOutstandingOrders(long &bsId)
 {
 
-    std::vector<BasketWave*> waves = basketDb.getWaves(bsId);
-    for (auto* wave : waves)
+    std::vector<BasketWave *> waves = basketDb.getWaves(bsId);
+    for (auto *wave : waves)
     {
         unsigned char wss = wave->getWaveSymbolStatus();
-        unsigned char cx = BasketWave::CANCELLED | BasketWave::EXECUTED;
-        if ( ( wss & cx) ==  cx )
+        unsigned char cx  = BasketWave::CANCELLED | BasketWave::EXECUTED;
+        if ((wss & cx) == cx)
         {
             wave->cancelWave();
         }

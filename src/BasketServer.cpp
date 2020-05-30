@@ -3,7 +3,6 @@
 //
 
 #include "../include/BasketServer.h"
-#include "../include/BasketWave.h"
 
 Basket *
 BasketServer::createTradableBasket(std::string accountId, std::vector<std::string> symbols, std::vector<int> quantities,
@@ -41,12 +40,17 @@ BasketWave * BasketServer::createWave(int basketId, double percentage, OrderConf
     return wave;
 }
 
-void BasketServer::cancelOutstandingOrders(long bsId)
+void BasketServer::cancelOutstandingOrders(long &bsId)
 {
 
-    std::vector<Order>& orders = basketDb.getOrders(bsId);
-    std::copy_if(orders, (Order& o)
+    std::vector<BasketWave*> waves = basketDb.getWaves(bsId);
+    for (auto* wave : waves)
     {
-
-    });
+        unsigned char wss = wave->getWaveSymbolStatus();
+        unsigned char cx = BasketWave::CANCELLED | BasketWave::EXECUTED;
+        if ( ( wss & cx) ==  cx )
+        {
+            wave->cancelWave();
+        }
+    }
 }

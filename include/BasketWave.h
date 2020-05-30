@@ -7,20 +7,15 @@
 
 
 #include "Algorithm.h"
-#include "Basket.h"
 #include "AlgorithmType.h"
 #include "LotSizing.h"
 #include "Rounding.h"
+#include "Basket.h"
 #include "AlgorithmFactory.h"
 
 class BasketWave
 {
 private:
-    static const int       PENDING          = 1;
-    static const int       SENT             = 2;
-    static const int       EXECUTED         = 4;
-    static const int       PARTIAL_EX       = 8;
-    static const int       CANCELLED        = 16;
     double                 waveNumber;
     double                 percentage;
     RoutingConfig          *routingConfig;
@@ -46,6 +41,16 @@ private:
     Order *findOrder(const std::string &orderId);
 
 public:
+    static const int       PENDING          = 1;
+    static const int       SENT             = 2;
+    static const int       EXECUTED         = 4;
+    static const int       PARTIAL_EX       = 8;
+    static const int       CANCELLED        = 16;
+
+    unsigned char getWaveSymbolStatus()
+    {
+        return waveSymbolStatus;
+    }
 
     /**
      *
@@ -89,7 +94,7 @@ public:
 
     void executeWave(Basket *b);
 
-    std::vector<Order>& getOrders(OrderStatus orderStatus);
+    std::vector<Order> getOrders(OrderStatus orderStatus);
 
     std::vector<Order> getOrders()
     {

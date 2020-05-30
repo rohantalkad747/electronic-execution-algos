@@ -159,7 +159,7 @@ void BasketWave::onExecution(Execution *execution)
     }
 }
 
-std::vector<Order>& BasketWave::getOrders(OrderStatus orderStatus)
+std::vector<Order> BasketWave::getOrders(OrderStatus orderStatus)
 {
     std::vector<Order> arr = this->orders;
     std::vector<Order> res = *(new std::vector<Order>());

@@ -8,17 +8,19 @@
 
 #include <map>
 #include "Basket.h"
+#include "BasketWave.h"
 
 class BasketDB
 {
 private:
     std::map<long, Basket *> baskets;
+    std::map<long, std::vector<BasketWave *>> waves;
 public:
     void addBasket(Basket *basket);
 
-    void appendOrders(long &basketId, std::vector<Order>& orders);
+    void addWave(long &basketId, BasketWave* wave);
 
-    std::vector<Order>& getOrders(long &basketId);
+    std::vector<BasketWave*>& getWaves(long &basketId);
 
     Basket *getBasket(long &basketId);
 

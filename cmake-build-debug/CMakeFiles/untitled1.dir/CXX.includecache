@@ -51,6 +51,8 @@ map
 -
 Basket.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
+BasketWave.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h
 Basket.h
@@ -73,14 +75,14 @@ vector
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
 Algorithm.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Algorithm.h
-Basket.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
 AlgorithmType.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmType.h
 LotSizing.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/LotSizing.h
 Rounding.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Rounding.h
+Basket.h
+/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
 AlgorithmFactory.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/AlgorithmFactory.h
 
@@ -325,8 +327,6 @@ OrderSide.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketServer.cpp
 ../include/BasketServer.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h
-../include/BasketWave.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
 
 /Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp
 numeric
@@ -929,8 +929,6 @@ chrono
 -
 thread
 -
-../src/BasketWave.cpp
-/Users/s2387022/CLionProjects/electronic-execution-algos/src/BasketWave.cpp
 ../include/Order.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/Order.h
 ../include/VenueManager.h
@@ -957,10 +955,6 @@ thread
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/IcebergConfig.h
 ../include/IcebergAlgorithm.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/IcebergAlgorithm.h
-../include/Basket.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/Basket.h
 ../include/BasketServer.h
 /Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketServer.h
-../include/BasketWave.h
-/Users/s2387022/CLionProjects/electronic-execution-algos/include/BasketWave.h
 

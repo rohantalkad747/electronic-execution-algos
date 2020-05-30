@@ -7,7 +7,6 @@
 #include <vector>
 #include <chrono>
 #include <thread>
-#include "../src/BasketWave.cpp"
 #include "../include/Order.h"
 #include "../include/VenueManager.h"
 #include "../include/SprayRouter.h"
@@ -21,9 +20,7 @@
 #include "../include/ParticipateConfig.h"
 #include "../include/IcebergConfig.h"
 #include "../include/IcebergAlgorithm.h"
-#include "../include/Basket.h"
 #include "../include/BasketServer.h"
-#include "../include/BasketWave.h"
 
 
 VenueManager createVenueManager();
@@ -275,5 +272,7 @@ void testBasket(const VenueManager &vm)
             LotSizing::ROUND,
             Rounding::UP
     );
+    std::thread t;
+    std::this_thread::sleep_for(std::chrono::milliseconds(10000));
 }
 

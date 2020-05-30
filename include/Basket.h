@@ -19,7 +19,8 @@ private:
     std::vector<int>         quantities;
     std::vector<OrderSide>   sides;
     std::vector<OrderType>   orderTypes;
-    std::atomic<int>         totalTraded    = 0;
+    std::atomic<int>         totalTraded;
+    int                      routed;
 
 public:
     int leaves() const
@@ -46,6 +47,15 @@ public:
                                                   sides(sides)
     {}
 
+    int updateRouted(int shares)
+    {
+        routed += shares;
+    }
+
+    int getRouted()
+    {
+        return routed;
+    }
 
     const std::vector<OrderType> &getOrderTypes() const
     {
@@ -95,11 +105,6 @@ public:
     void setQuantities(const std::vector<int> &quantities)
     {
         Basket::quantities = quantities;
-    }
-
-    void newExecution(int shares)
-    {
-        totalTraded += shares;
     }
 
     const std::vector<OrderSide> &getSides() const

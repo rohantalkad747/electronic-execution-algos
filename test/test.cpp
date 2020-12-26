@@ -269,10 +269,21 @@ void testBasket(const VenueManager &vm)
             &algorithmType,
             prices,
             orderTypes,
+            LotSizing::ODD,
+            Rounding::DOWN
+    );
+    logger->info("WAVE 3: 25% OF THE BASKET");
+
+    bs.createWave(
+            basket->getBasketId(),
+            0.25,
+            new OrderConfig(RoutingConfig::getSOR(RoutingType::SPRAY)),
+            &algorithmType,
+            prices,
+            orderTypes,
             LotSizing::ROUND,
             Rounding::UP
     );
-    std::thread t;
     std::this_thread::sleep_for(std::chrono::milliseconds(10000));
 }
 

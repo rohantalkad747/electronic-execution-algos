@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <numeric>
+#include <atomic>
 #include "Order.h"
 
 class Basket
@@ -50,6 +51,7 @@ public:
     int updateRouted(int shares)
     {
         routed += shares;
+        return routed;
     }
 
     int getRouted()

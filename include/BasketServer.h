@@ -76,6 +76,7 @@ public:
                            LotSizing lotSizing,
                            Rounding rounding);
 
+
     void cancelOutstandingOrders(long &basketId);
 };
 

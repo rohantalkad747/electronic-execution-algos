@@ -22,10 +22,6 @@ void TimedAlgorithm::executeAlgo()
                                        {
                                            return this->cancel;
                                        });
-            if (this->cancel)
-            {
-                return;
-            }
         }
         int  interval              = timingContext->getInterval();
         for (;;)
@@ -45,10 +41,6 @@ void TimedAlgorithm::executeAlgo()
                                            {
                                                return this->cancel;
                                            });
-                if (this->cancel)
-                {
-                    break;
-                }
             }
         }
         log.info("Algorithm executed! " + std::to_string(this->sharesTraded) + "/" +
